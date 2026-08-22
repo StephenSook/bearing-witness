@@ -7,9 +7,38 @@ actually pay for") · **Demo + pitch 30%** · Technical execution 10% ("doesn't
 break"). Consequence: watch mode is a HEADLINE beat, payback math gets air,
 deep tech stays compressed. Reliability IS the tech score; don't lecture it.
 [MEASURED] slots fill ONLY from the frozen evaluator or the shipped suite.
-Roles: Stephen presents; ONE teammate is Demo Driver (no pause-while-I-type);
-agree the driver at the 16:30 freeze. Judge routing: identify the decision-weight
-judge during the day and make sure they see the live run.
+Roles are per beat (table below): all four builders speak, Stephen opens and
+closes, and BEEDS IS DEMO DRIVER THROUGHOUT (his box, his muscle memory, incl.
+the kill/restart commands). The driver never narrates while typing. Lock the
+assignments at the 16:30 freeze and rehearse the handoffs; a handoff is one
+step forward and the first word, never "and now X will...". Judge routing:
+identify the decision-weight judge during the day and make sure they see the
+live run.
+
+## Who says what (STAGE deck numbering, 10 slides; slide flips match the spoken order)
+
+| Slides / beat | Voice | Why them |
+|---|---|---|
+| S1 · Title (hook opens on it; flip on "forty-one percent") | **Stephen** | leader opens; practitioner story is his |
+| S2 · Problem (41% + once a month by hand) | **Stephen** | hook lands while its numbers are on screen |
+| S3 · Blind spot ($125k + not allowed to leave; flip entering "A bearing can go from healthy to destroyed...") | **Stephen** | agitate beat, now with its own slide |
+| S4 · SOLUTION reveal (dark: "lives entirely on this box" + "Nothing leaves the room.") | **Vinh** | the solution sentence gets its own slide; flip as he starts speaking |
+| S5 · How it works (physics/paperwork/yes + four steps) | **Vinh** | the four steps ARE the engine, his lane |
+| S6 · Always-on + switch to app | **Beeds** | his box; he speaks the ten seconds and the bridge line, executes the switch himself, then goes quiet as the demo narration starts |
+| Demo steps 1, 2, 5 | **Stephen** | fleet + watch start, baseline, decision gate |
+| Demo step 3 (W155 two views) | **Vinh** | the 107.03 Hz + slip beat is evaluator truth |
+| Demo step 4 (audio, if verified) | **Vinh** | same evidence, second sense |
+| Demo step 6 (THE REFUSAL) | **Jadyn** | his gate: the model cannot cite what is not in evidence; then UI and DB refuse above it |
+| Demo step 7 (pick a window) | **Stephen** | live product path |
+| Demo steps 8-9 (watch callback, kill/restart) | **Stephen** | the Mongo story is his lane; Beeds executes the kill and restart |
+| S7 · Pays for the box | **Stephen** | business value, 30% axis |
+| S8 · Receipts (0/0 · 99 min · 42 h) | **Vinh** | the person who built the evaluator states its numbers |
+| S9 · Team + tech | **Beeds** (stack sentence), then **Stephen** (MongoDB side-challenge sentence) | Beeds built the box; Mongo is Stephen's |
+| S10 · Close + mantra | **Stephen** | leader asks for the win |
+
+Q&A routing after: engine and evaluator numbers to Vinh, box/serving/stack to
+Beeds, agent tools and sandbox policy to Jadyn, business and product and
+MongoDB to Stephen. Whoever is asked, answer or route in ONE sentence.
 
 ## 01 · HOOK (0:00-0:30) — named moment + sourced stat + structural tension
 
@@ -49,7 +78,8 @@ motors. Primary and peer-reviewed; survives a judge looking it up.)
 
 ## 04 · DEMO (1:20-3:20) — the headline runs live; narrate outcomes
 
-Verbal bridge: "Let me show you this live, right now, on real run-to-failure data."
+Verbal bridge (BEEDS, from slide 4, as he switches to the app himself):
+"Let me show you this live, right now, on real run-to-failure data."
 
 1. Fleet: "All fifteen bearings through the frozen evaluator; every card is a
    real verdict. Zero wrong. Zero missed." THEN press START WATCH and say:
@@ -110,9 +140,10 @@ Verbal bridge: "Let me show you this live, right now, on real run-to-failure dat
 
 > "Four builders, four lanes, one day: [stack as ACTUALLY wired at freeze, 2-3
 > of NemoClaw / OpenClaw / OpenShell + MongoDB + SciPy, one sentence]. Full
-> disclosure: both lanes brought Friday-night scaffolding, as the rules allow,
-> documented in the repo; the engine, the wiring, the agent, and everything you
-> just watched run was built today on this box. [If side challenge confirmed:]
+> disclosure: the core engine and its frozen evaluation were prepared ahead as
+> our disclosed starter scaffold, timestamped in the repo, as the rules allow;
+> today is everything that makes it a product on this box: the bring-up, the
+> wiring, the agent tools, and the demo you just watched. [If side challenge confirmed:]
 > And for the MongoDB side challenge: the database IS the safety mechanism
 > AND the agent's memory; immutable geometry versions, a compare-and-set
 > human gate, a work order that cannot exist without its evidence, and a
@@ -126,10 +157,10 @@ call back to the hook, leave ONE line in the room.)
 
 > "That practitioner we talked to checks bearings the way plants have for
 > forty years: monthly, by hand, hoping the failure waits. What you just
-> watched was built today, on this box, on real run-to-failure data, and it
-> never guessed once. Give us the win and this goes from a hackathon table to
-> a plant floor. Detect the change. Explain the spectrum. Escalate with
-> evidence. A human has to say yes."
+> watched became a product today, on this box, on real run-to-failure data,
+> and it never guessed once. Give us the win and this goes from a hackathon
+> table to a plant floor. Detect the change. Explain the spectrum. Escalate
+> with evidence. A human has to say yes."
 
 Final slide: QR to the public repo. 20 seconds of buffer held. Do NOT say
 "thank you" as the last word; the mantra is the last word.
@@ -137,11 +168,17 @@ Final slide: QR to the public repo. 20 seconds of buffer held. Do NOT say
 ## Slide cues (deck = docs/deck/Bearing_Witness_Pitch_Deck.pdf, 10 slides)
 
 LIVE STAGE VARIANT: present from docs/deck/Bearing_Witness_Stage_Deck.pdf
-(8 slides). It is the same deck with slides 6 and 7 removed, because the live
-app IS those two slides. Arrow keys then walk the exact pitch order with zero
-skipping: 1 Hook, 2 Problem, 3 Solution, 4 Always-on (switch to the app here),
-demo in the app, then 5 Pays-for-the-box, 6 Receipts, 7 Team+Tech, 8 Close.
-The 10-slide PDF stays the portal submission so pre-eval readers see the
+(10 slides). Differences from the portal deck, all deliberate: the title
+slide carries no tagline or mantra (the hook stays a mystery; the mantra
+debuts at the close), the old stats slide is SPLIT so the flips match the
+spoken order (S2 = 41% + once-a-month-by-hand for the hook; S3 = $125k + the
+lockout for the agitate), a dark SOLUTION reveal slide sits at S4 ("lives
+entirely on this box" / "Nothing leaves the room."), and the evidence/refusal
+screenshots are removed because the live app IS those slides. Arrow keys walk
+the exact pitch order with zero skipping: 1 Title, 2 Problem, 3 Blind spot,
+4 Solution, 5 How it works, 6 Always-on (switch to the app here), demo in the
+app, then 7 Pays-for-the-box, 8 Receipts, 9 Team+Tech, 10 Close. The portal
+PDF stays the submission so pre-eval readers get the tagline up front and the
 evidence and refusal screens without a narrator.
 
 | Script beat | On screen |
