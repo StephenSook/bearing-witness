@@ -21,11 +21,14 @@ set -euo pipefail
 
 SANDBOX=hack-agent
 
+# Per §05.2's pattern: set every related key first, restart once at the end
+# (not once per command — that's wasteful and isn't how Beeds' own two-command
+# memory-search example does it).
+
 # --- every session sandboxed, agent reads the workspace read-only ----------
 nemoclaw "$SANDBOX" config set --config-accept-new-path \
   --key agents.defaults.sandbox \
-  --value '{"mode":"all","scope":"session","backend":"openshell","workspaceAccess":"ro"}' \
-  --restart
+  --value '{"mode":"all","scope":"session","backend":"openshell","workspaceAccess":"ro"}'
 
 # --- openshell plugin entry (remote mode = lower per-turn overhead) --------
 # Egress itself is NOT closed here — that's GB10-RUNBOOK.md §05.1:
@@ -34,8 +37,7 @@ nemoclaw "$SANDBOX" config set --config-accept-new-path \
 # (optionally also: nemoclaw hack-agent policy remove huggingface --yes)
 nemoclaw "$SANDBOX" config set --config-accept-new-path \
   --key plugins.entries.openshell \
-  --value '{"enabled":true,"config":{"from":"openclaw","mode":"remote","autoProviders":true,"timeoutSeconds":60}}' \
-  --restart
+  --value '{"enabled":true,"config":{"from":"openclaw","mode":"remote","autoProviders":true,"timeoutSeconds":60}}'
 
 # --- tool allowlist: everything not listed here is auto-blocked ------------
 nemoclaw "$SANDBOX" config set --config-accept-new-path \
