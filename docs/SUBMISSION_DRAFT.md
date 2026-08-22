@@ -79,15 +79,18 @@ exists without its evidence record. Python: SciPy, NumPy, NiceGUI, PyMongo.
 
 ## Scaffold disclosure (D5, plain language)
 
-Per the event's "starter scaffolds and existing libraries are fine": before
-doors, our team prepared starter scaffolding: a research plan, a signal-
-processing prep study on the public XJTU-SY dataset, and starter code for the
-evidence engine, MongoDB layer, and UI shell, all committed in our repository
-history. On Saturday we built the system on site on the GB10: the engine was
-[typed/completed] from its plan, wired to the box's MongoDB and the local model
-stack, evaluated fresh with thresholds frozen before the run, and every number
-above comes from what ran at the event. We disclose this rather than have anyone
-discover it.
+Per the event's "starter scaffolds and existing libraries are fine": our
+Friday-night preparation went further than the word scaffolding suggests, and
+we state it with timestamps rather than have anyone discover it. Prepared ahead
+and logged as such in PLAN.md's status notes: the research plan, a signal-
+processing prep study on the public XJTU-SY dataset, and, on Friday night, the
+evidence engine and its CLI, the threshold freeze (Fri 23:37), the evaluation
+run every number above comes from (Fri 23:44), the MongoDB store, and the UI
+shell. Built on Saturday, on site, on the GB10: the box bring-up, the live
+engine-to-MongoDB-to-UI wiring on real corpus data, the OpenClaw agent tools
+and their locator-citation gate, the watch loop's resume-from-record, the
+egress hardening and its live proof, and the demo itself, all visible in
+Saturday's commit history.
 
 ## What we learned (fill Saturday; never write "the AI did it" or "no challenges")
 
