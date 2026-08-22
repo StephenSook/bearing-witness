@@ -7,7 +7,7 @@
 [![Tests](https://img.shields.io/badge/tests-150%2B_%C2%B7_engine_%C2%B7_product_%C2%B7_e2e-3fb950.svg)](tests/)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-3776AB.svg?logo=python&logoColor=white)](./pyproject.toml)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Community_8_%C2%B7_local_only-47A248.svg?logo=mongodb&logoColor=white)](bw_product/store.py)
-[![Stack](https://img.shields.io/badge/NVIDIA-NemoClaw_%C2%B7_OpenClaw_%C2%B7_OpenShell-76B900.svg?logo=nvidia&logoColor=white)](docs/openclaw.gateway.json5)
+[![Stack](https://img.shields.io/badge/NVIDIA-NemoClaw_%C2%B7_OpenClaw_%C2%B7_OpenShell-76B900.svg?logo=nvidia&logoColor=white)](docs/openclaw.gateway.setup.sh)
 
 Built by **Team Hermit Crab** at the Dell x NVIDIA AI Hackathon, New York City, August 22, 2026.
 
