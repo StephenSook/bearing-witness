@@ -1,0 +1,68 @@
+Bearing Witness agent-surface smoke test — run on GB10 after nemoclaw/openclaw
+onboard is done (GB10-RUNBOOK.md §04-06). Sandbox "hack-agent", agent "main",
+per the runbook. Substitute if either changed.
+
+This exercises the six OpenClaw tools (task 3.1) and the confirm-before-mutate
+gate on submit_decision (task 3.2). Runs against MOCK fixtures by default
+(cli.ts USE_MOCK = true) so it works regardless of whether the real corpus
+is staged yet — this is a plumbing test, not a real-data test.
+
+Known mismatch, not fixed here: cli.ts's ROOT constant is the relative path
+"data/XJTU-SY_Bearing_Datasets", but the runbook stages the real corpus at
+the absolute path /opt/bw/corpus (symlinked, §3.3). Flipping USE_MOCK to
+false for a real-data run needs ROOT fixed to match first — don't just flip
+the flag.
+
+---
+
+1. Install the plugin (once) — --link so rebuilds are picked up live
+
+cd /opt/bw/engine/bearing-witness-tools
+npm run build
+openclaw plugins install --link .
+openclaw plugins enable bearing-witness-tools
+
+---
+
+2. Confirm it loaded clean — both entries (six tools + the confirm-gate hook)
+
+openclaw plugins doctor
+openclaw plugins inspect bearing-witness-tools --runtime --json | grep -A8 '"toolNames"\|"trustedToolPolicies"'
+
+Expect: doctor reports no issues; toolNames lists all six
+(diagnose_bearing, check_blockers, get_evidence, submit_decision,
+test_without_geometry, replay_timeline); trustedToolPolicies lists
+bearing-witness-confirm-submit-decision.
+
+---
+
+3. One read-only tool call — proves the plugin actually answers
+
+nemoclaw hack-agent agent --agent main -m \
+  'Call diagnose_bearing with condition 35Hz12kN, bearing Bearing1_3, record 155. Report the status field only.'
+
+Expect: a status string back (mock fixture for record 155 is
+analyst_review_required.json -> ANALYST_REVIEW_REQUIRED).
+
+---
+
+4. THE REAL TEST — submit_decision must NOT fire immediately
+
+nemoclaw hack-agent agent --agent main -m \
+  'Call submit_decision with condition 35Hz12kN, bearing Bearing1_3, record 155, decision APPROVE, reason "test run from GB10". Tell me what happened.'
+
+Expect: the turn STOPS and asks for human approval before anything is
+recorded — that's the confirm-gate (task 3.2) actually firing. If it
+writes a decision without pausing, the gate isn't wired correctly on
+this box even though it validated clean locally (doctor clean,
+diagnostics empty) — worth reporting back, that means static
+validation passed but the live behavior didn't match.
+
+---
+
+5. Verify the sandbox surface itself (allowlist + confirm-gate visibility)
+
+openclaw sandbox explain --agent main --json
+
+Expect: the six tools under tools.allow, group:fs/group:web/group:runtime
+under tools.deny, sourced from config (not "default").
