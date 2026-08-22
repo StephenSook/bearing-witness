@@ -21,7 +21,7 @@ live run.
 |---|---|---|
 | S1-S2 · Hook + Agitate | **Stephen** | leader opens; practitioner story is his |
 | S3 · Solution sentence | **Vinh** | the four steps ARE the engine, his lane |
-| S4 · Always-on + switch to app | **Stephen** | product lane; presses nothing (Beeds drives) |
+| S4 · Always-on + switch to app | **Beeds** | his box; he speaks the ten seconds and the bridge line, executes the switch himself, then goes quiet as the demo narration starts |
 | Demo steps 1, 2, 5 | **Stephen** | fleet + watch start, baseline, decision gate |
 | Demo step 3 (W155 two views) | **Vinh** | the 107.03 Hz + slip beat is evaluator truth |
 | Demo step 4 (audio, if verified) | **Vinh** | same evidence, second sense |
@@ -75,7 +75,8 @@ motors. Primary and peer-reviewed; survives a judge looking it up.)
 
 ## 04 · DEMO (1:20-3:20) — the headline runs live; narrate outcomes
 
-Verbal bridge: "Let me show you this live, right now, on real run-to-failure data."
+Verbal bridge (BEEDS, from slide 4, as he switches to the app himself):
+"Let me show you this live, right now, on real run-to-failure data."
 
 1. Fleet: "All fifteen bearings through the frozen evaluator; every card is a
    real verdict. Zero wrong. Zero missed." THEN press START WATCH and say:
