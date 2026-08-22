@@ -23,18 +23,17 @@ live run.
 | S2 · Problem (41% + once a month by hand) | **Stephen** | hook lands while its numbers are on screen |
 | S3 · Blind spot ($125k + not allowed to leave; flip entering "A bearing can go from healthy to destroyed...") | **Stephen** | agitate beat, now with its own slide |
 | S4 · SOLUTION reveal (dark: "lives entirely on this box" + "Nothing leaves the room.") | **Vinh** | the solution sentence gets its own slide; flip as he starts speaking |
-| S5 · How it works (physics/paperwork/yes + four steps) | **Vinh** | the four steps ARE the engine, his lane |
-| S6 · Always-on + switch to app | **Beeds** | his box; he speaks the ten seconds and the bridge line, executes the switch himself, then goes quiet as the demo narration starts |
+| S5 · How it works (physics/paperwork/yes + four steps), then the app switch | **Vinh**, then **Beeds** for the bridge | the four steps are Vinh's engine; Beeds delivers the bridge line over the end of S5, switches to the app himself, then drives silent |
 | Demo steps 1, 2, 5 | **Stephen** | fleet + watch start, baseline, decision gate |
 | Demo step 3 (W155 two views) | **Vinh** | the 107.03 Hz + slip beat is evaluator truth |
 | Demo step 4 (audio, if verified) | **Vinh** | same evidence, second sense |
 | Demo step 6 (THE REFUSAL) | **Jadyn** | his gate: the model cannot cite what is not in evidence; then UI and DB refuse above it |
 | Demo step 7 (pick a window) | **Stephen** | live product path |
 | Demo steps 8-9 (watch callback, kill/restart) | **Stephen** | the Mongo story is his lane; Beeds executes the kill and restart |
-| S7 · Pays for the box | **Stephen** | business value, 30% axis |
-| S8 · Receipts (0/0 · 99 min · 42 h) | **Vinh** | the person who built the evaluator states its numbers |
-| S9 · Team + tech | **Beeds** (stack sentence), then **Stephen** (MongoDB side-challenge sentence) | Beeds built the box; Mongo is Stephen's |
-| S10 · Close + mantra | **Stephen** | leader asks for the win |
+| S6 · Pays for the box (the evaluator numbers are SPOKEN here; the fleet screen showed them live) | **Stephen** | business value, 30% axis |
+| S7 · The moat (security team is the real buyer; cloud vendor vs this box) | **Stephen** | the why-cloud-loses argument, business half of local-only |
+| S8 · Team + tech | **Beeds** (stack sentence), then **Stephen** (MongoDB side-challenge sentence) | Beeds built the box; Mongo is Stephen's |
+| S9 · Close + mantra | **Stephen** | leader asks for the win |
 
 Q&A routing after: engine and evaluator numbers to Vinh, box/serving/stack to
 Beeds, agent tools and sandbox policy to Jadyn, business and product and
@@ -168,18 +167,19 @@ Final slide: QR to the public repo. 20 seconds of buffer held. Do NOT say
 ## Slide cues (deck = docs/deck/Bearing_Witness_Pitch_Deck.pdf, 10 slides)
 
 LIVE STAGE VARIANT: present from docs/deck/Bearing_Witness_Stage_Deck.pdf
-(10 slides). Differences from the portal deck, all deliberate: the title
-slide carries no tagline or mantra (the hook stays a mystery; the mantra
-debuts at the close), the old stats slide is SPLIT so the flips match the
-spoken order (S2 = 41% + once-a-month-by-hand for the hook; S3 = $125k + the
-lockout for the agitate), a dark SOLUTION reveal slide sits at S4 ("lives
-entirely on this box" / "Nothing leaves the room."), and the evidence/refusal
-screenshots are removed because the live app IS those slides. Arrow keys walk
-the exact pitch order with zero skipping: 1 Title, 2 Problem, 3 Blind spot,
-4 Solution, 5 How it works, 6 Always-on (switch to the app here), demo in the
-app, then 7 Pays-for-the-box, 8 Receipts, 9 Team+Tech, 10 Close. The portal
-PDF stays the submission so pre-eval readers get the tagline up front and the
-evidence and refusal screens without a narrator.
+(9 slides). Differences from the portal deck, all deliberate: the title slide
+carries no tagline or mantra (the hook stays a mystery; the mantra debuts at
+the close); the old stats slide is SPLIT so the flips match the spoken order
+(S2 = 41% for the hook; S3 = $125k + the lockout for the agitate); a dark
+SOLUTION reveal sits at S4; a business MOAT slide (security team is the real
+buyer) sits at S7; and the ALWAYS-ON, EVIDENCE, REFUSAL, and RECEIPTS slides
+are removed because the live app IS those slides (the watch counter, the case
+screens, the fleet verdicts) and the numbers are spoken in the impact beat.
+Arrow keys walk the exact pitch order with zero skipping: 1 Title, 2 Problem,
+3 Blind spot, 4 Solution, 5 How it works (Beeds bridges to the app from
+here), demo in the app, then 6 Pays-for-the-box, 7 The moat, 8 Team+Tech,
+9 Close. The portal PDF stays the submission so pre-eval readers get the
+tagline, the screenshots, and the receipts without a narrator.
 
 | Script beat | On screen |
 |---|---|
