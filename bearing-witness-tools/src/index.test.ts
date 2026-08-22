@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { checkReport, checkLocators, collectKnownLocators, postScan, LOCATOR_RE } from "./postScan.js";
-import { decide } from "./cli.js";
+import { analyze, decide } from "./cli.js";
 
 // mirrors fixtures/analyst_review_required.json's candidate_families[0].locators
 const RED_RESULT = {
@@ -152,6 +152,35 @@ describe("postScan", () => {
   it("passes a clean report citing real evidence through unchanged", () => {
     const text = "Outer race pattern, see XJTU-SY/35Hz12kN/Bearing1_3|w155|3f8a91c2|envelope|107.03Hz|h1.";
     expect(postScan(text, RED_RESULT)).toBe(text);
+  });
+});
+
+describe("postScan against real fixtures (not the hand-typed RED_RESULT mirror)", () => {
+  it("collects exactly the 3 real locators from analyst_review_required.json via analyze()", async () => {
+    const r = await analyze("35Hz12kN", "Bearing1_3", 155); // record >= 100 -> analyst_review_required fixture
+    const known = collectKnownLocators(r);
+    expect(known.size).toBe(3);
+    expect(known.has("XJTU-SY/35Hz12kN/Bearing1_3|w155|3f8a91c2|envelope|107.03Hz|h1")).toBe(true);
+  });
+
+  it("passes a real fabricated-locator claim through postScan against the real fixture and blocks it", async () => {
+    const r = await analyze("35Hz12kN", "Bearing1_3", 155);
+    const text = "Outer race pattern, see XJTU-SY/35Hz12kN/Bearing1_3|w999|deadbeef|envelope|999.99Hz|h1.";
+    expect(postScan(text, r)).not.toContain("w999");
+  });
+
+  it("no_anomaly.json (no locators) passes clean text through unchanged", async () => {
+    const r = await analyze("35Hz12kN", "BearingS_1", 12); // record < 50 -> no_anomaly fixture
+    expect(collectKnownLocators(r).size).toBe(0);
+    const text = "No persistent change; not a verified healthy label.";
+    expect(postScan(text, r)).toBe(text);
+  });
+
+  it("unconfirmed.json (no locators) still blocks banned words via postScan", async () => {
+    const r = await analyze("35Hz12kN", "BearingS_1", 75); // 50 <= record < 100 -> unconfirmed fixture
+    expect(collectKnownLocators(r).size).toBe(0);
+    const text = "Location unconfirmed; you should replace it anyway.";
+    expect(postScan(text, r)).not.toContain("replace it");
   });
 });
 
