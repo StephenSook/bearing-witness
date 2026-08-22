@@ -510,14 +510,15 @@ remaining-useful-life claim.
 
 The signal-processing prep — frequency math, feature extraction, two earlier evaluator passes on
 a laptop — was done in the days before, and the event rules allow starter scaffolds and existing
-libraries. After the rules were read on Friday, both build lanes also laid scaffolding Friday
-evening and said so in PLAN.md's status notes: on the engine side the package skeleton and its
-first four modules (signal math, record loader, the frozen thresholds dataclass, the result
-contract) with their tests; on the product side the Mongo store, the UI running on fixtures, and
-the contract-shaped adapter. We say all of it plainly in the submission. What is built on the
-day is what makes it a product: the Stage-1 detector, the engine and CLI, the adapter flip from
-fixtures to real output, the agent tools, the sandbox policy, and the Saturday freeze-and-evaluate
-run that every number we quote comes from.
+libraries. After the rules were read on Friday, both build lanes worked Friday night and said so
+in PLAN.md's status notes with timestamps: on the engine side that Friday-night work went all the
+way through the Stage-1 detector, the engine and CLI, the threshold freeze (Fri 23:37) and the
+evaluation run every number we quote comes from (Fri 23:44); on the product side the Mongo store,
+the UI running on fixtures, the contract-shaped adapter, and a first full engine-to-Mongo-to-UI
+pass on a laptop. We say all of it plainly in the submission. What is built on the day is what
+makes it a product on THIS machine: the GB10 bring-up, the live wiring and gating on the box, the
+agent tools and their locator-citation gate, the watch loop's resume-from-record, the sandbox
+policy, and the demo, all of it in Saturday's commit history.
 
 ### "Why not train a model on the failure data?"
 

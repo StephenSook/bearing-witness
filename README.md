@@ -77,10 +77,15 @@ write even if a client renders one.
 
 ## Honesty notes
 
-- Starter scaffolding (fixtures, store, UI shell, engine skeleton) was built the
-  night before the event and is disclosed plainly here and in the submission, as
-  the event rules allow. Everything that runs, the engine, the wiring, the agent
-  surface, the analysis, was built and gated at the event.
+- The Friday-night work is bigger than the word "scaffolding" suggests, and we
+  disclose it with timestamps rather than hide it: the engine core, its CLI, the
+  threshold freeze (Fri 23:37) and the evaluation run behind every number here
+  (Fri 23:44), plus the Mongo store, fixtures, and UI shell, were all built the
+  night before doors and are logged as such in PLAN.md's status notes, as the
+  event rules allow for starter scaffolds. Built on event day: the GB10
+  bring-up, the live wiring and gating on the box, the agent tools and their
+  locator-citation gate, the watch loop's resume-from-record, and the demo, all
+  visible in Saturday's commit history.
 - Every number above comes from the frozen evaluator output committed in this
   repository. Wrong calls and abstentions are reported in the same sentence as
   the wins.
