@@ -30,10 +30,10 @@ live run.
 | Demo step 6 (THE REFUSAL) | **Jadyn** | his gate: the model cannot cite what is not in evidence; then UI and DB refuse above it |
 | Demo step 7 (pick a window) | **Stephen** | live product path |
 | Demo steps 8-9 (watch callback, kill/restart) | **Stephen** | the Mongo story is his lane; Beeds executes the kill and restart |
-| S6 · Pays for the box (the evaluator numbers are SPOKEN here; the fleet screen showed them live) | **Stephen** | business value, 30% axis |
-| S7 · The moat (security team is the real buyer; cloud vendor vs this box) | **Stephen** | the why-cloud-loses argument, business half of local-only |
-| S8 · Team + tech | **Beeds** (stack sentence), then **Stephen** (MongoDB side-challenge sentence) | Beeds built the box; Mongo is Stephen's |
-| S9 · Close + mantra | **Stephen** | leader asks for the win |
+| S6 · Pays for the box (the evaluator numbers are SPOKEN here) | **Jadyn** | business beat is his stage time; Vinh backs up any stumbled number cold |
+| S7 · The moat (security team is the real buyer; cloud vendor vs this box) | **Jadyn** | continues his business arc |
+| S8 · Team + tech (stack + disclosure + MongoDB side-challenge sentences) | **Stephen** | leader owns the honesty beat and the Mongo story |
+| S9 · Close | **Stephen** speaks the close paragraph; **ALL FOUR** say the mantra together as the last words in the room | four builders, one voice |
 
 Q&A routing after: engine and evaluator numbers to Vinh, box/serving/stack to
 Beeds, agent tools and sandbox policy to Jadyn, business and product and
@@ -86,7 +86,9 @@ Verbal bridge (BEEDS, from slide 4, as he switches to the app himself):
    analyzing this bearing's life on its own. Watch the counter." (30% criterion,
    verbatim: the agent acts on its own over time. Let it run through the pitch.)
 2. W011 baseline: green lamp. "It refuses to call this healthy; it says no
-   persistent change. Words matter here."
+   persistent change. Words matter here." (W060 is NOT opened in the pitch.
+   If a judge asks for it later: "change appeared, two windows, not yet
+   three; keep trending. Stage three isn't allowed to run yet.")
 3. W155: two views. PAUSE HERE (the killer feature; let judges absorb):
    > "The envelope spectrum shows 107.03 hertz and its harmonics: the outer-race
    > signature of THIS bearing's geometry. Prediction said 107.9. Measurement
@@ -158,8 +160,11 @@ call back to the hook, leave ONE line in the room.)
 > forty years: monthly, by hand, hoping the failure waits. What you just
 > watched became a product today, on this box, on real run-to-failure data,
 > and it never guessed once. Give us the win and this goes from a hackathon
-> table to a plant floor. Detect the change. Explain the spectrum. Escalate
-> with evidence. A human has to say yes."
+> table to a plant floor."
+>
+> ALL FOUR, together, the last words in the room:
+> "Detect the change. Explain the spectrum. Escalate with evidence.
+> A human has to say yes."
 
 Final slide: QR to the public repo. 20 seconds of buffer held. Do NOT say
 "thank you" as the last word; the mantra is the last word.
