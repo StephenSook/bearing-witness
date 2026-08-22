@@ -1,7 +1,11 @@
 # Pitch Script v2 — Bearing Witness (5:00, top-8 live, Sat 2026-08-22 20:00)
 
-Structure: the Sookra Pitch Arc (Pitch, Hook & Sell guide), tuned to this rubric:
-technical execution · usefulness · local-first design · pitch quality.
+Structure: the Sookra Pitch Arc, tuned to the OFFICIAL WEIGHTED RUBRIC
+(dashboard-verified Sat 11:12): **Local-first + always-on 30%** ("the agent acts
+on its own over time") · **Business value 30%** ("something a company would
+actually pay for") · **Demo + pitch 30%** · Technical execution 10% ("doesn't
+break"). Consequence: watch mode is a HEADLINE beat, payback math gets air,
+deep tech stays compressed. Reliability IS the tech score; don't lecture it.
 [MEASURED] slots fill ONLY from the frozen evaluator or the shipped suite.
 Roles: Stephen presents; ONE teammate is Demo Driver (no pause-while-I-type);
 agree the driver at the 16:30 freeze. Judge routing: identify the decision-weight
@@ -48,7 +52,10 @@ motors. Primary and peer-reviewed; survives a judge looking it up.)
 Verbal bridge: "Let me show you this live, right now, on real run-to-failure data."
 
 1. Fleet: "All fifteen bearings through the frozen evaluator; every card is a
-   real verdict. Zero wrong. Zero missed."
+   real verdict. Zero wrong. Zero missed." THEN press START WATCH and say:
+   "And I'm turning the agent loose right now. While we talk, it will keep
+   analyzing this bearing's life on its own. Watch the counter." (30% criterion,
+   verbatim: the agent acts on its own over time. Let it run through the pitch.)
 2. W011 baseline: green lamp. "It refuses to call this healthy; it says no
    persistent change. Words matter here."
 3. W155: two views. PAUSE HERE (the killer feature; let judges absorb):
@@ -68,13 +75,20 @@ Verbal bridge: "Let me show you this live, right now, on real run-to-failure dat
    > refuses when it should."
 7. Only if 2.8 ran green in all three rehearsals: "Pick a window. Any of the
    158." Analyze it live. "That analysis is not a recording; nothing here is."
+8. THE WATCH CALLBACK (do not skip; it closes the 30% always-on loop): point at
+   the status line running since step 1. "While we talked, it analyzed [N] more
+   windows by itself, wrote every case to the database, and refused the ones it
+   couldn't prove. Nobody touched it. That is what always-on means."
 
 ## 05 · IMPACT (3:20-3:50) — the After + the numbers
 
-> "The maintenance planner's morning changes: instead of a monthly route and a
-> guess, a screening queue with evidence, and a work order already in the system
-> of record. At ABB's median rate, catching one failure inside that monthly
-> blind spot pays for this box the first time it happens. The numbers, from an
+> "Who pays for this? Every plant that already refuses cloud monitoring: legal,
+> pharma, defense, food, any OT-isolated floor. The maintenance planner's
+> morning changes: instead of a monthly route and a guess, a screening queue
+> with evidence, and a work order already in the system of record. At ABB's
+> median rate of a hundred twenty-five thousand dollars an hour, catching ONE
+> failure inside that monthly blind spot pays for this box the first time it
+> happens. The numbers, from an
 > evaluation whose thresholds were frozen and committed BEFORE it ran: all
 > fifteen run-to-failure bearings, onset detected on every single one, eleven
 > element calls, ten exact plus one cage-consistent, ZERO wrong, and four
@@ -97,12 +111,43 @@ Verbal bridge: "Let me show you this live, right now, on real run-to-failure dat
 > immutable geometry versions, a compare-and-set human gate, and a work order
 > that cannot exist without its evidence."
 
-## 07 · CLOSE (4:20-4:40) — the line that gets remembered
+## 07 · CLOSE (4:20-4:40) — proof-of-concept close + hook callback + the line
 
-> "Detect the change. Explain the spectrum. Escalate with evidence. A human has
-> to say yes. Bearing Witness, team Hermit Crab."
+(Guide rules: never close on "thank you" or a summary; name what you want,
+call back to the hook, leave ONE line in the room.)
 
-Final slide: QR to the public repo. 20 seconds of buffer held.
+> "That practitioner we talked to checks bearings the way plants have for
+> forty years: monthly, by hand, hoping the failure waits. What you just
+> watched was built today, on this box, on real run-to-failure data, and it
+> never guessed once. Give us the win and this goes from a hackathon table to
+> a plant floor. Detect the change. Explain the spectrum. Escalate with
+> evidence. A human has to say yes."
+
+Final slide: QR to the public repo. 20 seconds of buffer held. Do NOT say
+"thank you" as the last word; the mantra is the last word.
+
+## Slide cues (deck = docs/deck/Bearing_Witness_Pitch_Deck.pdf, 10 slides)
+
+LIVE STAGE VARIANT: present from docs/deck/Bearing_Witness_Stage_Deck.pdf
+(8 slides). It is the same deck with slides 6 and 7 removed, because the live
+app IS those two slides. Arrow keys then walk the exact pitch order with zero
+skipping: 1 Hook, 2 Problem, 3 Solution, 4 Always-on (switch to the app here),
+demo in the app, then 5 Pays-for-the-box, 6 Receipts, 7 Team+Tech, 8 Close.
+The 10-slide PDF stays the portal submission so pre-eval readers see the
+evidence and refusal screens without a narrator.
+
+| Script beat | On screen |
+|---|---|
+| 01 Hook | Slide 1 (title + real bearing) → Slide 2 on "forty-one percent" |
+| 02 Agitate | Slide 2 stays ($125k + monthly-by-hand are on it) |
+| 03 Solution | Slide 3 (the one sentence + four steps) |
+| 04 Demo | Slide 4 (ALWAYS-ON) for ten seconds, THEN SWITCH TO THE LIVE APP and stay there for all demo steps — slides 6/7 exist so the PDF stands alone for pre-eval readers; live, the app IS those slides |
+| 05 Impact | Back to slides: Slide 5 (pays for the box) → Slide 8 (0/0 · 99 min · 42 h) |
+| 06 Team+Tech | Slide 9 |
+| 07 Close | Slide 10 (the mantra; it's the last thing on screen) |
+
+One rule from the guide: slides tell, the demo shows. The moment the app is up,
+nobody looks back at the deck until the numbers.
 
 ## Q&A prep (part of the pitch; three-move rule on risk questions)
 
