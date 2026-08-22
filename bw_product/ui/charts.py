@@ -76,6 +76,13 @@ def trend_figure(trend: dict, selected_window: int, onset: int | None, dark: boo
         "layout": _layout(dark, "Stage-1 trend · broadband RMS vs early baseline",
                           "window (1/min)", "rms (g)"),
     }
+    # floor the y-axis at 0 for THIS chart only: without it Plotly autoscales to
+    # the visible span, so a healthy screen's 0.02 g of noise fills the frame and
+    # reads as spikes, while W155's 4 g failure flattens the 0.06 g onset step
+    # into an apparently featureless line under the ONSET marker. The detector
+    # scores z against the asset's own baseline MAD; the chart shows grams, and
+    # a zero floor keeps the grams honest at every zoom. Spectra keep autoscale.
+    fig["layout"]["yaxis"]["rangemode"] = "tozero"
     shapes, annotations = [], []
     # baseline region: windows 1-10 (the asset's own early, condition-matched baseline)
     shapes.append({"type": "rect", "x0": 1, "x1": 10, "yref": "paper", "y0": 0, "y1": 1,

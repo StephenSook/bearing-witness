@@ -207,6 +207,11 @@ nobody looks back at the deck until the numbers.
 - "What makes this different?" -> physics owns diagnosis (SciPy, deterministic,
   auditable); the model explains and files paperwork; and the system refuses
   without trust. Most demos add AI; ours constrains it.
+- "Your onset line is at 59 but the curve barely moves there" -> "The line is
+  overall loudness, for intuition. The detector scores nine indicators against
+  this bearing's own first ten minutes, in units of how steady it was: that
+  step at 59 is ten median-deviations. It is just small in grams. The z-scores
+  are in the JSON."
 - Prevention-frame questions (accuracy, false alarms): acknowledge -> answer
   with the frozen-thresholds + verbatim-evaluator evidence -> advance to the
   human-gate design. Never leave the room in a risk frame.

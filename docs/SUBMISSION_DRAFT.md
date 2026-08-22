@@ -9,7 +9,9 @@
 - Repository (public, MIT): https://github.com/StephenSook/bearing-witness
 - Pitch deck (anyone-with-link, verified serving without auth):
   https://github.com/StephenSook/bearing-witness/blob/main/docs/deck/Bearing_Witness_Pitch_Deck.pdf
-- Demo film (99 s, motion-graphics + real GB10 footage, narrated, captioned):
+- Demo film on YouTube (1:40, unlisted; the portal's demo video link):
+  https://youtu.be/9K9KZY4Pqi8
+- Same film in the repo (source of truth, harness-verified):
   https://github.com/StephenSook/bearing-witness/blob/main/docs/demo/Bearing_Witness_Demo.mp4
 - Short cut (60 s, same narration, straight screen capture):
   https://github.com/StephenSook/bearing-witness/blob/main/docs/demo/Bearing_Witness_Demo_60s.mp4
