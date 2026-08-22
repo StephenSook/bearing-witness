@@ -62,7 +62,15 @@ The GB10 has **one pool**. 128 GB addressable by both, no copy step.
 
 ## 3. The model: what "35B-A3B" means
 
-`nvidia/Qwen3.6-35B-A3B-NVFP4`
+> **What is actually on the box (Saturday 2026-08-22, per `GB10-RUNBOOK.md`).** The stack that serves
+> the demo is **Ollama (≥ 0.32.12) running `qwen3.8:27b-q4_K_M`** behind NemoClaw `lkg` (v0.0.109),
+> route `ollama-local`, provider on `127.0.0.1:11434` — verified local by `nemoclaw hack-agent doctor`
+> and by the iptables cloud-block test in the runbook's §6.2. **vLLM and the NVFP4 checkpoint are not
+> in the runtime path.** §3–§7 below describe the NVFP4/vLLM plan as staged and *why* it was the
+> opening bid; keep them for the "why this box" argument, but in the room answer with the model that is
+> running. The 11:15 parachute (D3) was taken at bring-up; the submission names what actually served.
+
+`nvidia/Qwen3.6-35B-A3B-NVFP4` *(the staged plan — not what is serving; see the note above)*
 
 | Part | Meaning |
 |---|---|
@@ -542,20 +550,22 @@ because all experts have to be resident, but compute and bandwidth cost is close
 with plenty of capacity and modest bandwidth, that's exactly the right trade — plays to the
 strength, dodges the weakness.
 
-### "Why vLLM instead of something simpler?"
+### "Why vLLM instead of something simpler?" / "What's serving right now?"
 
-It's what we staged, and it serves the NVFP4 checkpoint directly. Our calls are sequential, so
-we're not using continuous batching for throughput — we'd say so rather than pretend otherwise.
-If it isn't serving by 11:15 we switch to Ollama on the native chat endpoint with a 4-bit GGUF
-build of the same model, and the deterministic engine's output exists either way. The demo
-narrows; it doesn't die.
+What's serving is **Ollama with `qwen3.8:27b-q4_K_M`**, local, behind NemoClaw — that was our
+pre-decided 11:15 parachute (D3), and we took it at bring-up rather than debug sm_121 on event day.
+vLLM with the NVFP4 checkpoint was the opening bid because it serves NVFP4 directly and is NVIDIA's own
+recipe for this box; it is staged, not running. Our calls are sequential either way, so we were never
+leaning on continuous batching. The deterministic engine's output is identical under both; only the
+explanation layer changes. The demo narrowed; it didn't die — and the submission names what served.
 
-### "Is the fallback also NVFP4?"
+### "Is the fallback also NVFP4?" / "So is NVFP4 in the demo at all?"
 
-No. Ollama's NVFP4 builds exist only for Apple Silicon, through its MLX engine. The fallback is a
-standard 4-bit GGUF of the same model family — about the same footprint, conventional block
-quantization, no Blackwell-specific kernels. The deterministic engine doesn't care which one is
-answering; only the explanation layer changes.
+No, and no. What is running is a standard 4-bit GGUF (`qwen3.8:27b-q4_K_M`) under Ollama — about
+the same footprint class, conventional block quantization, no Blackwell-specific kernels. Ollama's
+NVFP4 builds exist only for Apple Silicon through its MLX engine. We don't claim NVFP4 or Marlin for
+the demo; §4 and §7 explain why they were the plan on this silicon. The deterministic engine doesn't
+care which model is answering; only the explanation layer changes.
 
 ### "What stops the agent leaking the data?"
 
@@ -1001,4 +1011,6 @@ Updated 2026-08-22 00:5x: §11 honesty note carries the reconciled onset semanti
 lead-time statement (Task 14, `eval/onset_inspection.md`); §12 (engine module by module) and §13
 (engine-lane Q&A) added — every constant read from `bearing_witness/` at the frozen v3 state, every
 evaluator number from `eval/results_v3.json` / `eval/run_v3_output.txt`; the 12 + 3 pre-onset counts and
-the 0.4 s timing were re-measured on Bearing1_3 while writing.*
+the 0.4 s timing were re-measured on Bearing1_3 while writing. Updated 2026-08-22 12:1x: §3 "what is actually on
+the box" note and the two §11 serving answers now state the deployed stack (Ollama `qwen3.8:27b-q4_K_M`, NemoClaw
+`lkg`, local route) per `GB10-RUNBOOK.md`; §3–§7 keep the NVFP4/vLLM plan as the staged opening bid.*
