@@ -1,0 +1,58 @@
+// Reference config for the OpenClaw Gateway running the Bearing Witness
+// agent. This is NOT the live config OpenClaw reads — that lives at
+// ~/.openclaw/openclaw.json on whatever machine actually runs the
+// Gateway during the demo (the GB10 box). Paste the relevant pieces
+// there once OpenClaw is confirmed installed on the box.
+
+{
+  agents: {
+    defaults: {
+      sandbox: {
+        mode: "all",              // every session sandboxed, no exceptions
+        scope: "session",         // one sandbox per session
+        backend: "openshell",
+        workspaceAccess: "ro",    // agent reads local workspace, never writes to it directly
+      },
+    },
+  },
+
+  plugins: {
+    entries: {
+      openshell: {
+        enabled: true,
+        config: {
+          from: "openclaw",
+          mode: "remote",         // lower per-turn overhead, better for a live demo
+          policy: "bearing-witness-deny-egress",  // create this OpenShell-side policy on the box first
+          autoProviders: true,
+          timeoutSeconds: 60,
+        },
+      },
+    },
+  },
+
+  tools: {
+    sandbox: {
+      tools: {
+        // allow non-empty -> everything not listed is auto-blocked
+        allow: [
+          "diagnose_bearing",
+          "check_blockers",
+          "get_evidence",
+          "submit_decision",
+          "test_without_geometry",
+          "replay_timeline",
+        ],
+        deny: [
+          "group:fs",
+          "group:web",
+          "group:runtime",
+        ],
+      },
+    },
+  },
+}
+
+// Verify once applied on the box, don't just trust the file:
+//   openclaw sandbox list
+//   openclaw sandbox explain --agent <id> --json

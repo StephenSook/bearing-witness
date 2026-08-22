@@ -1,0 +1,15 @@
+{
+  "asset_id": "XJTU-SY/35Hz12kN/BearingS_1",
+  "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "anomaly_evidence": { "persistent": true, "onset_window": 40, "stage1_state": "ABNORMAL" },
+  "candidate_families": [
+    { "family": "BPFO", "found_f0_hz": 106.4, "harmonics_above_floor_median": 2, "eligible": false }
+  ],
+  "suspected_location": null,
+  "refusal_reasons": ["VIEW_A_NO_SUPPORT_BPFO"],
+  "inspection_draft": {
+    "task_type": "ANALYST_REVIEW",
+    "recommended_action": "Route to a vibration analyst: a persistent change exists but the element cannot be named with a clear margin from the available evidence."
+  },
+  "human_review": { "required": false, "decision": null, "reason": null, "timestamp": null }
+}

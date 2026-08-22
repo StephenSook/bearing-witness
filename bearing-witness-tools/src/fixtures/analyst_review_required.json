@@ -1,0 +1,32 @@
+{
+  "asset_id": "XJTU-SY/35Hz12kN/Bearing1_3",
+  "status": "ANALYST_REVIEW_REQUIRED",
+  "anomaly_evidence": { "persistent": true, "onset_window": 59, "stage1_state": "ABNORMAL" },
+  "candidate_families": [
+    {
+      "family": "BPFO",
+      "predicted_hz": 107.907,
+      "found_f0_hz": 107.03,
+      "harmonics_above_floor_median": 3,
+      "eligible": true,
+      "locators": [
+        "XJTU-SY/35Hz12kN/Bearing1_3|w155|3f8a91c2|envelope|107.03Hz|h1",
+        "XJTU-SY/35Hz12kN/Bearing1_3|w155|3f8a91c2|envelope|214.06Hz|h2",
+        "XJTU-SY/35Hz12kN/Bearing1_3|w155|3f8a91c2|envelope|321.09Hz|h3"
+      ]
+    }
+  ],
+  "suspected_location": "outer",
+  "refusal_reasons": [],
+  "inspection_draft": {
+    "task_type": "INSPECTION_WORK_ORDER",
+    "title": "Inspect bearing — suspected outer race/element pattern",
+    "recommended_action": "Draft inspection for analyst review: confirm the cited envelope and ordinary-spectrum evidence on the named elemen This is a review request, not a repair order.",
+    "not_claimed": [
+      "No remaining-useful-life (RUL) estimate",
+      "No universal failure stage or severity scale from envelope peak height",
+      "No part number, outage window, or repair schedule"
+    ]
+  },
+  "human_review": { "required": true, "decision": null, "reason": null, "timestamp": null }
+}

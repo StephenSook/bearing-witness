@@ -1,0 +1,10 @@
+{
+  "asset_id": "XJTU-SY/35Hz12kN/BearingS_1",
+  "status": "NO_ANOMALY_DETECTED",
+  "anomaly_evidence": { "persistent": false, "onset_window": null, "stage1_state": "NORMAL" },
+  "candidate_families": [],
+  "suspected_location": null,
+  "refusal_reasons": [],
+  "inspection_draft": null,
+  "human_review": { "required": false, "decision": null, "reason": null, "timestamp": null }
+}

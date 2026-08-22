@@ -1,0 +1,27 @@
+{
+  "id": "bearing-witness-tools",
+  "name": "Bearing Witness Tools",
+  "description": "Local bearing vibration analysis via the Bearing Witness CLI.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": [
+      "diagnose_bearing",
+      "check_blockers",
+      "get_evidence",
+      "submit_decision",
+      "test_without_geometry",
+      "replay_timeline"
+    ],
+    "trustedToolPolicies": [
+      "bearing-witness-confirm-submit-decision"
+    ]
+  }
+}
