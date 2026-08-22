@@ -110,9 +110,10 @@ Verbal bridge: "Let me show you this live, right now, on real run-to-failure dat
 
 > "Four builders, four lanes, one day: [stack as ACTUALLY wired at freeze, 2-3
 > of NemoClaw / OpenClaw / OpenShell + MongoDB + SciPy, one sentence]. Full
-> disclosure: both lanes brought Friday-night scaffolding, as the rules allow,
-> documented in the repo; the engine, the wiring, the agent, and everything you
-> just watched run was built today on this box. [If side challenge confirmed:]
+> disclosure: the core engine and its frozen evaluation were prepared ahead as
+> our disclosed starter scaffold, timestamped in the repo, as the rules allow;
+> today is everything that makes it a product on this box: the bring-up, the
+> wiring, the agent tools, and the demo you just watched. [If side challenge confirmed:]
 > And for the MongoDB side challenge: the database IS the safety mechanism
 > AND the agent's memory; immutable geometry versions, a compare-and-set
 > human gate, a work order that cannot exist without its evidence, and a
@@ -126,10 +127,10 @@ call back to the hook, leave ONE line in the room.)
 
 > "That practitioner we talked to checks bearings the way plants have for
 > forty years: monthly, by hand, hoping the failure waits. What you just
-> watched was built today, on this box, on real run-to-failure data, and it
-> never guessed once. Give us the win and this goes from a hackathon table to
-> a plant floor. Detect the change. Explain the spectrum. Escalate with
-> evidence. A human has to say yes."
+> watched became a product today, on this box, on real run-to-failure data,
+> and it never guessed once. Give us the win and this goes from a hackathon
+> table to a plant floor. Detect the change. Explain the spectrum. Escalate
+> with evidence. A human has to say yes."
 
 Final slide: QR to the public repo. 20 seconds of buffer held. Do NOT say
 "thank you" as the last word; the mantra is the last word.
