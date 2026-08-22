@@ -23,7 +23,11 @@
         config: {
           from: "openclaw",
           mode: "remote",         // lower per-turn overhead, better for a live demo
-          policy: "bearing-witness-deny-egress",  // create this OpenShell-side policy on the box first
+          // Egress is closed by excluding/removing the default-open presets
+          // (nvidia, openclaw-pricing, optionally huggingface) after onboard,
+          // not by a named policy here — see GB10-RUNBOOK.md §05.1:
+          //   nemoclaw hack-agent policy exclude nvidia --yes
+          //   nemoclaw hack-agent policy remove  openclaw-pricing --yes
           autoProviders: true,
           timeoutSeconds: 60,
         },
@@ -55,4 +59,7 @@
 
 // Verify once applied on the box, don't just trust the file:
 //   openclaw sandbox list
-//   openclaw sandbox explain --agent <id> --json
+//   openclaw sandbox explain --agent main --json
+// Verify egress is actually closed (GB10-RUNBOOK.md §05.1):
+//   nemoclaw hack-agent status | grep -E 'integrate\.api\.nvidia\.com|openrouter\.ai' \
+//     && echo "STILL EXPOSED" || echo "clean"
