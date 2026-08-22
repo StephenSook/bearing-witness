@@ -7,9 +7,35 @@ actually pay for") · **Demo + pitch 30%** · Technical execution 10% ("doesn't
 break"). Consequence: watch mode is a HEADLINE beat, payback math gets air,
 deep tech stays compressed. Reliability IS the tech score; don't lecture it.
 [MEASURED] slots fill ONLY from the frozen evaluator or the shipped suite.
-Roles: Stephen presents; ONE teammate is Demo Driver (no pause-while-I-type);
-agree the driver at the 16:30 freeze. Judge routing: identify the decision-weight
-judge during the day and make sure they see the live run.
+Roles are per beat (table below): all four builders speak, Stephen opens and
+closes, and BEEDS IS DEMO DRIVER THROUGHOUT (his box, his muscle memory, incl.
+the kill/restart commands). The driver never narrates while typing. Lock the
+assignments at the 16:30 freeze and rehearse the handoffs; a handoff is one
+step forward and the first word, never "and now X will...". Judge routing:
+identify the decision-weight judge during the day and make sure they see the
+live run.
+
+## Who says what (stage deck numbering, 8 slides)
+
+| Slides / beat | Voice | Why them |
+|---|---|---|
+| S1-S2 · Hook + Agitate | **Stephen** | leader opens; practitioner story is his |
+| S3 · Solution sentence | **Vinh** | the four steps ARE the engine, his lane |
+| S4 · Always-on + switch to app | **Stephen** | product lane; presses nothing (Beeds drives) |
+| Demo steps 1, 2, 5 | **Stephen** | fleet + watch start, baseline, decision gate |
+| Demo step 3 (W155 two views) | **Vinh** | the 107.03 Hz + slip beat is evaluator truth |
+| Demo step 4 (audio, if verified) | **Vinh** | same evidence, second sense |
+| Demo step 6 (THE REFUSAL) | **Jadyn** | his gate: the model cannot cite what is not in evidence; then UI and DB refuse above it |
+| Demo step 7 (pick a window) | **Stephen** | live product path |
+| Demo steps 8-9 (watch callback, kill/restart) | **Stephen** | the Mongo story is his lane; Beeds executes the kill and restart |
+| S5 · Pays for the box | **Stephen** | business value, 30% axis |
+| S6 · Receipts (0/0 · 99 min · 42 h) | **Vinh** | the person who built the evaluator states its numbers |
+| S7 · Team + tech | **Beeds** (stack + disclosure sentence), then **Stephen** (MongoDB side-challenge sentence) | Beeds built the box; Mongo is Stephen's |
+| S8 · Close + mantra | **Stephen** | leader asks for the win |
+
+Q&A routing after: engine and evaluator numbers to Vinh, box/serving/stack to
+Beeds, agent tools and sandbox policy to Jadyn, business and product and
+MongoDB to Stephen. Whoever is asked, answer or route in ONE sentence.
 
 ## 01 · HOOK (0:00-0:30) — named moment + sourced stat + structural tension
 
