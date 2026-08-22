@@ -7,11 +7,23 @@ engine smoke first, then this, in order. Report exact output, not summaries.
 
 ## Layout (same as the engine doc)
 
-- Repo: `/opt/bw/engine` (clone of public `github.com/StephenSook/bearing-witness`)
+- Repo: `/opt/bw/engine` (clone of public `github.com/StephenSook/bearing-witness`;
+  per GB10-RUNBOOK §3.3 this is a SYMLINK into the kit, staged before any sandbox)
 - Venv: `/opt/bw/venv` (python3.12, offline install from the kit wheelhouse:
   `pip install --no-index --find-links $K/06_PACKAGES -r requirements-product.txt`)
-- Corpus: `/opt/bw/corpus` (minimum `35Hz12kN/Bearing1_3`, 158 CSVs)
-- MongoDB: Community 8.0 ARM64, local only, no Atlas, no auth needed for the demo
+- Corpus: `/opt/bw/corpus` (minimum `35Hz12kN/Bearing1_3`, 158 CSVs). Mounted
+  READ-ONLY by design (RUNBOOK §3.3): locators carry a sha8 of the source, so
+  nothing may be able to rewrite a measurement. Never "fix" a corpus problem by
+  making it writable; fix the symlink.
+- State: `/opt/bw/state` is the one writable product path (RUNBOOK §3.3);
+  file-fallback decision logs belong there, never in the corpus or the repo.
+- MongoDB: Community 8.0 ARM64, local only, no Atlas, no auth for the demo.
+  NOTE: mongod is NOT covered by GB10-RUNBOOK (that doc is the NemoClaw/Ollama
+  stack). Confirm the mongod ARM64 binary exists on the box or the kit BEFORE
+  the gate; if it is missing, it needs the hotspot (Ollama-style) to fetch.
+- Model actually serving on the box (RUNBOOK header): `qwen3.8:27b-q4_K_M` via
+  Ollama on 127.0.0.1:11434, NemoClaw auth proxy on 11435. Say THIS model name
+  to judges; the deck and pitch already match it.
 
 Environment the product reads (defaults in parentheses; set only if paths differ):
 
