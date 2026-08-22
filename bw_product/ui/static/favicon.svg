@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#0f1111"/>
+  <!-- bearing races: outer, cage, inner -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#d8ff3e" stroke-width="3"/>
+  <circle cx="32" cy="32" r="15.5" fill="none" stroke="#d8ff3e" stroke-width="2" opacity="0.75"/>
+  <circle cx="32" cy="32" r="7" fill="none" stroke="#d8ff3e" stroke-width="2.5"/>
+  <!-- rolling elements -->
+  <g fill="#efede7">
+    <circle cx="32" cy="12.5" r="2.6"/>
+    <circle cx="51.5" cy="32" r="2.6"/>
+    <circle cx="32" cy="51.5" r="2.6"/>
+    <circle cx="12.5" cy="32" r="2.6"/>
+    <circle cx="45.8" cy="18.2" r="2.6"/>
+    <circle cx="45.8" cy="45.8" r="2.6"/>
+    <circle cx="18.2" cy="45.8" r="2.6"/>
+    <circle cx="18.2" cy="18.2" r="2.6"/>
+  </g>
+</svg>
