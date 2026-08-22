@@ -1,9 +1,20 @@
-# Written Submission: Working Draft (skeleton, numbers land Saturday)
+# Written Submission (FINAL TEXT, filled from box-verified facts Sat ~15:00)
 
-> Drafted Friday night per PLAN.md 4.4/4.5. Every `[MEASURED]` slot is filled ONLY
-> from the frozen v3 evaluator run or a fresh Saturday freeze. Nothing ships with
-> an empty slot: fill it or cut the sentence. Wired-or-cut sweep at the bottom
-> runs before this text goes anywhere.
+> Every number here comes from the frozen v3 evaluator run or a verified run on
+> the GB10 today. Wired-or-cut sweep at the bottom completed before this text
+> goes anywhere.
+
+## Links (for the portal form)
+
+- Repository (public, MIT): https://github.com/StephenSook/bearing-witness
+- Pitch deck (anyone-with-link, verified serving without auth):
+  https://github.com/StephenSook/bearing-witness/blob/main/docs/deck/Bearing_Witness_Pitch_Deck.pdf
+- Demo film (99 s, motion-graphics + real GB10 footage, narrated, captioned):
+  https://github.com/StephenSook/bearing-witness/blob/main/docs/demo/Bearing_Witness_Demo.mp4
+- Short cut (60 s, same narration, straight screen capture):
+  https://github.com/StephenSook/bearing-witness/blob/main/docs/demo/Bearing_Witness_Demo_60s.mp4
+- Backup demo video (41 s silent screen capture of the live loop on the GB10):
+  https://github.com/StephenSook/bearing-witness/blob/main/docs/demo/backup_demo_walkthrough.webm
 
 ## One-liner
 
@@ -65,14 +76,21 @@ BEFORE the run.
   structural floor rather than a measurement; we state both). Onset = first of
   3 consecutive one-sided abnormal windows after the 10-window baseline. The
   longest warning, Bearing3_1, was 2,519 minutes: forty-two hours of notice.
-- End-to-end throughput on the GB10: [MEASURED Saturday on the box].
+- Verified on the GB10 today: the full 151-test suite, including the
+  real-engine end-to-end path (red case, geometry-unverified refusal, baseline
+  honesty), runs green on the box against the real corpus and live MongoDB.
+  The watch agent's kill-and-restart resume was exercised on the box: killed
+  mid-tick, a fresh instance skipped the windows already on record and resumed
+  at the next one.
 
 ## Stack (name only what actually served)
 
 Dell Pro Max GB10, fully local. NemoClaw + OpenClaw + OpenShell (deny-by-default
-egress; denied requests are shown, not hidden). Local model: [WHICHEVER ACTUALLY
-SERVED: kit `nvidia/Qwen3.6-35B-A3B-NVFP4` via vLLM | Ollama fallback], named
-honestly. Self-managed MongoDB Community 8 on the box: versioned asset geometry,
+egress; denied requests are shown, not hidden). Local model actually serving:
+`qwen3.8:27b-q4_K_M` via Ollama on 127.0.0.1 behind NemoClaw, GPU offload
+confirmed; the staged vLLM + NVFP4 path was not in the runtime path and we say
+so. Self-managed MongoDB Community 8 on the box (Community confirmed from the
+server itself: `serverBuildInfo().modules` returns empty): versioned asset geometry,
 time-series feature windows, schema-validated diagnostic cases with the embedded
 task; task creation is a conditional single-document update, so no work order
 exists without its evidence record. Python: SciPy, NumPy, NiceGUI, PyMongo.
@@ -92,13 +110,30 @@ and their locator-citation gate, the watch loop's resume-from-record, the
 egress hardening and its live proof, and the demo itself, all visible in
 Saturday's commit history.
 
-## What we learned (fill Saturday; never write "the AI did it" or "no challenges")
+## What we learned
 
-- [What broke and how we recovered: e.g. the 11:15 model parachute decision,
-  a validator surprise, the projector test.]
-- [The physics lesson: kurtosis-ranked bands anti-correlated with demodulation
-  quality; harmonic coherence beats spectral kurtosis rank.]
-- [The product lesson: refusal-with-a-task reads stronger than a forced call.]
+- A safety policy that exists in source is not a safety policy at runtime.
+  Our confirm-before-mutate gate on `submit_decision` was registered in the
+  plugin manifest and never fired: OpenClaw's loader imports only the first
+  extensions entry for a path-installed plugin, so the second entry was
+  silently dead. An instrumented trace proved it never loaded; the fix routes
+  registration through the one entry that does. Lesson: prove a gate fires,
+  never trust that it is declared.
+- Pre-deciding the fallback is what makes a fallback cheap. The NVFP4-on-vLLM
+  opening hit day-one sm_121 silicon friction, and because the Ollama parachute
+  was written down before the event with its exact model tag, taking it cost
+  minutes, not the morning. The deterministic engine's output is identical
+  under either serving stack, which is the point of keeping diagnosis out of
+  the model.
+- The physics surprised us: kurtosis-ranked demodulation bands anti-correlated
+  with demodulation quality on this corpus; harmonic coherence beat spectral
+  kurtosis rank, and the frozen 3-harmonic floor is why the evaluator could
+  refuse instead of guess.
+- Refusal with a task attached reads stronger than a forced call, in the UI
+  and in the database: the trust gate blocks localization, drafts
+  VERIFY_BEARING_GEOMETRY, and there is no approve button on a case the system
+  does not trust. Making the DATABASE the agent's memory (kill the watch
+  agent, restart it, it resumes from the record) came from the same principle.
 
 ## Rubric mapping (event rules p.08: the four judged axes, in the rubric's own words)
 
@@ -142,16 +177,16 @@ Prepared answer, every clause greppable in the shipped store (hardened through a
 
 | Claim | Grep in shipped source | Status |
 |---|---|---|
-| MongoDB (collections + validators + decisions) | `pymongo`, `create_collection`, `MongoDecisionStore` | [ ] |
-| vLLM served the kit model | serve command in runbook/history + endpoint hit | [ ] |
-| Ollama (only if the parachute fired) | `api/chat` caller | [ ] |
-| OpenClaw typed tools | tool definitions in Jadyn's lane | [ ] |
-| OpenShell deny-by-default | policy file + a shown 403 | [ ] |
-| NemoClaw orchestration | onboard/config artifacts | [ ] |
-| SciPy/NumPy diagnosis | `scipy.signal` imports in the engine | [ ] |
-| NiceGUI UI | `nicegui` imports | [ ] |
-| LLM draft post-scan | post-scan module in Jadyn's lane | [ ] |
-| No claim of: RUL, deep learning, CMMS/MQTT, live sensors, 15/15 unless frozen-earned | text sweep | [ ] |
+| MongoDB (collections + validators + decisions) | `pymongo`, `create_collection` in `bw_product/store.py` | [x] Sat ~15:00 |
+| vLLM served the kit model | NOT CLAIMED; disclosed as staged, not serving (tech-ref §3 note) | [x] cut |
+| Ollama serving | GB10-RUNBOOK bring-up + PLAN 0.6 note (`qwen3.8:27b-q4_K_M`, doctor healthy) | [x] |
+| OpenClaw typed tools | six tools in `bearing-witness-tools/src/index.ts`, live per PLAN 3.1 | [x] |
+| OpenShell deny-by-default | sandbox policy denies fs/web/runtime (BOX_SESSION_ENGINE) + iptables live proof | [x] |
+| NemoClaw orchestration | GB10-RUNBOOK §04-§06, doctor healthy | [x] |
+| SciPy/NumPy diagnosis | `from scipy` in `bearing_witness/dsp.py` | [x] |
+| NiceGUI UI | `nicegui` in `bw_product/ui/main.py` | [x] |
+| LLM draft post-scan | `bearing-witness-tools/src/postScan.ts` (banned words + locator citation gate) | [x] |
+| No claim of: RUL, deep learning, CMMS/MQTT, live sensors | text sweep of this file | [x] |
 
 Also: em-dash sweep, AI-tone blocklist sweep, fictional-persona sweep (none
 exist), synthetic-data sweep (fixtures are real Bearing1_3 records with sha256
