@@ -1,4 +1,14 @@
+## Deviations from plan (2026-08-22 run)
 
+- SSD had no `gb10-bundle` — only `ollama-models/` (the two model blobs). Everything else (NemoClaw src, node deb, images) pulled live; box had wifi, not offline.
+- Ollama override already had `OLLAMA_HOST=0.0.0.0:11434` set (LAN-exposed) — reset to spec.
+- `cp -n` left a truncated blob from an interrupted copy; had to force-overwrite from SSD.
+- Pre-existing unrelated sandbox `watchdog` blocked onboarding; its own `destroy` refused (non-managed image), so removed manually via `docker rm` + hand-edited `sandboxes.json`.
+- Skipped 2.1's `nvidia-ctk runtime configure` — GPU passthrough already worked via CDI; forcing it would've restarted docker/all containers for no gain.
+- Skipped 3.3 (corpus/kit staging) and 6.3 (its data-path test) — no corpus or `/mnt/nvme/kit` found on the box.
+- Skipped 5.2 (memory-search embeddings) — optional, not requested.
+
+---
 
 NemoClaw + OpenClaw + OpenShell on a Dell Pro Max with GB10, all inference local.
 Run top to bottom.
