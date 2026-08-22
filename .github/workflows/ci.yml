@@ -1,0 +1,47 @@
+name: CI
+
+# Honest CI: runs every test that can genuinely execute on a hosted runner.
+# The XJTU-SY corpus is licensed and never leaves the kit drive, so
+# corpus-dependent tests skip WITH PRINTED REASONS (pytest -rs); a skip here is
+# a documented boundary, not a hidden hole. Mongo-backed tests run for real
+# against a service container: the decision gates are exercised, not mocked.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      mongo:
+        image: mongo:8
+        ports: ["27017:27017"]
+        options: >-
+          --health-cmd "mongosh --quiet --eval 'db.adminCommand({ping: 1})'"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      MONGODB_URI: mongodb://127.0.0.1:27017/bearing_witness
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-product.txt
+      - name: Mongo service must answer (a skip would be a false green)
+        run: |
+          python - <<'EOF'
+          from pymongo import MongoClient
+          MongoClient("mongodb://127.0.0.1:27017", serverSelectionTimeoutMS=5000).admin.command("ping")
+          print("mongo service: PONG")
+          EOF
+      - name: Engine suite (bearing_witness)
+        run: python -m pytest tests/ -q -rs
+      - name: Product suite (bw_product)
+        run: python -m pytest bw_product/tests/ -q -rs
