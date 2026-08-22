@@ -2,9 +2,13 @@
 
 The frozen v3 evaluator ran Fri 2026-08-21 night (0 wrong / 10 correct /
 1 cage-consistent / 4 abstain / 0 missed): when eval/results_v3.json is present
-every card shows its REAL verdict, status, and onset. Only Bearing1_3 carries
-the full replay walk, and only its card navigates; without the results file the
-screen falls back to the honest 1-of-15 fixture state.
+every card shows its REAL verdict, status, and onset, and every evaluated card
+opens something real. Bearing1_3 carries the curated four-beat "one real life"
+replay (`/case/{name}`, fixtures.SCENARIOS); the other 14 open a live
+re-analysis at their own onset window through the real engine (`fleet_case.py`,
+`/fleet/{bearing}/{condition}/{record}`) -- same engine, same gated Mongo
+write, just not the hand-picked narrative windows. Without the results file
+the screen falls back to the honest 1-of-15 fixture state.
 """
 from __future__ import annotations
 
@@ -48,9 +52,11 @@ def view(backend: Backend, hud: Hud) -> None:
         with ui.element("div").classes("w-full grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3"):
             for b in BEARINGS:
                 cond = int(b[7])
-                live = b == "Bearing1_3"   # the only bearing with the full replay walk loaded
+                live = b == "Bearing1_3"   # the only bearing with the curated four-beat replay
                 r = results.get(b)
-                card = ui.element("div").classes("bw-card" + ("" if live else " bw-card-dead"))
+                # dead (not-allowed cursor, dimmed) only when there is truly nothing to open;
+                # every evaluated bearing -- live or not -- is a real, clickable page
+                card = ui.element("div").classes("bw-card" + ("" if (live or r) else " bw-card-dead"))
                 with card:
                     ui.label(b.replace("Bearing", "")).classes("bw-card-index")
                     with ui.element("div").classes("bw-caprow"):
@@ -63,7 +69,7 @@ def view(backend: Backend, hud: Hud) -> None:
                                      + (f" · {r['suspected_location'].upper()}"
                                         if r["suspected_location"] else "")).style("opacity:0.75")
                             ui.element("span").classes("leader")
-                            ui.label("OPEN ↗" if live else f"ONSET W{r['onset_window']}")
+                            ui.label("OPEN ↗" if live else f"OPEN · W{r['files']} ↗")
                         with ui.element("div").classes("bw-caprow").style("margin-top:4px"):
                             ui.label(r["status"]).style(
                                 f"color:{LAMP[traffic_light(r['status'])]};font-weight:700;font-size:9px")
@@ -81,6 +87,15 @@ def view(backend: Backend, hud: Hud) -> None:
                             ui.label("NOT EVALUATED").style("opacity:0.7")
                 if live:
                     card.on("click", lambda: ui.navigate.to("/case/green"))
+                elif r:
+                    # every other bearing goes to a LIVE re-analysis at the SAME
+                    # window the frozen v3 run itself verdicted: run_eval.py calls
+                    # eng.analyze(nfiles) (the LAST window, "r['files']" here), not
+                    # the onset window -- onset_window is informational only (when
+                    # persistence began), the card's status/verdict comes from the
+                    # final window, so that's the window that must reproduce it
+                    dest = f"/fleet/{b}/{r['condition']}/{r['files']}"
+                    card.on("click", lambda d=dest: ui.navigate.to(d))
 
         with ui.element("div").classes("bw-section"):
             ui.label("REPLAY · ONE REAL LIFE, FOUR MOMENTS").classes("bw-mono")

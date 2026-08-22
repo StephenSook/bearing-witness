@@ -40,12 +40,14 @@ class EngineError(RuntimeError):
 
 
 def _cli_cmd(record: int, geometry_unverified: bool, root: str,
-             condition: str, bearing: str) -> list[str]:
+             condition: str, bearing: str, cache_dir: str | None = None) -> list[str]:
     cmd = [sys.executable, "-m", "bearing_witness", "analyze",
            "--root", root, "--condition", condition, "--bearing", bearing,
            "--record", str(record)]
     if geometry_unverified:
         cmd.append("--geometry-unverified")
+    if cache_dir:
+        cmd += ["--cache-dir", cache_dir]
     return cmd
 
 
@@ -92,12 +94,19 @@ def engine_available() -> bool:
 
 def analyze_record(record: int, *, geometry_unverified: bool = False,
                    root: str | None = None, condition: str = CONDITION,
-                   bearing: str = BEARING, timeout: int = ENGINE_TIMEOUT_S) -> dict:
+                   bearing: str = BEARING, timeout: int = ENGINE_TIMEOUT_S,
+                   cache_dir: str | None = None) -> dict:
     """Run the engine CLI for one record and return its VALIDATED contract dict.
     Raises EngineError with the CLI's stderr (never a silent fallback: a failed
-    analysis must not quietly become fixture data)."""
+    analysis must not quietly become fixture data).
+
+    cache_dir matters a lot for a late-life window on a long-running bearing
+    (e.g. Bearing3_1 has 2538 windows): without it every call recomputes
+    windows 1..N from scratch (~15 ms/window, ~40s for that one), since the
+    replay-discipline baseline/z-score math genuinely needs every prior
+    window's features, not just the requested one."""
     root = root or os.environ.get("BW_ENGINE_ROOT") or str(data_root())
-    cmd = _cli_cmd(record, geometry_unverified, root, condition, bearing)
+    cmd = _cli_cmd(record, geometry_unverified, root, condition, bearing, cache_dir)
     try:
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
     except subprocess.TimeoutExpired as exc:

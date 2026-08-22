@@ -15,7 +15,7 @@ from pathlib import Path
 from nicegui import app, ui
 
 from ..contract_shape import traffic_light
-from . import charts, evidence, fleet, theme
+from . import charts, evidence, fleet, fleet_case, theme
 from .casedata import SCENARIOS, connect_backend, load
 from .hud import Hud, ReplayState
 
@@ -106,12 +106,17 @@ def index() -> None:
     def _light_field() -> None:
         ui.query("body").classes(remove="bw-void")
 
+    async def _fleet_case_page(bearing: str, condition: str, record: str) -> None:
+        _light_field()
+        await fleet_case.view(bearing, condition, int(record), BACKEND, hud, dark.value)
+
     with ui.element("div").classes("bw-field w-full"):
         ui.sub_pages({
             "/": lambda: (_light_field(), fleet.view(BACKEND, hud)),
             "/case/{name}": lambda name: (_light_field(),
                                           evidence.view(name, BACKEND, hud, dark.value, FX_ON)),
             "/spectrum/{name}": lambda name: spectrum_view(name, hud, dark),
+            "/fleet/{bearing}/{condition}/{record}": _fleet_case_page,
         }).classes("w-full")
 
 
