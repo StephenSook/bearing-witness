@@ -1,0 +1,21 @@
+{
+  "_source": "Lei et al., XJTU-SY dataset tutorial (Chinese Journal of Mechanical Engineering 2019), table extracted from the paper PDF on 2026-08-21. File counts cross-checked: totals sum to 9216.",
+  "_labels": "outer=outer race, inner=inner race, cage=cage, ball=rolling element",
+  "bearings": {
+    "Bearing1_1": {"condition": "35Hz12kN",   "files": 123,  "life": "2h03m",  "elements": ["outer"]},
+    "Bearing1_2": {"condition": "35Hz12kN",   "files": 161,  "life": "2h41m",  "elements": ["outer"]},
+    "Bearing1_3": {"condition": "35Hz12kN",   "files": 158,  "life": "2h38m",  "elements": ["outer"]},
+    "Bearing1_4": {"condition": "35Hz12kN",   "files": 122,  "life": "2h02m",  "elements": ["cage"]},
+    "Bearing1_5": {"condition": "35Hz12kN",   "files": 52,   "life": "52m",    "elements": ["inner", "outer"]},
+    "Bearing2_1": {"condition": "37.5Hz11kN", "files": 491,  "life": "8h11m",  "elements": ["inner"]},
+    "Bearing2_2": {"condition": "37.5Hz11kN", "files": 161,  "life": "2h41m",  "elements": ["outer"]},
+    "Bearing2_3": {"condition": "37.5Hz11kN", "files": 533,  "life": "8h53m",  "elements": ["cage"]},
+    "Bearing2_4": {"condition": "37.5Hz11kN", "files": 42,   "life": "42m",    "elements": ["outer"]},
+    "Bearing2_5": {"condition": "37.5Hz11kN", "files": 339,  "life": "5h39m",  "elements": ["outer"]},
+    "Bearing3_1": {"condition": "40Hz10kN",   "files": 2538, "life": "42h18m", "elements": ["outer"]},
+    "Bearing3_2": {"condition": "40Hz10kN",   "files": 2496, "life": "41h36m", "elements": ["inner", "ball", "cage", "outer"]},
+    "Bearing3_3": {"condition": "40Hz10kN",   "files": 371,  "life": "6h11m",  "elements": ["inner"]},
+    "Bearing3_4": {"condition": "40Hz10kN",   "files": 1515, "life": "25h15m", "elements": ["inner"]},
+    "Bearing3_5": {"condition": "40Hz10kN",   "files": 114,  "life": "1h54m",  "elements": ["outer"]}
+  }
+}

@@ -1,0 +1,231 @@
+[
+  {
+    "analysis_id": "A-B13-012",
+    "asset_id": "XJTU-SY/35Hz12kN/Bearing1_3",
+    "source_window": {
+      "record": 12,
+      "file": "data/XJTU-SY/35Hz12kN/Bearing1_3/12.csv",
+      "channel": "horizontal (column 0)",
+      "n_samples": 32768,
+      "fs_hz": 25600,
+      "duration_s": 1.28,
+      "sha256": "MOCK-3fa1c2d47b9e0a15"
+    },
+    "input_trust": {
+      "trust_level": "TRUSTED",
+      "schema_valid": true,
+      "fs_confirmed_hz": 25600,
+      "clipping_detected": false,
+      "nan_count": 0,
+      "notes": "header row present; horizontal channel column 0 used"
+    },
+    "anomaly_evidence": {
+      "rms_g": 0.62,
+      "kurtosis": 3.1,
+      "crest_factor": 4.2,
+      "baseline_rms_g": 0.60,
+      "rms_ratio": 1.03,
+      "verdict": "WITHIN_BASELINE"
+    },
+    "machine_components": {
+      "shaft_hz_nominal": 35.0,
+      "shaft_hz_measured": 34.7,
+      "bearing_model": "LDK UER204",
+      "bpfo_hz": 107.907,
+      "bpfi_hz": 172.093,
+      "bsf2_hz": 144.66,
+      "ftf_hz": 13.488,
+      "geometry_verified": true
+    },
+    "ordinary_spectrum_evidence": {
+      "peaks": [
+        {"freq_hz": 34.7, "amp": 0.041, "label": "1x shaft"},
+        {"freq_hz": 69.4, "amp": 0.018, "label": "2x shaft"}
+      ],
+      "notes": "only shaft harmonics above noise floor"
+    },
+    "envelope_evidence": {
+      "band_hz": [2000, 8000],
+      "peaks": [],
+      "notes": "no envelope peaks above detection threshold"
+    },
+    "candidate_families": [],
+    "suspected_location": "NONE",
+    "status": "NO_ANOMALY_DETECTED",
+    "refusal_reasons": [],
+    "inspection_draft": null,
+    "human_review": {"required": false, "decision": null, "reason": null, "timestamp": null}
+  },
+  {
+    "analysis_id": "A-PMP7-096",
+    "asset_id": "PLANT-DEMO/pump-7/bearing-DE",
+    "source_window": {
+      "record": 96,
+      "file": "data/PLANT-DEMO/pump-7/bearing-DE/96.csv",
+      "channel": "horizontal (column 0)",
+      "n_samples": 32768,
+      "fs_hz": 25600,
+      "duration_s": 1.28,
+      "sha256": "MOCK-6b0d9e2f41c8a377"
+    },
+    "input_trust": {
+      "trust_level": "TRUSTED",
+      "schema_valid": true,
+      "fs_confirmed_hz": 25600,
+      "clipping_detected": false,
+      "nan_count": 0,
+      "notes": "signal quality OK; asset metadata incomplete"
+    },
+    "anomaly_evidence": {
+      "rms_g": 1.44,
+      "kurtosis": 6.8,
+      "crest_factor": 7.9,
+      "baseline_rms_g": 0.60,
+      "rms_ratio": 2.4,
+      "verdict": "ANOMALOUS"
+    },
+    "machine_components": {
+      "shaft_hz_nominal": 35.0,
+      "shaft_hz_measured": 34.7,
+      "bearing_model": "UNKNOWN (asset record incomplete)",
+      "bpfo_hz": null,
+      "bpfi_hz": null,
+      "bsf2_hz": null,
+      "ftf_hz": null,
+      "geometry_verified": false
+    },
+    "ordinary_spectrum_evidence": {
+      "peaks": [
+        {"freq_hz": 34.7, "amp": 0.049, "label": "1x shaft"},
+        {"freq_hz": 69.4, "amp": 0.022, "label": "2x shaft"}
+      ],
+      "notes": "broadband energy elevated vs baseline"
+    },
+    "envelope_evidence": {
+      "band_hz": [2000, 8000],
+      "peaks": [
+        {"freq_hz": 105.9, "amp": 0.012, "snr_db": 7.2}
+      ],
+      "notes": "single envelope peak; no harmonic chain"
+    },
+    "candidate_families": [
+      {
+        "family": "BPFO?",
+        "f0_measured_hz": 105.9,
+        "f0_predicted_hz": null,
+        "deviation_pct": null,
+        "harmonics_detected_hz": [105.9],
+        "sideband_spacing_hz": null,
+        "sidebands_present": false,
+        "score": 0.41,
+        "note": "cannot map to a fault family without verified bearing geometry"
+      }
+    ],
+    "suspected_location": "UNCONFIRMED",
+    "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+    "refusal_reasons": [
+      {
+        "code": "GEOMETRY_UNVERIFIED",
+        "detail": "Bearing model/geometry not on file for pump-7 DE bearing; BPFO/BPFI/BSF/FTF predictions unavailable, so the 105.9 Hz envelope peak cannot be attributed to a fault location.",
+        "required_action": "VERIFY_BEARING_GEOMETRY"
+      },
+      {
+        "code": "WEAK_HARMONIC_CHAIN",
+        "detail": "Only 1 harmonic of candidate f0=105.9 Hz above threshold; localization requires >= 2 harmonics.",
+        "required_action": "RE_RUN_AFTER_NEXT_WINDOW"
+      }
+    ],
+    "inspection_draft": null,
+    "human_review": {"required": false, "decision": null, "reason": null, "timestamp": null}
+  },
+  {
+    "analysis_id": "A-B13-140",
+    "asset_id": "XJTU-SY/35Hz12kN/Bearing1_3",
+    "source_window": {
+      "record": 140,
+      "file": "data/XJTU-SY/35Hz12kN/Bearing1_3/140.csv",
+      "channel": "horizontal (column 0)",
+      "n_samples": 32768,
+      "fs_hz": 25600,
+      "duration_s": 1.28,
+      "sha256": "MOCK-9e4f7a1b5c3d2e88"
+    },
+    "input_trust": {
+      "trust_level": "TRUSTED",
+      "schema_valid": true,
+      "fs_confirmed_hz": 25600,
+      "clipping_detected": false,
+      "nan_count": 0,
+      "notes": "header row present; horizontal channel column 0 used"
+    },
+    "anomaly_evidence": {
+      "rms_g": 3.48,
+      "kurtosis": 12.4,
+      "crest_factor": 9.6,
+      "baseline_rms_g": 0.60,
+      "rms_ratio": 5.8,
+      "verdict": "ANOMALOUS"
+    },
+    "machine_components": {
+      "shaft_hz_nominal": 35.0,
+      "shaft_hz_measured": 34.7,
+      "bearing_model": "LDK UER204",
+      "bpfo_hz": 107.907,
+      "bpfi_hz": 172.093,
+      "bsf2_hz": 144.66,
+      "ftf_hz": 13.488,
+      "geometry_verified": true
+    },
+    "ordinary_spectrum_evidence": {
+      "peaks": [
+        {"freq_hz": 34.7, "amp": 0.052, "label": "1x shaft"},
+        {"freq_hz": 69.4, "amp": 0.024, "label": "2x shaft"},
+        {"freq_hz": 3120.0, "amp": 0.09, "label": "resonance band center (impact-excited)"}
+      ],
+      "notes": "high-frequency resonance band strongly excited vs baseline"
+    },
+    "envelope_evidence": {
+      "band_hz": [2000, 8000],
+      "peaks": [
+        {"freq_hz": 107.03, "amp": 0.062, "snr_db": 18.4},
+        {"freq_hz": 214.06, "amp": 0.031, "snr_db": 12.1},
+        {"freq_hz": 321.09, "amp": 0.017, "snr_db": 8.9}
+      ],
+      "notes": "clean harmonic chain at f0=107.03 Hz; no shaft-rate sidebands"
+    },
+    "candidate_families": [
+      {
+        "family": "BPFO",
+        "f0_measured_hz": 107.03,
+        "f0_predicted_hz": 107.907,
+        "deviation_pct": -0.81,
+        "harmonics_detected_hz": [107.03, 214.06, 321.09],
+        "sideband_spacing_hz": 34.7,
+        "sidebands_present": false,
+        "score": 0.94,
+        "note": "-0.81% vs prediction, consistent with ~1% measured slip"
+      }
+    ],
+    "suspected_location": "OUTER_RACE",
+    "status": "ANALYST_REVIEW_REQUIRED",
+    "refusal_reasons": [],
+    "inspection_draft": {
+      "title": "Suspected outer-race defect — Bearing1_3 (record 140)",
+      "summary": "Envelope analysis of asset XJTU-SY/35Hz12kN/Bearing1_3, window record 140/158 (file 140.csv, 32768 samples @ 25.6 kHz, source sha256 MOCK-9e4f7a1b5c3d2e88), shows a fundamental at 107.03 Hz (-0.81% vs predicted BPFO 107.907 Hz, consistent with ~1% shaft slip at 34.7 Hz measured) with harmonics at 214.06 Hz (2x) and 321.09 Hz (3x). Shaft-rate (34.7 Hz) sidebands are ABSENT around the fundamental, consistent with a stationary outer-race defect rather than inner-race or cage modulation. RMS is 5.8x baseline; kurtosis 12.4.",
+      "evidence_locators": {
+        "asset": "XJTU-SY/35Hz12kN/Bearing1_3",
+        "window": "record 140/158 (file 140.csv, 32768 samples @ 25.6 kHz)",
+        "source_sha256": "MOCK-9e4f7a1b5c3d2e88",
+        "fundamental_hz": 107.03,
+        "harmonics_hz": [214.06, 321.09],
+        "sidebands": {
+          "spacing_checked_hz": 34.7,
+          "present": false,
+          "note": "absence of shaft-rate sidebands supports OUTER_RACE localization"
+        }
+      },
+      "recommended_action": "Schedule visual/borescope inspection of the outer race at next planned stop; increase monitoring cadence until then."
+    },
+    "human_review": {"required": true, "decision": null, "reason": null, "timestamp": null}
+  }
+]

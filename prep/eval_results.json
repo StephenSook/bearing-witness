@@ -1,0 +1,2533 @@
+{
+ "Bearing1_1": {
+  "condition": "35Hz12kN",
+  "files": 123,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 30,
+  "onset_groups": [
+   "energy",
+   "hf_band",
+   "shape"
+  ],
+  "lead_time_min": 93,
+  "watch_early_count": 0,
+  "isolated_abnormal_before_onset": [
+   23,
+   27
+  ],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_15.4_vs_FTF_11.3"
+  ],
+  "median_family_scores": {
+   "BPFO": 15.35,
+   "BPFI": 5.63,
+   "BSF2": 5.98,
+   "FTF": 11.27
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 3.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 2.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 119,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 8.730525079394237,
+    "winner_band_scores": {
+     "BPFO": 11.78944075258446,
+     "BPFI": 5.560457183132699,
+     "BSF2": 6.030780305702892,
+     "FTF": 11.454121263574471
+    },
+    "fixed_band_scores": {
+     "BPFO": 71.80829310129707,
+     "BPFI": 5.926971803061298,
+     "BSF2": 13.507497878351662,
+     "FTF": 8.356750853375566
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 120,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 7.293673891817102,
+    "winner_band_scores": {
+     "BPFO": 15.354703534131556,
+     "BPFI": 7.290969277187989,
+     "BSF2": 5.982709831608304,
+     "FTF": 11.271048204889862
+    },
+    "fixed_band_scores": {
+     "BPFO": 48.00558163613908,
+     "BPFI": 7.188129347855476,
+     "BSF2": 10.852186814134296,
+     "FTF": 9.869567655268431
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 121,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 7.611047743948772,
+    "winner_band_scores": {
+     "BPFO": 15.093057276054626,
+     "BPFI": 5.664790549386385,
+     "BSF2": 5.873605870728104,
+     "FTF": 10.225165967643509
+    },
+    "fixed_band_scores": {
+     "BPFO": 52.99362442488915,
+     "BPFI": 4.593597677651073,
+     "BSF2": 12.120791329591833,
+     "FTF": 11.936342078482886
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 122,
+    "band": [
+     9500.0,
+     10500.0
+    ],
+    "sk": 11.803375046781182,
+    "winner_band_scores": {
+     "BPFO": 15.531303331254744,
+     "BPFI": 5.176080963156589,
+     "BSF2": 5.603337067565284,
+     "FTF": 15.195991771679342
+    },
+    "fixed_band_scores": {
+     "BPFO": 34.9645270029182,
+     "BPFI": 8.204106358396432,
+     "BSF2": 10.522522228696218,
+     "FTF": 14.305727520769008
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 123,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 5.42799215898518,
+    "winner_band_scores": {
+     "BPFO": 19.11352341968109,
+     "BPFI": 5.626768183645808,
+     "BSF2": 7.79668087240069,
+     "FTF": 10.196908040475593
+    },
+    "fixed_band_scores": {
+     "BPFO": 41.55240080720559,
+     "BPFI": 7.267434079825348,
+     "BSF2": 20.347649659609434,
+     "FTF": 7.165851010461999
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing1_2": {
+  "condition": "35Hz12kN",
+  "files": 161,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 32,
+  "onset_groups": [
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 129,
+  "watch_early_count": 0,
+  "isolated_abnormal_before_onset": [],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_11.0_vs_FTF_9.4"
+  ],
+  "median_family_scores": {
+   "BPFO": 11.02,
+   "BPFI": 5.54,
+   "BSF2": 6.41,
+   "FTF": 9.41
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 2.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 2.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 157,
+    "band": [
+     5000.0,
+     9000.0
+    ],
+    "sk": 6.012757514657066,
+    "winner_band_scores": {
+     "BPFO": 10.520433126179725,
+     "BPFI": 5.5351690129334346,
+     "BSF2": 6.41294729636803,
+     "FTF": 9.978180887896016
+    },
+    "fixed_band_scores": {
+     "BPFO": 23.291020550423625,
+     "BPFI": 6.449019047423101,
+     "BSF2": 13.411830412414224,
+     "FTF": 5.841633540290988
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 158,
+    "band": [
+     6000.0,
+     8000.0
+    ],
+    "sk": 7.463054341208178,
+    "winner_band_scores": {
+     "BPFO": 9.915543969171084,
+     "BPFI": 5.517024178944455,
+     "BSF2": 5.892307960481658,
+     "FTF": 9.413556889759379
+    },
+    "fixed_band_scores": {
+     "BPFO": 21.196387317727005,
+     "BPFI": 6.937881732371066,
+     "BSF2": 12.501201291288817,
+     "FTF": 7.2978533546302105
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 159,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 7.476890067880671,
+    "winner_band_scores": {
+     "BPFO": 13.494002321492271,
+     "BPFI": 6.06069793772185,
+     "BSF2": 6.260642162298172,
+     "FTF": 8.587077487244391
+    },
+    "fixed_band_scores": {
+     "BPFO": 26.169013610982248,
+     "BPFI": 5.950565898265878,
+     "BSF2": 9.383384608360105,
+     "FTF": 4.419369839805457
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 160,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 6.816280582434905,
+    "winner_band_scores": {
+     "BPFO": 16.908047426202835,
+     "BPFI": 5.845532584608259,
+     "BSF2": 7.040172109840158,
+     "FTF": 6.957682808814175
+    },
+    "fixed_band_scores": {
+     "BPFO": 35.022842078932506,
+     "BPFI": 5.470266449942523,
+     "BSF2": 7.146273154402446,
+     "FTF": 6.648227667209901
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 161,
+    "band": [
+     6000.0,
+     8000.0
+    ],
+    "sk": 7.968252534952857,
+    "winner_band_scores": {
+     "BPFO": 11.023084191096988,
+     "BPFI": 5.510913674767929,
+     "BSF2": 7.131112270826742,
+     "FTF": 10.005638635352632
+    },
+    "fixed_band_scores": {
+     "BPFO": 38.20599927880033,
+     "BPFI": 8.038562527346306,
+     "BSF2": 22.75105590406602,
+     "FTF": 5.246535483154497
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 2
+    }
+   }
+  ]
+ },
+ "Bearing1_3": {
+  "condition": "35Hz12kN",
+  "files": 158,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 59,
+  "onset_groups": [
+   "energy",
+   "hf_band"
+  ],
+  "lead_time_min": 99,
+  "watch_early_count": 12,
+  "isolated_abnormal_before_onset": [
+   24,
+   29,
+   33
+  ],
+  "early_onset_inside_first_30pct": false,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_14.1_vs_FTF_11.2"
+  ],
+  "median_family_scores": {
+   "BPFO": 14.12,
+   "BPFI": 5.71,
+   "BSF2": 7.26,
+   "FTF": 11.19
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 2.0,
+   "BPFI": 0.0,
+   "BSF2": 1.0,
+   "FTF": 3.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 154,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 7.770496827130605,
+    "winner_band_scores": {
+     "BPFO": 14.860069682954599,
+     "BPFI": 6.331517975326015,
+     "BSF2": 7.88947676266251,
+     "FTF": 11.192607688232401
+    },
+    "fixed_band_scores": {
+     "BPFO": 49.23916843484644,
+     "BPFI": 6.739578889721793,
+     "BSF2": 8.79052326488535,
+     "FTF": 10.415207098869987
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 155,
+    "band": [
+     9000.0,
+     10000.0
+    ],
+    "sk": 6.841038338250744,
+    "winner_band_scores": {
+     "BPFO": 10.876163325796844,
+     "BPFI": 6.119801319084497,
+     "BSF2": 5.992864984157033,
+     "FTF": 12.89391756544281
+    },
+    "fixed_band_scores": {
+     "BPFO": 30.102928911915388,
+     "BPFI": 7.637878237999773,
+     "BSF2": 7.484738975366678,
+     "FTF": 11.439132539263642
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 156,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 8.072985215084787,
+    "winner_band_scores": {
+     "BPFO": 9.559698593863368,
+     "BPFI": 4.2630506526162915,
+     "BSF2": 6.798195204801228,
+     "FTF": 8.068041418282828
+    },
+    "fixed_band_scores": {
+     "BPFO": 21.326513659981924,
+     "BPFI": 11.073072974459958,
+     "BSF2": 12.197047356097537,
+     "FTF": 8.17274293629378
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 157,
+    "band": [
+     8000.0,
+     10000.0
+    ],
+    "sk": 10.295527700818447,
+    "winner_band_scores": {
+     "BPFO": 14.12274959193172,
+     "BPFI": 5.712455171605385,
+     "BSF2": 7.551715680979475,
+     "FTF": 14.935109554653259
+    },
+    "fixed_band_scores": {
+     "BPFO": 29.469487399338316,
+     "BPFI": 9.722459006254304,
+     "BSF2": 10.556267278572777,
+     "FTF": 12.063462451994639
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 158,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 7.206507603440569,
+    "winner_band_scores": {
+     "BPFO": 15.142701819986764,
+     "BPFI": 5.576233002461849,
+     "BSF2": 7.260416886675912,
+     "FTF": 10.69311145478551
+    },
+    "fixed_band_scores": {
+     "BPFO": 30.911884378957907,
+     "BPFI": 11.64255239684326,
+     "BSF2": 10.680939224921119,
+     "FTF": 13.299674228341566
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing1_4": {
+  "condition": "35Hz12kN",
+  "files": 122,
+  "documented": [
+   "cage"
+  ],
+  "onset_window": 57,
+  "onset_groups": [
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 65,
+  "watch_early_count": 29,
+  "isolated_abnormal_before_onset": [
+   33,
+   38,
+   44,
+   51,
+   54
+  ],
+  "early_onset_inside_first_30pct": false,
+  "call": "CAGE_CONSISTENT",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 7.64,
+   "BPFI": 5.66,
+   "BSF2": 6.51,
+   "FTF": 15.96
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 3.0
+  },
+  "verdict": "CORRECT_CONSISTENT",
+  "loc_detail": [
+   {
+    "window": 118,
+    "band": [
+     10000.0,
+     11000.0
+    ],
+    "sk": 7.641890689898407,
+    "winner_band_scores": {
+     "BPFO": 9.286293931437092,
+     "BPFI": 5.954516906223199,
+     "BSF2": 6.50691819333945,
+     "FTF": 18.170541247307188
+    },
+    "fixed_band_scores": {
+     "BPFO": 6.8840951226303275,
+     "BPFI": 6.064565100662692,
+     "BSF2": 5.144843105072288,
+     "FTF": 11.172148499936338
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 119,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 4.774756348524065,
+    "winner_band_scores": {
+     "BPFO": 6.705543177350146,
+     "BPFI": 6.223594263598569,
+     "BSF2": 6.357707747858202,
+     "FTF": 15.957007222476628
+    },
+    "fixed_band_scores": {
+     "BPFO": 6.720957793335683,
+     "BPFI": 5.83584336666194,
+     "BSF2": 5.92670667928263,
+     "FTF": 10.746058899193304
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 120,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 4.752681620470633,
+    "winner_band_scores": {
+     "BPFO": 7.636249190924572,
+     "BPFI": 5.659849310210124,
+     "BSF2": 6.983006649544369,
+     "FTF": 11.258133748001123
+    },
+    "fixed_band_scores": {
+     "BPFO": 6.363822795489338,
+     "BPFI": 5.369791874601343,
+     "BSF2": 6.053439881325255,
+     "FTF": 10.184997066488982
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 121,
+    "band": [
+     10500.0,
+     11500.0
+    ],
+    "sk": 4.217471904022072,
+    "winner_band_scores": {
+     "BPFO": 9.306883820718227,
+     "BPFI": 5.332880216077286,
+     "BSF2": 6.521414111832799,
+     "FTF": 19.97636065317
+    },
+    "fixed_band_scores": {
+     "BPFO": 5.94617069621483,
+     "BPFI": 6.035351845400178,
+     "BSF2": 5.001391166796678,
+     "FTF": 8.02065502659407
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 122,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 788.7618905561638,
+    "winner_band_scores": {
+     "BPFO": 3.3052455276012047,
+     "BPFI": 2.8455046001856914,
+     "BSF2": 3.0261433064248715,
+     "FTF": 4.144089634222872
+    },
+    "fixed_band_scores": {
+     "BPFO": 7.012454377101549,
+     "BPFI": 4.066857011419478,
+     "BSF2": 5.145678664564942,
+     "FTF": 14.27026687691075
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing1_5": {
+  "condition": "35Hz12kN",
+  "files": 52,
+  "documented": [
+   "inner",
+   "outer"
+  ],
+  "onset_window": 32,
+  "onset_groups": [
+   "energy",
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 20,
+  "watch_early_count": 15,
+  "isolated_abnormal_before_onset": [
+   16,
+   18,
+   20,
+   25,
+   30
+  ],
+  "early_onset_inside_first_30pct": false,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_10.7_vs_FTF_7.6"
+  ],
+  "median_family_scores": {
+   "BPFO": 10.67,
+   "BPFI": 5.39,
+   "BSF2": 6.69,
+   "FTF": 7.61
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 0.0,
+   "BSF2": 1.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 48,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 2.1804809756996715,
+    "winner_band_scores": {
+     "BPFO": 11.695139724260038,
+     "BPFI": 5.790796711741784,
+     "BSF2": 6.64183196930145,
+     "FTF": 6.314124186015889
+    },
+    "fixed_band_scores": {
+     "BPFO": 19.63047410906393,
+     "BPFI": 6.498286435398386,
+     "BSF2": 7.601086339729712,
+     "FTF": 6.726944046621822
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 49,
+    "band": [
+     6000.0,
+     7000.0
+    ],
+    "sk": 6.702583322218985,
+    "winner_band_scores": {
+     "BPFO": 10.668195478099241,
+     "BPFI": 4.9899537321615695,
+     "BSF2": 7.00265812701065,
+     "FTF": 9.74035753395902
+    },
+    "fixed_band_scores": {
+     "BPFO": 14.575293037773738,
+     "BPFI": 5.072169414384408,
+     "BSF2": 9.765624604246476,
+     "FTF": 10.064114034945929
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 50,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "sk": 2.200164640220816,
+    "winner_band_scores": {
+     "BPFO": 21.414837932200847,
+     "BPFI": 7.334952104553712,
+     "BSF2": 12.461773353833108,
+     "FTF": 10.695514816230931
+    },
+    "fixed_band_scores": {
+     "BPFO": 21.414837932200847,
+     "BPFI": 7.334952104553712,
+     "BSF2": 12.461773353833108,
+     "FTF": 10.695514816230931
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 2,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 51,
+    "band": [
+     5000.0,
+     6000.0
+    ],
+    "sk": 28.980757262364982,
+    "winner_band_scores": {
+     "BPFO": 10.182845656213125,
+     "BPFI": 5.391936665214183,
+     "BSF2": 6.692770618781269,
+     "FTF": 7.371295516392611
+    },
+    "fixed_band_scores": {
+     "BPFO": 13.873628209993356,
+     "BPFI": 5.9854215949243414,
+     "BSF2": 6.85219604551577,
+     "FTF": 9.526597718844165
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 52,
+    "band": [
+     4500.0,
+     5500.0
+    ],
+    "sk": 18.73069005848597,
+    "winner_band_scores": {
+     "BPFO": 6.537120087171833,
+     "BPFI": 5.154124893758095,
+     "BSF2": 5.447257470351675,
+     "FTF": 7.60774668089911
+    },
+    "fixed_band_scores": {
+     "BPFO": 13.201546526747022,
+     "BPFI": 6.609795911329163,
+     "BSF2": 6.436432422055417,
+     "FTF": 6.729736034981465
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing2_1": {
+  "condition": "37.5Hz11kN",
+  "files": 491,
+  "documented": [
+   "inner"
+  ],
+  "onset_window": 100,
+  "onset_groups": [
+   "energy",
+   "hf_band"
+  ],
+  "lead_time_min": 391,
+  "watch_early_count": 63,
+  "isolated_abnormal_before_onset": [
+   40,
+   55,
+   60,
+   64,
+   73,
+   78,
+   80,
+   82,
+   84,
+   88,
+   90,
+   94,
+   97
+  ],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "TOP_FAMILY_BPFI_SCORE_8.7_BELOW_9.0"
+  ],
+  "median_family_scores": {
+   "BPFO": 6.85,
+   "BPFI": 8.73,
+   "BSF2": 6.95,
+   "FTF": 7.94
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 0.0,
+   "BPFI": 1.0,
+   "BSF2": 1.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 487,
+    "band": [
+     4500.0,
+     5500.0
+    ],
+    "sk": 6.442530693862878,
+    "winner_band_scores": {
+     "BPFO": 8.77673675354673,
+     "BPFI": 8.733969020801505,
+     "BSF2": 6.954758876538825,
+     "FTF": 9.01473118137918
+    },
+    "fixed_band_scores": {
+     "BPFO": 5.096819745543419,
+     "BPFI": 8.924113775981324,
+     "BSF2": 11.456313334473705,
+     "FTF": 5.857292607791579
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 488,
+    "band": [
+     9500.0,
+     10500.0
+    ],
+    "sk": 9.596596941898687,
+    "winner_band_scores": {
+     "BPFO": 5.857452346286004,
+     "BPFI": 10.659058967268178,
+     "BSF2": 5.907592335454761,
+     "FTF": 7.944064518139125
+    },
+    "fixed_band_scores": {
+     "BPFO": 9.943629664884424,
+     "BPFI": 9.7927029459748,
+     "BSF2": 10.074038205608938,
+     "FTF": 7.991431110828588
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 489,
+    "band": [
+     10500.0,
+     11500.0
+    ],
+    "sk": 7.87330541710206,
+    "winner_band_scores": {
+     "BPFO": 6.8459201892129,
+     "BPFI": 11.978650839939823,
+     "BSF2": 7.510680655725732,
+     "FTF": 6.517709878521237
+    },
+    "fixed_band_scores": {
+     "BPFO": 11.57109274470592,
+     "BPFI": 9.578797068456938,
+     "BSF2": 9.426115583667217,
+     "FTF": 7.490502234125846
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 490,
+    "band": [
+     5000.0,
+     7000.0
+    ],
+    "sk": 11.210166955996474,
+    "winner_band_scores": {
+     "BPFO": 5.707322953689634,
+     "BPFI": 7.154291390350691,
+     "BSF2": 7.504021972106728,
+     "FTF": 6.331300779563334
+    },
+    "fixed_band_scores": {
+     "BPFO": 10.840438391732704,
+     "BPFI": 6.748011650597822,
+     "BSF2": 13.040238419842293,
+     "FTF": 5.880723735496818
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 491,
+    "band": [
+     6000.0,
+     7000.0
+    ],
+    "sk": 10.071660816688361,
+    "winner_band_scores": {
+     "BPFO": 7.112074117827964,
+     "BPFI": 6.658280863411312,
+     "BSF2": 5.538984412127175,
+     "FTF": 9.775701840996588
+    },
+    "fixed_band_scores": {
+     "BPFO": 11.541933146944913,
+     "BPFI": 8.530068868214933,
+     "BSF2": 9.136404374107908,
+     "FTF": 8.643677721449896
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   }
+  ]
+ },
+ "Bearing2_2": {
+  "condition": "37.5Hz11kN",
+  "files": 161,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 24,
+  "onset_groups": [
+   "energy",
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 137,
+  "watch_early_count": 6,
+  "isolated_abnormal_before_onset": [
+   18
+  ],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_12.8_vs_FTF_9.3"
+  ],
+  "median_family_scores": {
+   "BPFO": 12.76,
+   "BPFI": 5.11,
+   "BSF2": 6.09,
+   "FTF": 9.29
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 2.0,
+   "BPFI": 0.0,
+   "BSF2": 1.0,
+   "FTF": 2.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 157,
+    "band": [
+     6000.0,
+     8000.0
+    ],
+    "sk": 13.250216087075152,
+    "winner_band_scores": {
+     "BPFO": 14.045374924315999,
+     "BPFI": 4.916814304245822,
+     "BSF2": 6.833974215043805,
+     "FTF": 9.285943979436674
+    },
+    "fixed_band_scores": {
+     "BPFO": 33.52691559333281,
+     "BPFI": 6.687527078392734,
+     "BSF2": 12.20194461776441,
+     "FTF": 6.357648426300584
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 158,
+    "band": [
+     6000.0,
+     8000.0
+    ],
+    "sk": 14.80069053645705,
+    "winner_band_scores": {
+     "BPFO": 12.53394670982034,
+     "BPFI": 5.10609836184904,
+     "BSF2": 6.4295118313337465,
+     "FTF": 8.652770783121605
+    },
+    "fixed_band_scores": {
+     "BPFO": 35.134212222442,
+     "BPFI": 9.115771733287007,
+     "BSF2": 10.521697777542188,
+     "FTF": 4.917866129564094
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 159,
+    "band": [
+     6000.0,
+     8000.0
+    ],
+    "sk": 33.28619248149581,
+    "winner_band_scores": {
+     "BPFO": 9.884419890903494,
+     "BPFI": 4.076580343862549,
+     "BSF2": 5.690372826460207,
+     "FTF": 6.566326070013395
+    },
+    "fixed_band_scores": {
+     "BPFO": 38.77129102575417,
+     "BPFI": 10.307652693306157,
+     "BSF2": 12.5738770667413,
+     "FTF": 6.564764760149132
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 160,
+    "band": [
+     9000.0,
+     10000.0
+    ],
+    "sk": 12.080189935014994,
+    "winner_band_scores": {
+     "BPFO": 12.755290700371333,
+     "BPFI": 6.017475617732558,
+     "BSF2": 5.935243483730197,
+     "FTF": 14.920482519442249
+    },
+    "fixed_band_scores": {
+     "BPFO": 37.592846136500185,
+     "BPFI": 7.9047679501731745,
+     "BSF2": 9.288650323304774,
+     "FTF": 7.3568158778389385
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 161,
+    "band": [
+     6500.0,
+     7500.0
+    ],
+    "sk": 6.22001969231316,
+    "winner_band_scores": {
+     "BPFO": 15.207904144860034,
+     "BPFI": 8.21943069053373,
+     "BSF2": 6.0882545858460935,
+     "FTF": 14.293889786239921
+    },
+    "fixed_band_scores": {
+     "BPFO": 95.59901689432316,
+     "BPFI": 8.640059853556354,
+     "BSF2": 44.18286769731202,
+     "FTF": 11.874138814746333
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   }
+  ]
+ },
+ "Bearing2_3": {
+  "condition": "37.5Hz11kN",
+  "files": 533,
+  "documented": [
+   "cage"
+  ],
+  "onset_window": 26,
+  "onset_groups": [
+   "energy",
+   "hf_band"
+  ],
+  "lead_time_min": 507,
+  "watch_early_count": 4,
+  "isolated_abnormal_before_onset": [],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "TOP_FAMILY_FTF_SCORE_6.8_BELOW_9.0"
+  ],
+  "median_family_scores": {
+   "BPFO": 6.6,
+   "BPFI": 5.5,
+   "BSF2": 5.83,
+   "FTF": 6.76
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 0.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 529,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 92.74328921424728,
+    "winner_band_scores": {
+     "BPFO": 4.483111827250286,
+     "BPFI": 4.076566867773283,
+     "BSF2": 4.474859849916308,
+     "FTF": 6.4671114611392735
+    },
+    "fixed_band_scores": {
+     "BPFO": 20.402173243609894,
+     "BPFI": 6.574729964187603,
+     "BSF2": 6.157311223577983,
+     "FTF": 5.657187204066254
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 530,
+    "band": [
+     9500.0,
+     10500.0
+    ],
+    "sk": 4.029856102705678,
+    "winner_band_scores": {
+     "BPFO": 6.603092993382306,
+     "BPFI": 5.500513219551613,
+     "BSF2": 5.2117771721760136,
+     "FTF": 7.982963616641683
+    },
+    "fixed_band_scores": {
+     "BPFO": 23.292466652947095,
+     "BPFI": 6.49333510643652,
+     "BSF2": 5.534078321923444,
+     "FTF": 6.965513880506268
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 531,
+    "band": [
+     3000.0,
+     4000.0
+    ],
+    "sk": 1.6842185778876608,
+    "winner_band_scores": {
+     "BPFO": 30.174443318515536,
+     "BPFI": 5.9435669991249,
+     "BSF2": 6.6801078107303224,
+     "FTF": 10.59320766600347
+    },
+    "fixed_band_scores": {
+     "BPFO": 31.16052266348287,
+     "BPFI": 6.205274413896971,
+     "BSF2": 6.433549249866152,
+     "FTF": 6.180364369712191
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 532,
+    "band": [
+     2500.0,
+     3500.0
+    ],
+    "sk": 1.1200855018301734,
+    "winner_band_scores": {
+     "BPFO": 9.275930418503021,
+     "BPFI": 5.393201449692704,
+     "BSF2": 5.834055847291955,
+     "FTF": 6.30106401077808
+    },
+    "fixed_band_scores": {
+     "BPFO": 19.00515622237378,
+     "BPFI": 5.725109836996147,
+     "BSF2": 6.243160243329427,
+     "FTF": 6.231839740259258
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 533,
+    "band": [
+     5000.0,
+     6000.0
+    ],
+    "sk": 2.3857488484386122,
+    "winner_band_scores": {
+     "BPFO": 4.7492266660814595,
+     "BPFI": 6.3070963603612995,
+     "BSF2": 5.844616347375733,
+     "FTF": 6.757228537508047
+    },
+    "fixed_band_scores": {
+     "BPFO": 8.157027610685857,
+     "BPFI": 7.748306511400846,
+     "BSF2": 5.042152786432824,
+     "FTF": 11.00000572357892
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing2_4": {
+  "condition": "37.5Hz11kN",
+  "files": 42,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 31,
+  "onset_groups": [
+   "energy",
+   "envelope",
+   "hf_band",
+   "shape"
+  ],
+  "lead_time_min": 11,
+  "watch_early_count": 2,
+  "isolated_abnormal_before_onset": [
+   8,
+   11,
+   15,
+   17
+  ],
+  "early_onset_inside_first_30pct": false,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "TOP_FAMILY_BPFO_SCORE_7.5_BELOW_9.0"
+  ],
+  "median_family_scores": {
+   "BPFO": 7.52,
+   "BPFI": 5.14,
+   "BSF2": 5.32,
+   "FTF": 7.1
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 0.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 38,
+    "band": [
+     8500.0,
+     9500.0
+    ],
+    "sk": 5.536246751191955,
+    "winner_band_scores": {
+     "BPFO": 6.730696895450221,
+     "BPFI": 4.9295155899754715,
+     "BSF2": 5.268614354291664,
+     "FTF": 6.184599574214784
+    },
+    "fixed_band_scores": {
+     "BPFO": 15.399354285852791,
+     "BPFI": 5.8693356920234985,
+     "BSF2": 6.800088313612209,
+     "FTF": 4.972999499187789
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 39,
+    "band": [
+     7500.0,
+     8500.0
+    ],
+    "sk": 3.631758069419635,
+    "winner_band_scores": {
+     "BPFO": 8.076690889707542,
+     "BPFI": 6.105134725109108,
+     "BSF2": 5.321001408303448,
+     "FTF": 8.435737032881518
+    },
+    "fixed_band_scores": {
+     "BPFO": 27.348954432047456,
+     "BPFI": 6.741679289460091,
+     "BSF2": 10.41372740859468,
+     "FTF": 5.36387855489826
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 40,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 1.2575493139018024,
+    "winner_band_scores": {
+     "BPFO": 7.48199720739339,
+     "BPFI": 5.067147008630843,
+     "BSF2": 4.9712315563154945,
+     "FTF": 5.779704435463581
+    },
+    "fixed_band_scores": {
+     "BPFO": 25.81612879571026,
+     "BPFI": 5.732199585717403,
+     "BSF2": 13.475979530156437,
+     "FTF": 4.9754980673372
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 41,
+    "band": [
+     8500.0,
+     9500.0
+    ],
+    "sk": 1.8686914124137033,
+    "winner_band_scores": {
+     "BPFO": 7.519507810204609,
+     "BPFI": 5.470985348403332,
+     "BSF2": 6.661313679805381,
+     "FTF": 7.103194904120329
+    },
+    "fixed_band_scores": {
+     "BPFO": 11.052657562665711,
+     "BPFI": 5.197893468644503,
+     "BSF2": 10.711653021445052,
+     "FTF": 5.349313737362237
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 42,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 11.399632083383185,
+    "winner_band_scores": {
+     "BPFO": 12.23548603528112,
+     "BPFI": 5.138878650442694,
+     "BSF2": 6.2251905203351345,
+     "FTF": 8.67936427129633
+    },
+    "fixed_band_scores": {
+     "BPFO": 19.109784623469146,
+     "BPFI": 6.308576585316323,
+     "BSF2": 13.260965307969828,
+     "FTF": 4.437648228455253
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing2_5": {
+  "condition": "37.5Hz11kN",
+  "files": 339,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 21,
+  "onset_groups": [
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 318,
+  "watch_early_count": 3,
+  "isolated_abnormal_before_onset": [],
+  "early_onset_inside_first_30pct": true,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 26.14,
+   "BPFI": 8.86,
+   "BSF2": 13.93,
+   "FTF": 10.01
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 3.0,
+   "BPFI": 1.0,
+   "BSF2": 2.0,
+   "FTF": 2.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 335,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 7.361520906208597,
+    "winner_band_scores": {
+     "BPFO": 6.801665966143324,
+     "BPFI": 5.259710805972219,
+     "BSF2": 5.476187570340555,
+     "FTF": 18.237525331391904
+    },
+    "fixed_band_scores": {
+     "BPFO": 36.463188269010786,
+     "BPFI": 9.823879745786195,
+     "BSF2": 23.406327765292975,
+     "FTF": 10.225617086593717
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 336,
+    "band": [
+     4000.0,
+     6000.0
+    ],
+    "sk": 6.004212342314917,
+    "winner_band_scores": {
+     "BPFO": 100.2843718577523,
+     "BPFI": 8.856456112072568,
+     "BSF2": 37.14292007231,
+     "FTF": 9.987400087386085
+    },
+    "fixed_band_scores": {
+     "BPFO": 56.7615052108445,
+     "BPFI": 7.22354280808412,
+     "BSF2": 14.896027667661665,
+     "FTF": 7.2393879830622785
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 337,
+    "band": [
+     4000.0,
+     6000.0
+    ],
+    "sk": 3.581432890187817,
+    "winner_band_scores": {
+     "BPFO": 49.054960773663055,
+     "BPFI": 11.332092212516137,
+     "BSF2": 18.48046003355447,
+     "FTF": 9.494824839085084
+    },
+    "fixed_band_scores": {
+     "BPFO": 35.978055986199045,
+     "BPFI": 6.305247935269873,
+     "BSF2": 16.112058493949423,
+     "FTF": 9.51471546950247
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 2,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 338,
+    "band": [
+     4000.0,
+     6000.0
+    ],
+    "sk": 4.97141800361584,
+    "winner_band_scores": {
+     "BPFO": 26.13854693823225,
+     "BPFI": 9.856991190253671,
+     "BSF2": 13.931640139496043,
+     "FTF": 10.009645343597064
+    },
+    "fixed_band_scores": {
+     "BPFO": 28.075812149012624,
+     "BPFI": 20.219291713371685,
+     "BSF2": 16.874530286074254,
+     "FTF": 6.607813282596828
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 339,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 14.828353258464194,
+    "winner_band_scores": {
+     "BPFO": 9.185844594645351,
+     "BPFI": 5.831116093481351,
+     "BSF2": 5.8556871016620935,
+     "FTF": 31.714492352241102
+    },
+    "fixed_band_scores": {
+     "BPFO": 40.53002315957146,
+     "BPFI": 14.977304821510367,
+     "BSF2": 21.76039211894384,
+     "FTF": 9.07374267646778
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   }
+  ]
+ },
+ "Bearing3_1": {
+  "condition": "40Hz10kN",
+  "files": 2538,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 19,
+  "onset_groups": [
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 2519,
+  "watch_early_count": 8,
+  "isolated_abnormal_before_onset": [],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_10.2_vs_FTF_9.2"
+  ],
+  "median_family_scores": {
+   "BPFO": 10.21,
+   "BPFI": 4.79,
+   "BSF2": 6.76,
+   "FTF": 9.24
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 2.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 2534,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 7.908700961356741,
+    "winner_band_scores": {
+     "BPFO": 9.700452184334367,
+     "BPFI": 5.201478478459157,
+     "BSF2": 6.794830427973341,
+     "FTF": 9.768905578122821
+    },
+    "fixed_band_scores": {
+     "BPFO": 119.7306418638905,
+     "BPFI": 6.403879194472179,
+     "BSF2": 50.32880750554678,
+     "FTF": 4.251832578270656
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2535,
+    "band": [
+     7000.0,
+     8000.0
+    ],
+    "sk": 4.034340612466061,
+    "winner_band_scores": {
+     "BPFO": 8.499843035846077,
+     "BPFI": 4.341723798301848,
+     "BSF2": 6.762198267675169,
+     "FTF": 10.479247650820316
+    },
+    "fixed_band_scores": {
+     "BPFO": 65.95463302445442,
+     "BPFI": 6.946957472424206,
+     "BSF2": 37.87633602496524,
+     "FTF": 6.265947299085392
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 2536,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 3.279089951436206,
+    "winner_band_scores": {
+     "BPFO": 10.214819757594515,
+     "BPFI": 4.443548803547842,
+     "BSF2": 6.085857455386552,
+     "FTF": 7.796313013185803
+    },
+    "fixed_band_scores": {
+     "BPFO": 62.28707237406274,
+     "BPFI": 7.973026474084798,
+     "BSF2": 22.17303695866019,
+     "FTF": 5.636620139117605
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2537,
+    "band": [
+     4500.0,
+     5500.0
+    ],
+    "sk": 2.5295609954421376,
+    "winner_band_scores": {
+     "BPFO": 30.03902385353925,
+     "BPFI": 5.800034276444131,
+     "BSF2": 9.778044150217408,
+     "FTF": 6.207975625852774
+    },
+    "fixed_band_scores": {
+     "BPFO": 67.87627802668392,
+     "BPFI": 5.897778005425847,
+     "BSF2": 15.84247633702807,
+     "FTF": 8.46960868498802
+    },
+    "harmonics": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 2538,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 2.0283018944547404,
+    "winner_band_scores": {
+     "BPFO": 11.88612832992787,
+     "BPFI": 4.785895446961343,
+     "BSF2": 6.0431690382380765,
+     "FTF": 9.23840828273281
+    },
+    "fixed_band_scores": {
+     "BPFO": 101.0408914359158,
+     "BPFI": 5.976297927627876,
+     "BSF2": 28.272920576681994,
+     "FTF": 9.080738919928052
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   }
+  ]
+ },
+ "Bearing3_2": {
+  "condition": "40Hz10kN",
+  "files": 2496,
+  "documented": [
+   "inner",
+   "ball",
+   "cage",
+   "outer"
+  ],
+  "onset_window": 169,
+  "onset_groups": [
+   "envelope",
+   "hf_band"
+  ],
+  "lead_time_min": 2327,
+  "watch_early_count": 60,
+  "isolated_abnormal_before_onset": [
+   54,
+   64,
+   69,
+   86,
+   94,
+   154
+  ],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "TOP_FAMILY_FTF_SCORE_8.1_BELOW_9.0"
+  ],
+  "median_family_scores": {
+   "BPFO": 6.45,
+   "BPFI": 6.99,
+   "BSF2": 6.21,
+   "FTF": 8.08
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 0.0,
+   "BPFI": 1.0,
+   "BSF2": 0.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 2492,
+    "band": [
+     5500.0,
+     6500.0
+    ],
+    "sk": 4.988810502236485,
+    "winner_band_scores": {
+     "BPFO": 5.5590530997335454,
+     "BPFI": 6.516527657866339,
+     "BSF2": 5.817062825497646,
+     "FTF": 8.077937368951169
+    },
+    "fixed_band_scores": {
+     "BPFO": 5.939107879693697,
+     "BPFI": 10.599775965882325,
+     "BSF2": 5.810627465115018,
+     "FTF": 9.18719108585273
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2493,
+    "band": [
+     10500.0,
+     11500.0
+    ],
+    "sk": 12.725420337847648,
+    "winner_band_scores": {
+     "BPFO": 9.18914894455632,
+     "BPFI": 4.462275713638413,
+     "BSF2": 7.361435435527818,
+     "FTF": 7.454319567693254
+    },
+    "fixed_band_scores": {
+     "BPFO": 5.555829239588123,
+     "BPFI": 9.472490800760445,
+     "BSF2": 6.903639806181717,
+     "FTF": 6.857164297034847
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 2494,
+    "band": [
+     2000.0,
+     3000.0
+    ],
+    "sk": 1.9844714210227332,
+    "winner_band_scores": {
+     "BPFO": 6.753908749005328,
+     "BPFI": 6.990626555221677,
+     "BSF2": 6.714458336699568,
+     "FTF": 9.772756311424686
+    },
+    "fixed_band_scores": {
+     "BPFO": 5.706759395715514,
+     "BPFI": 5.930017867229039,
+     "BSF2": 6.154399429842584,
+     "FTF": 7.416925224874025
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2495,
+    "band": [
+     2000.0,
+     3000.0
+    ],
+    "sk": 2.982641865948356,
+    "winner_band_scores": {
+     "BPFO": 6.4497693486357655,
+     "BPFI": 12.9471672606556,
+     "BSF2": 5.2779301564655805,
+     "FTF": 8.640612532270598
+    },
+    "fixed_band_scores": {
+     "BPFO": 7.1468615470179255,
+     "BPFI": 7.495582380793774,
+     "BSF2": 5.987184064503352,
+     "FTF": 5.600242448699296
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 2,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 2496,
+    "band": [
+     2000.0,
+     3000.0
+    ],
+    "sk": 2.298808803698255,
+    "winner_band_scores": {
+     "BPFO": 5.431175574879071,
+     "BPFI": 8.82693543351727,
+     "BSF2": 6.212663041254195,
+     "FTF": 7.687103487242054
+    },
+    "fixed_band_scores": {
+     "BPFO": 6.331904876647066,
+     "BPFI": 7.110608370668428,
+     "BSF2": 5.269862114100261,
+     "FTF": 6.630769044101687
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing3_3": {
+  "condition": "40Hz10kN",
+  "files": 371,
+  "documented": [
+   "inner"
+  ],
+  "onset_window": 342,
+  "onset_groups": [
+   "energy",
+   "shape"
+  ],
+  "lead_time_min": 29,
+  "watch_early_count": 0,
+  "isolated_abnormal_before_onset": [],
+  "early_onset_inside_first_30pct": false,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_9.2_vs_BPFI_8.7"
+  ],
+  "median_family_scores": {
+   "BPFO": 9.17,
+   "BPFI": 8.72,
+   "BSF2": 7.44,
+   "FTF": 7.63
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 1.0,
+   "BSF2": 1.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 367,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 8.056772942239851,
+    "winner_band_scores": {
+     "BPFO": 10.453207039230756,
+     "BPFI": 9.719810956428121,
+     "BSF2": 8.687885453697255,
+     "FTF": 10.775080905717724
+    },
+    "fixed_band_scores": {
+     "BPFO": 6.335433889499465,
+     "BPFI": 17.156898759040196,
+     "BSF2": 8.609009693103298,
+     "FTF": 4.8014350797591
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 368,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 11.21492988166606,
+    "winner_band_scores": {
+     "BPFO": 9.170438535392487,
+     "BPFI": 7.873922163034991,
+     "BSF2": 7.435443280467357,
+     "FTF": 8.515267950322068
+    },
+    "fixed_band_scores": {
+     "BPFO": 7.640601408456932,
+     "BPFI": 15.320343933389431,
+     "BSF2": 10.905380576503655,
+     "FTF": 5.8560437662098295
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 369,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 12.738755410736381,
+    "winner_band_scores": {
+     "BPFO": 6.727074398014269,
+     "BPFI": 8.723701808286712,
+     "BSF2": 6.100984595232119,
+     "FTF": 7.630196253386663
+    },
+    "fixed_band_scores": {
+     "BPFO": 10.139203399206226,
+     "BPFI": 23.17256155967742,
+     "BSF2": 10.089746170155314,
+     "FTF": 5.172567146449686
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 370,
+    "band": [
+     10500.0,
+     11500.0
+    ],
+    "sk": 11.612962696813268,
+    "winner_band_scores": {
+     "BPFO": 9.3067831117405,
+     "BPFI": 8.049081303523593,
+     "BSF2": 8.179094901967186,
+     "FTF": 7.130386365476929
+    },
+    "fixed_band_scores": {
+     "BPFO": 7.881099416808191,
+     "BPFI": 12.921606221136052,
+     "BSF2": 9.98104784965408,
+     "FTF": 4.394666838845625
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 371,
+    "band": [
+     6000.0,
+     7000.0
+    ],
+    "sk": 6.11349672673863,
+    "winner_band_scores": {
+     "BPFO": 6.757080625349771,
+     "BPFI": 10.31487172876268,
+     "BSF2": 7.107024353578581,
+     "FTF": 7.512255135150621
+    },
+    "fixed_band_scores": {
+     "BPFO": 6.616448381931517,
+     "BPFI": 11.415911628720755,
+     "BSF2": 6.119108749609718,
+     "FTF": 5.75563175623954
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing3_4": {
+  "condition": "40Hz10kN",
+  "files": 1515,
+  "documented": [
+   "inner"
+  ],
+  "onset_window": 52,
+  "onset_groups": [
+   "energy",
+   "envelope",
+   "hf_band",
+   "shape"
+  ],
+  "lead_time_min": 1463,
+  "watch_early_count": 29,
+  "isolated_abnormal_before_onset": [
+   28
+  ],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFI_19.6_vs_BPFO_16.7"
+  ],
+  "median_family_scores": {
+   "BPFO": 16.66,
+   "BPFI": 19.61,
+   "BSF2": 7.65,
+   "FTF": 9.24
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 2.0,
+   "BSF2": 1.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 1511,
+    "band": [
+     4000.0,
+     6000.0
+    ],
+    "sk": 7.602715035007694,
+    "winner_band_scores": {
+     "BPFO": 11.294589324105411,
+     "BPFI": 17.514265001335037,
+     "BSF2": 7.648964428616143,
+     "FTF": 8.892771536680907
+    },
+    "fixed_band_scores": {
+     "BPFO": 11.824414061671316,
+     "BPFI": 19.615018031342597,
+     "BSF2": 9.152321661853703,
+     "FTF": 8.809065363771248
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 1512,
+    "band": [
+     3500.0,
+     4500.0
+    ],
+    "sk": 5.697487347652089,
+    "winner_band_scores": {
+     "BPFO": 14.615167843807379,
+     "BPFI": 19.614981026322297,
+     "BSF2": 7.464439861227937,
+     "FTF": 11.348155476294297
+    },
+    "fixed_band_scores": {
+     "BPFO": 11.364281993306468,
+     "BPFI": 30.034176044946594,
+     "BSF2": 10.818033285914158,
+     "FTF": 5.956252505309263
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 1513,
+    "band": [
+     3500.0,
+     4500.0
+    ],
+    "sk": 6.094299682128673,
+    "winner_band_scores": {
+     "BPFO": 17.262285834065047,
+     "BPFI": 15.991534714661201,
+     "BSF2": 6.116286516378096,
+     "FTF": 9.235353481848605
+    },
+    "fixed_band_scores": {
+     "BPFO": 15.232907361719422,
+     "BPFI": 30.969890073494195,
+     "BSF2": 10.997311546949138,
+     "FTF": 6.375200310237584
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 2,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 1514,
+    "band": [
+     3000.0,
+     7000.0
+    ],
+    "sk": 5.899314576602352,
+    "winner_band_scores": {
+     "BPFO": 16.66243314182585,
+     "BPFI": 27.783900135674582,
+     "BSF2": 9.990369307395772,
+     "FTF": 9.120414114917454
+    },
+    "fixed_band_scores": {
+     "BPFO": 12.352019160420541,
+     "BPFI": 31.651242330017173,
+     "BSF2": 9.751057001342778,
+     "FTF": 7.7949327357353875
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 1515,
+    "band": [
+     3500.0,
+     4500.0
+    ],
+    "sk": 6.5730256846473125,
+    "winner_band_scores": {
+     "BPFO": 24.28405184830354,
+     "BPFI": 28.209528644715647,
+     "BSF2": 7.970163619483982,
+     "FTF": 10.98437489489842
+    },
+    "fixed_band_scores": {
+     "BPFO": 21.571646775913074,
+     "BPFI": 34.38636289660522,
+     "BSF2": 10.587633331058312,
+     "FTF": 10.676840730794332
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing3_5": {
+  "condition": "40Hz10kN",
+  "files": 114,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 9,
+  "onset_groups": [
+   "energy",
+   "shape"
+  ],
+  "lead_time_min": 105,
+  "watch_early_count": 0,
+  "isolated_abnormal_before_onset": [],
+  "early_onset_inside_first_30pct": true,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "TOP_FAMILY_BPFO_SCORE_8.2_BELOW_9.0"
+  ],
+  "median_family_scores": {
+   "BPFO": 8.22,
+   "BPFI": 4.96,
+   "BSF2": 5.2,
+   "FTF": 6.76
+  },
+  "median_harmonics_above_3x": {
+   "BPFO": 1.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 0.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 110,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "sk": 4.2626042724970015,
+    "winner_band_scores": {
+     "BPFO": 8.228989382526354,
+     "BPFI": 6.068061040390621,
+     "BSF2": 6.619561642779639,
+     "FTF": 8.0832537098657
+    },
+    "fixed_band_scores": {
+     "BPFO": 23.79240740817689,
+     "BPFI": 6.2917889810317655,
+     "BSF2": 7.670022151700821,
+     "FTF": 8.374123929298902
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 111,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 5.5438240616904935,
+    "winner_band_scores": {
+     "BPFO": 6.93182574740996,
+     "BPFI": 4.790731359346105,
+     "BSF2": 5.422983806657196,
+     "FTF": 6.5234358723468056
+    },
+    "fixed_band_scores": {
+     "BPFO": 27.809902690476335,
+     "BPFI": 6.127085530644478,
+     "BSF2": 8.629594145686776,
+     "FTF": 7.6303048657226995
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 112,
+    "band": [
+     9000.0,
+     10000.0
+    ],
+    "sk": 9.78693021439807,
+    "winner_band_scores": {
+     "BPFO": 6.672876803299608,
+     "BPFI": 5.424724806156004,
+     "BSF2": 5.162332824904705,
+     "FTF": 8.443580609804753
+    },
+    "fixed_band_scores": {
+     "BPFO": 24.058681912286627,
+     "BPFI": 5.601111475081064,
+     "BSF2": 8.847520967196068,
+     "FTF": 8.85304562327698
+    },
+    "harmonics": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 113,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 6.195630504586811,
+    "winner_band_scores": {
+     "BPFO": 8.21636611840065,
+     "BPFI": 4.799931979058851,
+     "BSF2": 5.013104823782129,
+     "FTF": 6.380950394628504
+    },
+    "fixed_band_scores": {
+     "BPFO": 30.771195984375826,
+     "BPFI": 7.35957157808087,
+     "BSF2": 8.187326547024153,
+     "FTF": 7.736761472713997
+    },
+    "harmonics": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 114,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "sk": 5.780446365880763,
+    "winner_band_scores": {
+     "BPFO": 9.13143246698266,
+     "BPFI": 4.9555316735592445,
+     "BSF2": 5.199044521727752,
+     "FTF": 6.761054501165885
+    },
+    "fixed_band_scores": {
+     "BPFO": 28.21512391138645,
+     "BPFI": 7.4847875596524185,
+     "BSF2": 10.361898156877713,
+     "FTF": 7.013109912475678
+    },
+    "harmonics": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   }
+  ]
+ }
+}

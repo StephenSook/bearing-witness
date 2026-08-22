@@ -1,0 +1,12 @@
+[
+  {
+    "decision": "approved",
+    "reason": "write-path test: approve",
+    "timestamp": "2026-08-21T07:52:40.286565+00:00"
+  },
+  {
+    "decision": "rejected",
+    "reason": "(no reason given)",
+    "timestamp": "2026-08-21T07:52:40.286730+00:00"
+  }
+]

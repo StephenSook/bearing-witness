@@ -1,0 +1,1902 @@
+{
+ "Bearing1_1": {
+  "condition": "35Hz12kN",
+  "files": 123,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 30,
+  "lead_time_min": 93,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 48.01,
+   "BPFI": 8.05,
+   "BSF2": 14.87,
+   "FTF": 8.6
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 1.0,
+   "BSF2": 2.0,
+   "FTF": 1.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 119,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 71.81,
+     "BPFI": 8.05,
+     "BSF2": 14.31,
+     "FTF": 6.43
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 120,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 48.01,
+     "BPFI": 8.04,
+     "BSF2": 12.55,
+     "FTF": 8.6
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 2,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 121,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 52.99,
+     "BPFI": 7.91,
+     "BSF2": 14.97,
+     "FTF": 9.55
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 122,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 34.96,
+     "BPFI": 8.94,
+     "BSF2": 14.87,
+     "FTF": 11.45
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 123,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 41.55,
+     "BPFI": 8.45,
+     "BSF2": 24.15,
+     "FTF": 4.64
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing1_2": {
+  "condition": "35Hz12kN",
+  "files": 161,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 32,
+  "lead_time_min": 129,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 26.17,
+   "BPFI": 11.7,
+   "BSF2": 13.27,
+   "FTF": 3.77
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 2.0,
+   "BSF2": 1.0,
+   "FTF": 0.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 157,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 23.29,
+     "BPFI": 11.7,
+     "BSF2": 15.05,
+     "FTF": 3.77
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 158,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 21.2,
+     "BPFI": 10.98,
+     "BSF2": 13.27,
+     "FTF": 6.63
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 159,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 26.17,
+     "BPFI": 6.62,
+     "BSF2": 11.41,
+     "FTF": 3.08
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 160,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 35.02,
+     "BPFI": 15.44,
+     "BSF2": 7.82,
+     "FTF": 4.02
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 161,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 38.21,
+     "BPFI": 22.36,
+     "BSF2": 26.74,
+     "FTF": 3.73
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing1_3": {
+  "condition": "35Hz12kN",
+  "files": 158,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 59,
+  "lead_time_min": 99,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 30.1,
+   "BPFI": 11.91,
+   "BSF2": 10.8,
+   "FTF": 11.44
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 1.0,
+   "BSF2": 1.0,
+   "FTF": 2.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 154,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 49.24,
+     "BPFI": 11.95,
+     "BSF2": 9.47,
+     "FTF": 10.42
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 155,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 30.1,
+     "BPFI": 8.71,
+     "BSF2": 7.84,
+     "FTF": 11.44
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 156,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 21.33,
+     "BPFI": 11.07,
+     "BSF2": 12.2,
+     "FTF": 7.89
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 157,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 29.47,
+     "BPFI": 12.13,
+     "BSF2": 10.83,
+     "FTF": 12.06
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 158,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 30.91,
+     "BPFI": 11.91,
+     "BSF2": 10.8,
+     "FTF": 13.3
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   }
+  ]
+ },
+ "Bearing1_4": {
+  "condition": "35Hz12kN",
+  "files": 122,
+  "documented": [
+   "cage"
+  ],
+  "onset_window": 57,
+  "lead_time_min": 65,
+  "call": "CAGE_CONSISTENT",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 7.64,
+   "BPFI": 6.01,
+   "BSF2": 6.93,
+   "FTF": 15.96
+  },
+  "median_harmonics": {
+   "BPFO": 1.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 3.0
+  },
+  "verdict": "CORRECT_CONSISTENT",
+  "loc_detail": [
+   {
+    "window": 118,
+    "band": [
+     10000.0,
+     11000.0
+    ],
+    "band_source": "sk",
+    "scores": {
+     "BPFO": 9.43,
+     "BPFI": 6.05,
+     "BSF2": 7.02,
+     "FTF": 18.17
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 119,
+    "band": [
+     10000.0,
+     12000.0
+    ],
+    "band_source": "sk",
+    "scores": {
+     "BPFO": 7.02,
+     "BPFI": 6.58,
+     "BSF2": 6.4,
+     "FTF": 15.96
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 120,
+    "band": [
+     11000.0,
+     12000.0
+    ],
+    "band_source": "sk",
+    "scores": {
+     "BPFO": 7.64,
+     "BPFI": 6.01,
+     "BSF2": 8.1,
+     "FTF": 9.87
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 121,
+    "band": [
+     10500.0,
+     11500.0
+    ],
+    "band_source": "sk",
+    "scores": {
+     "BPFO": 9.31,
+     "BPFI": 5.52,
+     "BSF2": 6.93,
+     "FTF": 19.98
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 3
+    }
+   },
+   {
+    "window": 122,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 7.09,
+     "BPFI": 4.26,
+     "BSF2": 5.24,
+     "FTF": 14.01
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 2
+    }
+   }
+  ]
+ },
+ "Bearing1_5": {
+  "condition": "35Hz12kN",
+  "files": 52,
+  "documented": [
+   "inner",
+   "outer"
+  ],
+  "onset_window": 32,
+  "lead_time_min": 20,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 14.63,
+   "BPFI": 7.02,
+   "BSF2": 8.95,
+   "FTF": 6.25
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 0.0,
+   "BSF2": 1.0,
+   "FTF": 0.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 48,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 19.63,
+     "BPFI": 6.56,
+     "BSF2": 8.95,
+     "FTF": 4.12
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 49,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 14.58,
+     "BPFI": 6.06,
+     "BSF2": 11.23,
+     "FTF": 10.06
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 2,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 50,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 21.41,
+     "BPFI": 7.75,
+     "BSF2": 15.86,
+     "FTF": 10.7
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 3,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 51,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 14.63,
+     "BPFI": 9.52,
+     "BSF2": 7.4,
+     "FTF": 4.98
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 52,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 13.2,
+     "BPFI": 7.02,
+     "BSF2": 6.69,
+     "FTF": 6.25
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing2_1": {
+  "condition": "37.5Hz11kN",
+  "files": 491,
+  "documented": [
+   "inner"
+  ],
+  "onset_window": 100,
+  "lead_time_min": 391,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFI_17.6_vs_15.2"
+  ],
+  "median_family_scores": {
+   "BPFO": 11.37,
+   "BPFI": 17.59,
+   "BSF2": 15.23,
+   "FTF": 5.98
+  },
+  "median_harmonics": {
+   "BPFO": 2.0,
+   "BPFI": 2.0,
+   "BSF2": 2.0,
+   "FTF": 0.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 487,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 10.96,
+     "BPFI": 22.46,
+     "BSF2": 18.0,
+     "FTF": 4.39
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 488,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 9.94,
+     "BPFI": 12.78,
+     "BSF2": 15.23,
+     "FTF": 5.98
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 3,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 489,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 13.62,
+     "BPFI": 18.36,
+     "BSF2": 10.73,
+     "FTF": 6.53
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 2,
+     "BSF2": 2,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 490,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 11.37,
+     "BPFI": 17.59,
+     "BSF2": 16.1,
+     "FTF": 5.88
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 2,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 491,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 13.49,
+     "BPFI": 11.07,
+     "BSF2": 12.77,
+     "FTF": 6.21
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing2_2": {
+  "condition": "37.5Hz11kN",
+  "files": 161,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 24,
+  "lead_time_min": 137,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 37.59,
+   "BPFI": 9.12,
+   "BSF2": 15.9,
+   "FTF": 6.09
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 1.0,
+   "BSF2": 3.0,
+   "FTF": 0.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 157,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 33.53,
+     "BPFI": 8.5,
+     "BSF2": 16.08,
+     "FTF": 4.97
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 158,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 35.13,
+     "BPFI": 9.12,
+     "BSF2": 15.9,
+     "FTF": 4.37
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 159,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 38.77,
+     "BPFI": 10.37,
+     "BSF2": 13.35,
+     "FTF": 6.35
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 160,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 37.59,
+     "BPFI": 8.11,
+     "BSF2": 13.2,
+     "FTF": 6.09
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 161,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 95.6,
+     "BPFI": 9.86,
+     "BSF2": 48.78,
+     "FTF": 10.54
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing2_3": {
+  "condition": "37.5Hz11kN",
+  "files": 533,
+  "documented": [
+   "cage"
+  ],
+  "onset_window": 26,
+  "lead_time_min": 507,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 20.4,
+   "BPFI": 7.41,
+   "BSF2": 6.91,
+   "FTF": 5.31
+  },
+  "median_harmonics": {
+   "BPFO": 2.0,
+   "BPFI": 0.0,
+   "BSF2": 0.0,
+   "FTF": 0.0
+  },
+  "verdict": "WRONG",
+  "loc_detail": [
+   {
+    "window": 529,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 20.4,
+     "BPFI": 6.81,
+     "BSF2": 7.02,
+     "FTF": 5.01
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 530,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 23.29,
+     "BPFI": 7.41,
+     "BSF2": 5.89,
+     "FTF": 5.31
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 531,
+    "band": [
+     3000.0,
+     4000.0
+    ],
+    "band_source": "sk",
+    "scores": {
+     "BPFO": 30.17,
+     "BPFI": 8.5,
+     "BSF2": 7.98,
+     "FTF": 8.93
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 2
+    }
+   },
+   {
+    "window": 532,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 19.01,
+     "BPFI": 6.33,
+     "BSF2": 6.91,
+     "FTF": 5.47
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 533,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 9.26,
+     "BPFI": 7.95,
+     "BSF2": 6.2,
+     "FTF": 4.79
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing2_4": {
+  "condition": "37.5Hz11kN",
+  "files": 42,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 31,
+  "lead_time_min": 11,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 19.11,
+   "BPFI": 9.92,
+   "BSF2": 12.39,
+   "FTF": 3.75
+  },
+  "median_harmonics": {
+   "BPFO": 2.0,
+   "BPFI": 2.0,
+   "BSF2": 2.0,
+   "FTF": 0.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 38,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 15.4,
+     "BPFI": 9.92,
+     "BSF2": 7.93,
+     "FTF": 2.89
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 39,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 27.35,
+     "BPFI": 11.87,
+     "BSF2": 12.39,
+     "FTF": 4.99
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 40,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 25.82,
+     "BPFI": 9.29,
+     "BSF2": 14.49,
+     "FTF": 2.91
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 41,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 11.62,
+     "BPFI": 5.98,
+     "BSF2": 10.71,
+     "FTF": 4.05
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 0,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 42,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 19.11,
+     "BPFI": 12.65,
+     "BSF2": 15.1,
+     "FTF": 3.75
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing2_5": {
+  "condition": "37.5Hz11kN",
+  "files": 339,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 21,
+  "lead_time_min": 318,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFO_36.5_vs_26.3"
+  ],
+  "median_family_scores": {
+   "BPFO": 36.46,
+   "BPFI": 9.82,
+   "BSF2": 26.26,
+   "FTF": 8.3
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 1.0,
+   "BSF2": 3.0,
+   "FTF": 1.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 335,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 36.46,
+     "BPFI": 9.82,
+     "BSF2": 27.13,
+     "FTF": 9.71
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 336,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 56.76,
+     "BPFI": 7.78,
+     "BSF2": 16.65,
+     "FTF": 7.24
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 337,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 35.98,
+     "BPFI": 6.54,
+     "BSF2": 21.17,
+     "FTF": 8.3
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 338,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 28.08,
+     "BPFI": 20.22,
+     "BSF2": 26.26,
+     "FTF": 4.93
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 3,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 339,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 40.53,
+     "BPFI": 14.98,
+     "BSF2": 26.79,
+     "FTF": 8.99
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing3_1": {
+  "condition": "40Hz10kN",
+  "files": 2538,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 19,
+  "lead_time_min": 2519,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 67.88,
+   "BPFI": 18.44,
+   "BSF2": 28.27,
+   "FTF": 6.23
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 2.0,
+   "BSF2": 3.0,
+   "FTF": 0.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 2534,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 119.73,
+     "BPFI": 34.41,
+     "BSF2": 51.6,
+     "FTF": 3.89
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 3,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 2535,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 65.95,
+     "BPFI": 17.35,
+     "BSF2": 37.88,
+     "FTF": 6.27
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 2,
+     "BSF2": 3,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 2536,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 62.29,
+     "BPFI": 18.44,
+     "BSF2": 22.17,
+     "FTF": 4.28
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 2537,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 67.88,
+     "BPFI": 8.1,
+     "BSF2": 15.84,
+     "FTF": 7.56
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2538,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 101.04,
+     "BPFI": 22.92,
+     "BSF2": 28.27,
+     "FTF": 6.23
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing3_2": {
+  "condition": "40Hz10kN",
+  "files": 2496,
+  "documented": [
+   "inner",
+   "ball",
+   "cage",
+   "outer"
+  ],
+  "onset_window": 169,
+  "lead_time_min": 2327,
+  "call": "SUSPECTED_INNER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 6.85,
+   "BPFI": 9.47,
+   "BSF2": 6.95,
+   "FTF": 6.58
+  },
+  "median_harmonics": {
+   "BPFO": 0.0,
+   "BPFI": 2.0,
+   "BSF2": 0.0,
+   "FTF": 1.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 2492,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 5.97,
+     "BPFI": 10.6,
+     "BSF2": 6.21,
+     "FTF": 8.58
+    },
+    "harm": {
+     "BPFO": 0,
+     "BPFI": 2,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2493,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 6.85,
+     "BPFI": 9.47,
+     "BSF2": 7.16,
+     "FTF": 6.58
+    },
+    "harm": {
+     "BPFO": 0,
+     "BPFI": 2,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 2494,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 6.62,
+     "BPFI": 6.44,
+     "BSF2": 6.95,
+     "FTF": 7.16
+    },
+    "harm": {
+     "BPFO": 0,
+     "BPFI": 0,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2495,
+    "band": [
+     2000.0,
+     3000.0
+    ],
+    "band_source": "sk",
+    "scores": {
+     "BPFO": 7.82,
+     "BPFI": 13.2,
+     "BSF2": 6.46,
+     "FTF": 6.56
+    },
+    "harm": {
+     "BPFO": 0,
+     "BPFI": 2,
+     "BSF2": 0,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 2496,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 7.84,
+     "BPFI": 7.11,
+     "BSF2": 14.25,
+     "FTF": 5.89
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 0,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing3_3": {
+  "condition": "40Hz10kN",
+  "files": 371,
+  "documented": [
+   "inner"
+  ],
+  "onset_window": 342,
+  "lead_time_min": 29,
+  "call": "ABNORMAL_LOCATION_UNCONFIRMED",
+  "call_reasons": [
+   "NO_MARGIN_BPFI_15.3_vs_10.7"
+  ],
+  "median_family_scores": {
+   "BPFO": 10.26,
+   "BPFI": 15.32,
+   "BSF2": 10.68,
+   "FTF": 4.15
+  },
+  "median_harmonics": {
+   "BPFO": 1.0,
+   "BPFI": 3.0,
+   "BSF2": 1.0,
+   "FTF": 0.0
+  },
+  "verdict": "ABSTAIN",
+  "loc_detail": [
+   {
+    "window": 367,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 10.26,
+     "BPFI": 17.16,
+     "BSF2": 9.44,
+     "FTF": 3.88
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 368,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 9.09,
+     "BPFI": 15.32,
+     "BSF2": 11.52,
+     "FTF": 5.06
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 369,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 10.35,
+     "BPFI": 23.17,
+     "BSF2": 10.68,
+     "FTF": 4.34
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 370,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 11.35,
+     "BPFI": 12.92,
+     "BSF2": 11.82,
+     "FTF": 4.15
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 2,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 371,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 8.96,
+     "BPFI": 12.35,
+     "BSF2": 7.28,
+     "FTF": 3.72
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 1,
+     "BSF2": 0,
+     "FTF": 0
+    }
+   }
+  ]
+ },
+ "Bearing3_4": {
+  "condition": "40Hz10kN",
+  "files": 1515,
+  "documented": [
+   "inner"
+  ],
+  "onset_window": 52,
+  "lead_time_min": 1463,
+  "call": "SUSPECTED_INNER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 13.16,
+   "BPFI": 30.97,
+   "BSF2": 11.38,
+   "FTF": 4.94
+  },
+  "median_harmonics": {
+   "BPFO": 2.0,
+   "BPFI": 3.0,
+   "BSF2": 1.0,
+   "FTF": 0.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 1511,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 12.68,
+     "BPFI": 19.62,
+     "BSF2": 10.2,
+     "FTF": 5.66
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 1512,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 12.9,
+     "BPFI": 30.03,
+     "BSF2": 11.38,
+     "FTF": 3.67
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 1513,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 18.93,
+     "BPFI": 30.97,
+     "BSF2": 11.93,
+     "FTF": 4.14
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 1514,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 13.16,
+     "BPFI": 31.65,
+     "BSF2": 11.04,
+     "FTF": 4.94
+    },
+    "harm": {
+     "BPFO": 1,
+     "BPFI": 3,
+     "BSF2": 1,
+     "FTF": 0
+    }
+   },
+   {
+    "window": 1515,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 25.28,
+     "BPFI": 34.39,
+     "BSF2": 11.77,
+     "FTF": 6.03
+    },
+    "harm": {
+     "BPFO": 2,
+     "BPFI": 3,
+     "BSF2": 2,
+     "FTF": 1
+    }
+   }
+  ]
+ },
+ "Bearing3_5": {
+  "condition": "40Hz10kN",
+  "files": 114,
+  "documented": [
+   "outer"
+  ],
+  "onset_window": 9,
+  "lead_time_min": 105,
+  "call": "SUSPECTED_OUTER",
+  "call_reasons": [],
+  "median_family_scores": {
+   "BPFO": 27.81,
+   "BPFI": 7.8,
+   "BSF2": 9.7,
+   "FTF": 7.01
+  },
+  "median_harmonics": {
+   "BPFO": 3.0,
+   "BPFI": 0.0,
+   "BSF2": 1.0,
+   "FTF": 1.0
+  },
+  "verdict": "CORRECT",
+  "loc_detail": [
+   {
+    "window": 110,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 23.79,
+     "BPFI": 6.77,
+     "BSF2": 8.26,
+     "FTF": 8.37
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 111,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 27.81,
+     "BPFI": 6.53,
+     "BSF2": 8.9,
+     "FTF": 6.96
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 112,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 24.06,
+     "BPFI": 7.94,
+     "BSF2": 10.19,
+     "FTF": 8.85
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 1,
+     "BSF2": 3,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 113,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 30.77,
+     "BPFI": 8.12,
+     "BSF2": 9.7,
+     "FTF": 7.01
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 1,
+     "FTF": 1
+    }
+   },
+   {
+    "window": 114,
+    "band": [
+     2000.0,
+     4000.0
+    ],
+    "band_source": "fixed",
+    "scores": {
+     "BPFO": 28.22,
+     "BPFI": 7.8,
+     "BSF2": 11.35,
+     "FTF": 4.72
+    },
+    "harm": {
+     "BPFO": 3,
+     "BPFI": 0,
+     "BSF2": 2,
+     "FTF": 0
+    }
+   }
+  ]
+ }
+}
