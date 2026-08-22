@@ -79,6 +79,12 @@ Verbal bridge: "Let me show you this live, right now, on real run-to-failure dat
    the status line running since step 1. "While we talked, it analyzed [N] more
    windows by itself, wrote every case to the database, and refused the ones it
    couldn't prove. Nobody touched it. That is what always-on means."
+9. KILL/RESTART BEAT (optional, ONLY if the MongoDB judge is at the table AND
+   it ran clean in all three rehearsals): kill the app mid-count, restart it,
+   point at "RESUMED PAST [N] ON RECORD". "I just killed the agent. It came
+   back and resumed where the DATABASE says it left off, not from zero. Its
+   memory is MongoDB, not the process. A JSON file cannot do that." (Their
+   slide's three criteria in one screen; their kicker answered verbatim.)
 
 ## 05 · IMPACT (3:20-3:50) — the After + the numbers
 
@@ -107,9 +113,11 @@ Verbal bridge: "Let me show you this live, right now, on real run-to-failure dat
 > disclosure: both lanes brought Friday-night scaffolding, as the rules allow,
 > documented in the repo; the engine, the wiring, the agent, and everything you
 > just watched run was built today on this box. [If side challenge confirmed:]
-> And for the MongoDB side challenge: the database IS the safety mechanism;
-> immutable geometry versions, a compare-and-set human gate, and a work order
-> that cannot exist without its evidence."
+> And for the MongoDB side challenge: the database IS the safety mechanism
+> AND the agent's memory; immutable geometry versions, a compare-and-set
+> human gate, a work order that cannot exist without its evidence, and a
+> watch agent that survives being killed because it resumes from the record,
+> not from the process. If a JSON file would do, we wouldn't need any of it."
 
 ## 07 · CLOSE (4:20-4:40) — proof-of-concept close + hook callback + the line
 
