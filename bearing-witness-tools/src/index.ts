@@ -2,6 +2,7 @@ import { Type } from "typebox";
 import { defineToolPlugin } from "openclaw/plugin-sdk/tool-plugin";
 import { analyze, decide, replay } from "./cli.js";
 import { registerConfirmGate } from "./confirmGate.js";
+import { registerSessionScan } from "./sessionScan.js";
 
 const plugin = defineToolPlugin({
   id: "bearing-witness-tools",
@@ -113,6 +114,7 @@ const baseRegister = plugin.register;
 plugin.register = (api) => {
   baseRegister(api);
   registerConfirmGate(api);
+  registerSessionScan(api);
 };
 
 export default plugin;

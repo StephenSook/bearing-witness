@@ -269,6 +269,62 @@ the one that matters here — `hack-agent`'s own gateway, forwarded to the host 
 (`openshell forward list` shows it), and it's where agent `main` — with the bearing-witness
 plugin now actually loaded — really lives.
 
+### Root cause of task 3.5 (found and fixed, Aug 22 ~21:40) — `postScan()` never ran either
+
+Same shape of bug as task 3.2's `confirmGate.js`: `postScan.ts` (bans `replace` always, bans
+unearned `confirmed`, strips fabricated locator citations) was written and unit-tested in
+`index.test.ts`, but nothing in `index.ts`'s tool `execute()` functions ever called it. Proven
+live, not just by reading code: asked the sandbox agent to output a banned-word sentence
+verbatim on record 155 (`ANALYST_REVIEW_REQUIRED`) — it came back unfiltered.
+
+The fix isn't shaped like 3.2's, because the thing that needs scanning — the model's own drafted
+prose — doesn't exist inside any tool's `execute()`; a tool only sees its own JSON return value,
+never what the model later writes about it. Two OpenClaw hook points bracket that gap:
+`after_tool_call` (fires with the tool's result) and `reply_payload_sending` (the last point
+before a reply actually goes out, and the only one whose result type lets a plugin substitute
+`payload.text` outright). `before_agent_finalize` fires earlier and looked promising, but its
+result type only supports `action: "continue" | "revise" | "finalize"` with a retry
+instruction — "revise" asks the model to redo the turn, which contradicts task 3.5's own spec
+("swap safe JSON line, NO retry"), so it's the wrong hook shape even though it's tempting.
+
+New `bearing-witness-tools/src/sessionScan.ts` correlates the two hooks by `sessionKey` (OpenClaw's
+own hook-types comments say `reply_payload_sending`'s `runId` is "not yet plumbed through the
+outbound delivery path" and name `sessionKey` as the field plugins should rely on instead):
+`after_tool_call` stashes the last diagnostic-shaped tool result (anything with `status` +
+`refusal_reasons` — a type guard, not a toolName allowlist) per session; `reply_payload_sending`
+reads it back, runs `postScan`, and replaces just `payload.text` if it changed. Single-use: the
+entry is deleted after one scan so a stale result can't silently validate a later, unrelated
+reply. 8 new unit tests in `sessionScan.test.ts` (banned words, fabricated locators, payload
+fields preserved, missing sessionKey, non-diagnostic tool results, single-use).
+
+**A real, separate bug this surfaced**: `BANNED_ALWAYS`'s `/\breplace\b/i` regex does not match
+"replaced" — `\b` fails between `e` and `d`. `index.test.ts` already has a NAMED, deliberate test
+("passes 'recommend replacement' since replacement is not replace"), so this is a scoping choice,
+not an oversight — left untouched here, flagged for Jadyn rather than changed unilaterally.
+
+**Deploying it hit a second, unrelated live-box issue**: after `docker cp`-ing the rebuilt `dist/`
+into the sandbox and restarting the gateway, `openclaw plugins doctor` started reporting
+`bearing-witness-tools` as a **blocked plugin candidate: suspicious ownership (uid=998, expected
+uid=0 or root)** — and unlike nemoclaw's own core extension (which carries the identical warning
+harmlessly), this one was a hard block: the tool catalog actually lost all six tools
+(`Unknown tool id: openclaw:bearing-witness-tools:diagnose_bearing`). The whole
+`/sandbox/plugins/bearing-witness-tools` tree was owned `sandbox:sandbox`, not root, apparently
+regardless of how it got there (this predates the `docker cp`, going by nemoclaw's own directory
+showing the same pattern) — third-party plugin paths enforce the check, core paths don't. Fixed
+with `docker exec ... chown -R root:root /sandbox/plugins/bearing-witness-tools` + a gateway
+restart; confirmed durable (`/sandbox/plugins` is in the container's own writable layer per
+`docker inspect`, not a bind mount that would reset it). **Same fix will be needed after ANY
+future `docker cp` into that path** — chown to root before restarting the gateway, every time.
+
+Live-fire verification against the real sandbox agent was inconclusive by design, not by bug: the
+model itself declined the adversarial prompt twice in a row ("I won't do it while the underlying
+status says the fault is unconfirmed" / hedged the sentence into a marked quote) rather than
+emitting the banned text unmarked, so the hook never got exercised through that path either time.
+Both live runs completed cleanly (no crash, no hang — one ran long, ~5 minutes, which is ordinary
+model+retry latency, confirmed via `nemoclaw hack-agent logs`, not a stuck hook). Confidence here
+rests on the 8 unit tests plus a clean non-crashing live deployment, not a live catch — worth a
+short dashboard session (per the workflow above) if someone wants to force the exact case.
+
 ### Still untouched
 
 `/opt/bw` corpus/engine mount into the sandbox (`GB10-RUNBOOK.md` §3.3/§6.3 data-path test) —
