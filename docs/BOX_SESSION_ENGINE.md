@@ -142,6 +142,143 @@ After 1.5: **support mode** — answer Jadyn's CLI/locator questions (consumers 
 5–7 segments), pair with Stephen if 2.8 slips past 15:30, claim-correcting edits only after 16:30,
 submissions close 18:00.
 
+## OpenClaw plugin / sandbox track (bearing-witness-tools) — Aug 22, continued
+
+> **Downstream of `GB10-RUNBOOK.md` §04** (Install NemoClaw) **and §6.3** (Prove the sandbox
+> sees what it should) — the same relationship this file's engine-lane section above has to
+> §3.3/§6.3. Scope here is `bearing-witness-tools/` + OpenShell/NemoClaw sandbox policy —
+> **Jadyn's and Beeds' area**, not the Vinh engine-lane content above. Recorded in this file for
+> continuity between the two tracks, since both live on the same box session.
+
+### What was found
+
+- The plugin install steps (`npm run build`, `openclaw plugins install --link`, `enable`) target
+  the **host's** OpenClaw instance (`~/.openclaw/openclaw.json`). The `hack-agent` sandbox that
+  `nemoclaw hack-agent agent --agent main` actually talks to is a separate Docker container
+  (`openshell-default--hack-agent-*`) with its own isolated config at
+  `/sandbox/.openclaw/openclaw.json` **inside** the container, and its own `plugins.allow` hard
+  allowlist. Installing on the host never reaches it.
+- `GB10-RUNBOOK.md` §6.3's own `openclaw sandbox explain --agent main --json` step must be run
+  **inside** the sandbox (`nemoclaw hack-agent connect` first) — running it from the host queries
+  an unrelated agent/profile and gives a misleading result.
+
+### Fixes applied (inside the `hack-agent` container, `/sandbox/.openclaw`)
+
+1. Copied the built plugin (`dist/`, `openclaw.plugin.json`, `package.json`, `node_modules` for
+   the `typebox` runtime dep) into `/sandbox/plugins/bearing-witness-tools`.
+2. `openclaw plugins install --link /sandbox/plugins/bearing-witness-tools` +
+   `openclaw plugins enable bearing-witness-tools`, run as the `sandbox` user **inside** the
+   container — its own `openclaw` binary, its own config, not the host CLI.
+3. `openclaw config set plugins.allow '["nemoclaw","bearing-witness-tools"]' --strict-json` —
+   appended; `nemoclaw` was not removed.
+4. Copied `src/fixtures/*.json` into `dist/fixtures/` — `tsc` does not copy static JSON fixtures
+   on `npm run build`, and `cli.ts`'s `FIXTURES_DIR = join(__dirname, "fixtures")` resolves to
+   `dist/fixtures`, which is otherwise never created. **This is a real gap in the plugin's own
+   build, present on the host too** — worth a `postbuild` copy step, not something specific to
+   the container.
+5. Gateway restart was initially rejected (`GATEWAY_UNSAFE_CONFIG_PATH` →
+   `invalid-restart-posture`): the OpenClaw CLI's own config writer left `/sandbox/.openclaw` at
+   `0700` and `openclaw.json` at `0600`, but NemoClaw's tamper-detection guard
+   (`openclaw-config-guard.py`) requires exactly `2770`/`0660` `sandbox:sandbox` (matching the
+   sibling `.config-hash`) to accept a restart as legitimate "mutable posture" rather than
+   tampering. Fixed via `chmod 2770 .openclaw && chmod 660 openclaw.json` — permissions only, no
+   content touched.
+6. Restarted via `nemoclaw hack-agent gateway restart` (the host-gated path) — the in-container
+   restart-request channel is root-only by design
+   (`/run/nemoclaw/gateway-control`, comment in `nemoclaw-start`: "sandbox processes cannot
+   submit or alter them"). Never send a signal/kill into the container directly for this.
+7. Step 5 (`openclaw sandbox explain`) was reporting OpenClaw's own internal exec-sandbox tool
+   profile (default "coding" profile, unrelated to the plugin's tools) with `source: "default"`.
+   Set the intended surface via `openclaw config patch`:
+   ```json5
+   { tools: { sandbox: { tools: {
+     allow: ["diagnose_bearing","check_blockers","get_evidence","submit_decision","test_without_geometry","replay_timeline"],
+     deny: ["group:fs","group:web","group:runtime"]
+   } } } }
+   ```
+   No restart needed (hot-reloadable). `sandbox explain` now shows the six tools under `allow`,
+   the expanded group members (`read`/`write`/`edit`/`apply_patch`,
+   `web_search`/`web_fetch`/`x_search`, `exec`/`process`/`code_execution`) under `deny`, both
+   sourced `"global"` — matches §6.3's expectation.
+
+### Root cause of task 3.2 (found and proven, Aug 22 ~17:00) — `confirmGate.js` never loads
+
+Step 3 (`diagnose_bearing`) returns `ANALYST_REVIEW_REQUIRED` cleanly. Step 4 (`submit_decision`)
+does **not** pause — it writes `INSPECTION_APPROVED` immediately, every time, regardless of
+invocation mode. An earlier pass through this file guessed this was a one-shot-CLI /
+no-approval-channel gap (OpenClaw's `requireApproval` only truly blocks when it can route to a
+live human). **That theory was wrong** — proven wrong by instrumenting the actual running code:
+
+- `package.json` declares two plugin entry points: `"openclaw": {"extensions":
+  ["./dist/index.js", "./dist/confirmGate.js"]}`.
+- `openclaw plugins inspect bearing-witness-tools --runtime --json` (and `plugins list --json`)
+  both report `"source": ".../dist/index.js"` only — `confirmGate.js` is never named as a loaded
+  module anywhere in the runtime record. `"hookCount": 0`, `"typedHooks": []` — nothing is
+  registered.
+- The `trustedToolPolicies`/`tools` array that *does* show up under `inspect`'s `"contracts"` key
+  is a **static echo of `openclaw.plugin.json`'s own `contracts` field** (word-for-word), not
+  proof of live registration — that manifest file self-declares what the plugin *claims* to
+  provide, and `doctor`/`inspect` surface it whether or not the code backing it actually ran.
+  This is what made the wiring look correct in steps 1–2 of the original smoke test.
+- Definitive proof: added an unconditional `appendFileSync` trace at the top of `confirmGate.js`
+  (fires the instant the ES module is evaluated, before any function call) and reinstalled +
+  restarted the gateway. The trace file was **never created** — the module is never imported.
+  Reverted this instrumentation after confirming; `confirmGate.js` in the repo is unchanged.
+
+**Fix needed (Jadyn's file, needs review per this doc's process):** `./dist/confirmGate.js` as a
+second `package.json` `openclaw.extensions` entry does not get loaded by this OpenClaw version's
+plugin loader for a path-installed (`--link`) plugin — only the first listed entry loads. The
+robust fix is to stop relying on a second entry point: merge the trusted-tool-policy registration
+into `index.ts`'s single `register`/`defineToolPlugin` flow (import `confirmGate.ts`'s
+`api.registerTrustedToolPolicy(...)` call and invoke it from the same entry that registers the
+six tools), then drop `./dist/confirmGate.js` from `package.json`'s `extensions` array. Until
+that lands, task 3.2 does not function on this build — no invocation mode (CLI, dashboard,
+channel) will trigger it, since the code that would ask for approval never runs.
+
+### Workflow: testing interactively via the dashboard
+
+Even after the fix above lands, the `nemoclaw hack-agent agent -m` one-shot CLI call still won't
+be able to answer a real approval prompt (it's channel-less, so `requireApproval` has nowhere to
+route the question to a human) — use the sandbox's own web dashboard instead, where a human is
+present to click Allow/Deny:
+
+```bash
+nemoclaw hack-agent dashboard-url
+# -> http://127.0.0.1:18790/#token=<token>   (treat the URL like a password)
+```
+
+Open that URL in a browser (SSH-tunnel it first if not on the box:
+`ssh -L 18790:127.0.0.1:18790 user@gb10`), start a chat with agent `main`, and ask it to call
+`submit_decision` the same way step 4 does. A working confirm-before-mutate gate should show an
+approval card in the UI and block until answered.
+
+### Note: `openclaw config set`/`patch` resets the mutable-posture file modes every time
+
+Each CLI config write (not just the first) leaves `/sandbox/.openclaw` at `0700` and
+`openclaw.json` at `0600` instead of NemoClaw's required `2770`/`0660`. Hit this twice — once
+after the original `plugins.allow` edit, again after the step-5 `tools.sandbox` patch. Before any
+`nemoclaw hack-agent gateway restart`, re-check/fix: `chmod 2770 /sandbox/.openclaw && chmod 660
+/sandbox/.openclaw/openclaw.json`, or the restart fails with `GATEWAY_UNSAFE_CONFIG_PATH` /
+`invalid-restart-posture`.
+
+**Not port 8080.** `127.0.0.1:8080` is OpenShell's own internal control-plane gateway (JSON-RPC/WS
+orchestration API used by `nemoclaw`/`openshell` themselves to manage sandboxes — every page
+route 404s, it is not a browsable UI). `18789` is the **host's** general-purpose OpenClaw gateway
+(unrelated to this plugin, since it was never installed there for the sandbox to use). `18790` is
+the one that matters here — `hack-agent`'s own gateway, forwarded to the host by OpenShell
+(`openshell forward list` shows it), and it's where agent `main` — with the bearing-witness
+plugin now actually loaded — really lives.
+
+### Still untouched
+
+`/opt/bw` corpus/engine mount into the sandbox (`GB10-RUNBOOK.md` §3.3/§6.3 data-path test) —
+separate, deeper issue; §3.3 says sandbox mounts lock at `nemoclaw onboard` time, and `/opt/bw`
+didn't exist yet when this box's onboarding ran (see "Box staging performed" above), so the
+running container was never given that mount. Fixing it means recreating the sandbox, which is
+riskier than anything above and wasn't attempted here.
+
+---
+
 ## Where the facts live (when a judge or teammate asks)
 
 - Engine rules, constants, status tree, Q&A: `TECHNICAL_REFERENCE.md` §9, §11, **§12, §13**.
@@ -150,3 +287,5 @@ submissions close 18:00.
 - Freeze + results: `eval/frozen_thresholds_v3.md`, `eval/results_v3.json`, `eval/run_v3_output.txt`.
 - Onset semantics + verdicts: `eval/onset_inspection.md`.
 - Decisions D1–D10 and the abandon ladder: `PLAN.md`.
+- OpenClaw plugin / NemoClaw sandbox state (bearing-witness-tools, confirm-gate, dashboard
+  workflow): "OpenClaw plugin / sandbox track" section above.

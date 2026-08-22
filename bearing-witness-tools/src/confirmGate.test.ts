@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
-import confirmGate from "./confirmGate.js";
+import { registerConfirmGate } from "./confirmGate.js";
 
 function registerAndCapture() {
   let captured: any;
-  confirmGate.register({
+  registerConfirmGate({
     registerTrustedToolPolicy: (policy: any) => {
       captured = policy;
     },

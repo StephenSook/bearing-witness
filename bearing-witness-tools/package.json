@@ -27,8 +27,7 @@
   },
   "openclaw": {
     "extensions": [
-      "./dist/index.js",
-      "./dist/confirmGate.js"
+      "./dist/index.js"
     ]
   }
 }

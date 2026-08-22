@@ -1,8 +1,9 @@
 import { Type } from "typebox";
 import { defineToolPlugin } from "openclaw/plugin-sdk/tool-plugin";
 import { analyze, decide, replay } from "./cli.js";
+import { registerConfirmGate } from "./confirmGate.js";
 
-export default defineToolPlugin({
+const plugin = defineToolPlugin({
   id: "bearing-witness-tools",
   name: "Bearing Witness Tools",
   description: "Local bearing vibration analysis via the Bearing Witness CLI.",
@@ -102,3 +103,16 @@ export default defineToolPlugin({
 
   ],
 });
+
+// package.json's `openclaw.extensions` lists only this file — a plugin loaded by
+// path only imports its first declared extension entry. The confirm-gate used to
+// live in a second entry (confirmGate.js) that never actually loaded as a result
+// (see the NOTE in confirmGate.ts). Registering it here, from the one entry point
+// that does load, is what actually wires task 3.2's human-confirmation gate in.
+const baseRegister = plugin.register;
+plugin.register = (api) => {
+  baseRegister(api);
+  registerConfirmGate(api);
+};
+
+export default plugin;
