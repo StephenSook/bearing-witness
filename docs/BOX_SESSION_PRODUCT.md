@@ -33,10 +33,44 @@ Environment the product reads (defaults in parentheses; set only if paths differ
 | `BW_ENGINE_ROOT` | repo `data/` | corpus root; on the box: `/opt/bw/corpus/XJTU-SY_Bearing_Datasets` |
 | `BW_PORT` | `8080` | UI port |
 
+## Step 0: install mongod (one-time; needs the hotspot unless it is on the kit)
+
+Check first (any output = already there, skip the install):
+
+```bash
+command -v mongod; docker images | grep -i mongo
+ls /mnt/nvme/kit/05_CONTAINERS /mnt/nvme/kit/06_PACKAGES 2>/dev/null | grep -i mongo
+```
+
+Preferred path, Docker (the exact image CI tests against; ~750 MB over the
+hotspot):
+
+```bash
+docker pull mongo:8
+sudo mkdir -p /opt/bw/state/mongo
+docker run -d --name bw-mongo --restart unless-stopped \
+  -p 127.0.0.1:27017:27017 \
+  -v /opt/bw/state/mongo:/data/db \
+  mongo:8
+```
+
+The `127.0.0.1:` in the port mapping is load-bearing: it keeps Mongo off the
+venue LAN, which is the "localhost only" claim on the tech slide. Do not
+publish it as a bare `-p 27017:27017`.
+
+If the kit has it as a docker tar instead: `docker load -i <that tar>` then the
+same `docker run`. If the kit has native ARM64 debs: `sudo dpkg -i` them, then
+`sudo systemctl enable --now mongod` (default bind is already 127.0.0.1).
+
+No user, no password, no config file needed: the product connects to
+`mongodb://127.0.0.1:27017/bearing_witness` by default, and the FIRST UI boot
+creates the collections, the schema validators, and the seeded fixture cases by
+itself. There is no separate "initialize the database" step.
+
 ## Bring-up order
 
 ```bash
-# 1. Mongo up (however Beeds installed it; then verify)
+# 1. Mongo up (after step 0; verify the ping)
 /opt/bw/venv/bin/python -c "from pymongo import MongoClient; \
   print(MongoClient('mongodb://127.0.0.1:27017', serverSelectionTimeoutMS=2000).admin.command('ping'))"
 # expect: {'ok': 1.0}
