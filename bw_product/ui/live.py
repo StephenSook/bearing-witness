@@ -54,8 +54,10 @@ def live_analysis_row(backend: Backend) -> None:
                     status.text = (f"STOPPING · FINISHING W{s['current_window'] or 0:03d} "
                                    "(engine tick can take minutes)")
                 elif s["running"]:
+                    resumed = s.get("skipped_on_record", 0)
                     status.text = (f"WATCHING · W{s['current_window'] or 0:03d} · "
-                                   f"{s['analyzed']} ANALYZED · {len(s['errors'])} ERR")
+                                   f"{s['analyzed']} ANALYZED · {len(s['errors'])} ERR"
+                                   + (f" · RESUMED PAST {resumed} ON RECORD" if resumed else ""))
                 else:
                     status.text = (f"WATCH DONE · {s['analyzed']} ANALYZED · "
                                    f"{len(s['errors'])} ERR" if s["analyzed"] else "")

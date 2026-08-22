@@ -89,3 +89,41 @@ def test_watch_start_is_idempotent():
     assert loop.start() is False  # second start while running: refused
     gate.set()
     loop.stop()
+
+
+def _drain(loop):
+    deadline = time.monotonic() + 5
+    while loop.snapshot()["running"] and time.monotonic() < deadline:
+        time.sleep(0.01)
+    return loop.snapshot()
+
+
+def test_watch_resumes_past_windows_already_on_record():
+    """The agent survives its own sandbox: a restarted loop asks the DATABASE
+    which windows already carry a case and analyzes only the rest, so its
+    position lives in Mongo, not in process memory."""
+    seen = []
+    loop = WatchLoop(db=None, windows=range(1, 8), interval_s=0.0,
+                     analyze=seen.append, resume=lambda: {1, 2, 3, 155})
+    loop.start()
+    snap = _drain(loop)
+    assert seen == [4, 5, 6, 7]                 # retrieval changed behavior
+    assert snap["analyzed"] == 4
+    assert snap["skipped_on_record"] == 3       # 155 outside this range: not counted
+    assert snap["errors"] == []
+
+
+def test_watch_resume_failure_replays_from_start_and_records_it():
+    """Resume is an optimization, never a crash: a failed resume query is
+    recorded and the loop replays everything (duplicate inserts reconcile)."""
+    def broken_resume():
+        raise RuntimeError("mongo unreachable during resume")
+
+    seen = []
+    loop = WatchLoop(db=None, windows=range(1, 4), interval_s=0.0,
+                     analyze=seen.append, resume=broken_resume)
+    loop.start()
+    snap = _drain(loop)
+    assert seen == [1, 2, 3]
+    assert snap["skipped_on_record"] == 0
+    assert len(snap["errors"]) == 1 and snap["errors"][0][0] == "resume"

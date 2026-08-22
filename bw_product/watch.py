@@ -16,6 +16,7 @@ import threading
 from typing import Callable, Iterable
 
 from . import engine_adapter as ea
+from . import store as st
 
 
 class WatchLoop:
@@ -24,16 +25,21 @@ class WatchLoop:
 
     def __init__(self, db, windows: Iterable[int] = range(1, 159),
                  interval_s: float = 2.0,
-                 analyze: Callable[[int], dict] | None = None):
+                 analyze: Callable[[int], dict] | None = None,
+                 resume: Callable[[], set] | None = None):
         self._db = db
         self._windows = list(windows)
         self._interval = interval_s
         self._analyze = analyze or (lambda w: ea.analyze_and_store(self._db, w))
+        # the loop's memory is the DATABASE: at start it asks Mongo which
+        # windows already have a case on record and skips them, so a killed
+        # and restarted agent resumes where the stored record says it left off
+        self._resume = resume or (lambda: st.recorded_windows(self._db))
         self._lock = threading.Lock()
         self._stop = threading.Event()
         self._thread: threading.Thread | None = None
         self._state = {"running": False, "current_window": None,
-                       "analyzed": 0, "errors": []}
+                       "analyzed": 0, "skipped_on_record": 0, "errors": []}
 
     def snapshot(self) -> dict:
         t = self._thread
@@ -47,7 +53,8 @@ class WatchLoop:
         with self._lock:
             if self._state["running"]:
                 return False
-            self._state.update({"running": True, "analyzed": 0, "errors": []})
+            self._state.update({"running": True, "analyzed": 0,
+                                "skipped_on_record": 0, "errors": []})
         self._stop.clear()
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
@@ -69,7 +76,18 @@ class WatchLoop:
 
     def _run(self) -> None:
         try:
+            try:
+                on_record = self._resume()
+            except Exception as exc:  # resume is an optimization, never a crash
+                with self._lock:
+                    self._state["errors"].append(("resume", str(exc)[:200]))
+                on_record = set()
+            skipped = [w for w in self._windows if w in on_record]
+            with self._lock:
+                self._state["skipped_on_record"] = len(skipped)
             for w in self._windows:
+                if w in on_record:
+                    continue
                 if self._stop.is_set():
                     break
                 with self._lock:

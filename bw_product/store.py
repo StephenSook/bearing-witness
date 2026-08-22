@@ -215,6 +215,22 @@ def get_case(db: Database, analysis_id: str) -> dict | None:
     return db.diagnostic_cases.find_one({"analysis_id": analysis_id})
 
 
+def recorded_windows(db: Database) -> set[int]:
+    """Window numbers that already have a case on record. The watch loop reads
+    this at start so a restarted agent resumes where the DATABASE says it left
+    off instead of replaying from window 1: the loop's memory is Mongo, not the
+    process. On a failed query, return empty and log the cause: the loop then
+    replays from the start, which is safe (duplicate inserts reconcile by
+    readback) and merely slower, never silent data loss."""
+    try:
+        return {int(w) for w in db.diagnostic_cases.distinct("source_window.record")
+                if w is not None}
+    except Exception as exc:
+        import logging
+        logging.getLogger(__name__).warning("recorded_windows query failed: %s", exc)
+        return set()
+
+
 # fields a fixture regeneration may refresh; identity and the human trail never move
 _EVIDENCE_FIELDS = tuple(f for f in FIELDS if f not in ("analysis_id", "status", "human_review"))
 
