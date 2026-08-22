@@ -1,0 +1,132 @@
+# Pitch Script v2 — Bearing Witness (5:00, top-8 live, Sat 2026-08-22 20:00)
+
+Structure: the Sookra Pitch Arc (Pitch, Hook & Sell guide), tuned to this rubric:
+technical execution · usefulness · local-first design · pitch quality.
+[MEASURED] slots fill ONLY from the frozen evaluator or the shipped suite.
+Roles: Stephen presents; ONE teammate is Demo Driver (no pause-while-I-type);
+agree the driver at the 16:30 freeze. Judge routing: identify the decision-weight
+judge during the day and make sure they see the live run.
+
+## 01 · HOOK (0:00-0:30) — named moment + sourced stat + structural tension
+
+No prop. At "a part smaller than your fist," gesture at the bearing on screen
+(the fleet screen's card grid or the title slide's bearing image carries the
+visual). Do not introduce the team. Do not say "today I'll show you."
+
+> "This month we sat down with a vibration practitioner who has spent decades
+> walking plant floors. He told us how bearing failures actually get found:
+> someone hears it, smells it, or the line stops. In the largest utility motor
+> reliability study ever done, six thousand three hundred motors, forty-one
+> percent of ALL failures came down to this:" [gesture at the screen] "a part
+> smaller than your fist. And most plants still check it once a month, by hand,
+> on a route."
+
+(41% = Albrecht et al., IEEE Trans. Energy Conversion, 1986, EPRI/GE, 6,312
+motors. Primary and peer-reviewed; survives a judge looking it up.)
+
+## 02 · PROBLEM + AGITATE (0:30-1:05) — stay in the pain
+
+> "A bearing can go from healthy to destroyed inside the gap between two of
+> those monthly readings. ABB's own reliability survey of three thousand plant
+> decision-makers puts the median cost of unplanned downtime at a hundred and
+> twenty-five thousand dollars an hour; two-thirds of plants eat at least one
+> a month. So why isn't continuous monitoring everywhere? Because the fix
+> everyone sells is a cloud subscription, and the plants that need it most are
+> exactly the ones whose vibration data is not allowed to leave the building.
+> The people who fail here aren't lazy. They're locked out."
+
+(Name ABB as the source out loud: pre-empts the challenge.)
+
+## 03 · SOLUTION (1:05-1:20) — one sentence, no stack
+
+> "Bearing Witness is an always-on screening agent that lives entirely on this
+> Dell Pro Max: it watches every window of vibration, explains what it sees with
+> evidence a human can check, and files the work order. Nothing leaves the room."
+
+## 04 · DEMO (1:20-3:20) — the headline runs live; narrate outcomes
+
+Verbal bridge: "Let me show you this live, right now, on real run-to-failure data."
+
+1. Fleet: "All fifteen bearings through the frozen evaluator; every card is a
+   real verdict. Zero wrong. Zero missed."
+2. W011 baseline: green lamp. "It refuses to call this healthy; it says no
+   persistent change. Words matter here."
+3. W155: two views. PAUSE HERE (the killer feature; let judges absorb):
+   > "The envelope spectrum shows 107.03 hertz and its harmonics: the outer-race
+   > signature of THIS bearing's geometry. Prediction said 107.9. Measurement
+   > runs 0.8 percent low. That's real shaft slip; the app shows it instead of
+   > hiding it."
+4. Audio beat (if room-speaker-verified): "Same bearing, first hour vs last
+   hour. You can hear what the spectrum shows."
+5. Decision: reason typed, APPROVE. "The work order is a MongoDB document with
+   the evidence pinned to it. The agent drafts. A human says yes."
+6. THE REFUSAL BEAT (slow down; this is the shouldn't-be-possible moment):
+   > "Now watch what it will NOT do. Same waveform, but the bearing's geometry
+   > is unverified. No location call. And look: no approve button. The UI cannot
+   > approve an untrusted case, and neither can the database; the decision write
+   > is compare-and-set on the review state. An agent you can trust is one that
+   > refuses when it should."
+7. Only if 2.8 ran green in all three rehearsals: "Pick a window. Any of the
+   158." Analyze it live. "That analysis is not a recording; nothing here is."
+
+## 05 · IMPACT (3:20-3:50) — the After + the numbers
+
+> "The maintenance planner's morning changes: instead of a monthly route and a
+> guess, a screening queue with evidence, and a work order already in the system
+> of record. At ABB's median rate, catching one failure inside that monthly
+> blind spot pays for this box the first time it happens. The numbers, from an
+> evaluation whose thresholds were frozen and committed BEFORE it ran: all
+> fifteen run-to-failure bearings, onset detected on every single one, eleven
+> element calls, ten exact plus one cage-consistent, ZERO wrong, and four
+> honest abstentions where the evidence didn't clear the three-harmonic floor.
+> Median warning: ninety-nine minutes before end of life. The best case,
+> forty-two hours. When this system doesn't know, it says so. That's the
+> entire point."
+> (Lead-time semantics reconciled in eval/onset_inspection.md; if pressed:
+> median 98 excluding the one bearing whose baseline was contaminated, we
+> state it both ways.)
+
+## 06 · TEAM + TECH (3:50-4:20) — stack lands HERE, once, wired-or-cut
+
+> "Four builders, four lanes, one day: [stack as ACTUALLY wired at freeze, 2-3
+> of NemoClaw / OpenClaw / OpenShell + MongoDB + SciPy, one sentence]. Full
+> disclosure: both lanes brought Friday-night scaffolding, as the rules allow,
+> documented in the repo; the engine, the wiring, the agent, and everything you
+> just watched run was built today on this box. [If side challenge confirmed:]
+> And for the MongoDB side challenge: the database IS the safety mechanism;
+> immutable geometry versions, a compare-and-set human gate, and a work order
+> that cannot exist without its evidence."
+
+## 07 · CLOSE (4:20-4:40) — the line that gets remembered
+
+> "Detect the change. Explain the spectrum. Escalate with evidence. A human has
+> to say yes. Bearing Witness, team Hermit Crab."
+
+Final slide: QR to the public repo. 20 seconds of buffer held.
+
+## Q&A prep (part of the pitch; three-move rule on risk questions)
+
+- "What were the challenges?" -> the honest one: sm_121 silicon day-one, the
+  11:15 Ollama parachute decision, and keeping claims measured under deadline.
+- "What would you build next?" -> SK band selection over the fixed 2-4 kHz
+  demod band; more bearings into the fleet; the analyst-review queue for teams.
+- "Business value?" -> ABB $125k/hour median (named as ABB's survey), the
+  monthly blind spot, one catch pays for the box.
+- "Who are your users?" -> reliability/vibration teams in OT-isolated plants;
+  built from a real practitioner conversation this month.
+- "What makes this different?" -> physics owns diagnosis (SciPy, deterministic,
+  auditable); the model explains and files paperwork; and the system refuses
+  without trust. Most demos add AI; ours constrains it.
+- Prevention-frame questions (accuracy, false alarms): acknowledge -> answer
+  with the frozen-thresholds + verbatim-evaluator evidence -> advance to the
+  human-gate design. Never leave the room in a risk frame.
+
+## Delivery rules
+
+- Rehearse x3 timed after the 16:30 freeze; memorize the hook COLD.
+- RECORD one full rehearsal as the hardwired backup video (screen + voice);
+  if the live demo dies, cut to it without hesitation (Golden Rule 12).
+- Use the provided monitor, not a laptop screen; judges cluster.
+- Never say a number that is not on a screen, in the frozen evaluator output,
+  or in the sourced-stat list above.
+- No em-dashes, no AI-tone words on slides or in speech notes.
