@@ -19,8 +19,8 @@ engine smoke first, then this, in order. Report exact output, not summaries.
   file-fallback decision logs belong there, never in the corpus or the repo.
 - MongoDB: Community 8.0 ARM64, local only, no Atlas, no auth for the demo.
   NOTE: mongod is NOT covered by GB10-RUNBOOK (that doc is the NemoClaw/Ollama
-  stack). Confirm the mongod ARM64 binary exists on the box or the kit BEFORE
-  the gate; if it is missing, it needs the hotspot (Ollama-style) to fetch.
+  stack), and this box has no `mongod` package or binary at all — it runs as a
+  Docker container from the kit's image tar (confirmed 2026-08-22; see Step 0).
 - Model actually serving on the box (RUNBOOK header): `qwen3.8:27b-q4_K_M` via
   Ollama on 127.0.0.1:11434, NemoClaw auth proxy on 11435. Say THIS model name
   to judges; the deck and pitch already match it.
@@ -38,34 +38,47 @@ Environment the product reads (defaults in parentheses; set only if paths differ
 Check first (any output = already there, skip the install):
 
 ```bash
-command -v mongod; docker images | grep -i mongo
-ls /mnt/nvme/kit/05_CONTAINERS /mnt/nvme/kit/06_PACKAGES 2>/dev/null | grep -i mongo
+command -v mongod; docker ps --filter name=bearing-witness-mongo; docker images | grep -i mongo
+ls /media/dell/BWITNESS/BEARING_WITNESS_OFFLINE_KIT/05_CONTAINERS 2>/dev/null | grep -i mongo
 ```
 
-Preferred path, Docker (the exact image CI tests against; ~750 MB over the
-hotspot):
+**On this box (verified 2026-08-22):** there is no `mongod` package or binary
+anywhere, and the kit's `06_PACKAGES/mongodb/` is empty — the real artifact is
+a Docker image tar in `05_CONTAINERS/`. This is the path that's actually
+running:
 
 ```bash
-docker pull mongo:8
-sudo mkdir -p /opt/bw/state/mongo
-docker run -d --name bw-mongo --restart unless-stopped \
+docker load -i /media/dell/BWITNESS/BEARING_WITNESS_OFFLINE_KIT/05_CONTAINERS/mongo-8.0-arm64-*.tar
+docker tag mongo:i-was-a-digest mongo:8.0-bwitness-arm64   # matches 09_VERIFY/prepare_gb10.sh's own retag
+docker volume create bearing-witness-mongo-data            # not a /opt bind mount: /opt is root-owned
+                                                             # on this box and sudo has no TTY here; a
+                                                             # docker-managed volume needs no sudo and
+                                                             # gives the same local-only guarantee
+docker run -d --name bearing-witness-mongo --restart unless-stopped \
   -p 127.0.0.1:27017:27017 \
-  -v /opt/bw/state/mongo:/data/db \
-  mongo:8
+  -v bearing-witness-mongo-data:/data/db \
+  mongo:8.0-bwitness-arm64
 ```
 
 The `127.0.0.1:` in the port mapping is load-bearing: it keeps Mongo off the
 venue LAN, which is the "localhost only" claim on the tech slide. Do not
-publish it as a bare `-p 27017:27017`.
+publish it as a bare `-p 27017:27017`. `restart unless-stopped` survives a
+docker-daemon restart (verified via `docker restart bearing-witness-mongo`);
+data persists in the named volume regardless — reload+retag from the kit tar
+and `docker run` again if the container itself is ever gone.
 
-If the kit has it as a docker tar instead: `docker load -i <that tar>` then the
-same `docker run`. If the kit has native ARM64 debs: `sudo dpkg -i` them, then
-`sudo systemctl enable --now mongod` (default bind is already 127.0.0.1).
+**Starting fresh on a different box** (no pre-staged kit tar, wifi
+available): `docker pull mongo:8`, then the same `docker run` shape above with
+whatever container/volume names you like. If the kit instead ships native
+ARM64 debs: `sudo dpkg -i` them, then `sudo systemctl enable --now mongod`
+(default bind is already 127.0.0.1).
 
 No user, no password, no config file needed: the product connects to
 `mongodb://127.0.0.1:27017/bearing_witness` by default, and the FIRST UI boot
 creates the collections, the schema validators, and the seeded fixture cases by
-itself. There is no separate "initialize the database" step.
+itself. There is no separate "initialize the database" step. Confirmed
+Community edition, not Enterprise: `docker exec bearing-witness-mongo mongosh
+--quiet --eval 'db.serverBuildInfo().modules'` returns `[]`.
 
 ## Bring-up order
 
