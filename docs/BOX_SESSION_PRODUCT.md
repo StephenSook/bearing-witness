@@ -30,8 +30,8 @@ Environment the product reads (defaults in parentheses; set only if paths differ
 | Var | Default | Meaning |
 |---|---|---|
 | `MONGODB_URI` | `mongodb://127.0.0.1:27017/bearing_witness` | Mongo connection |
-| `BW_ENGINE_ROOT` | repo `data/` | corpus root; on the box: `/opt/bw/corpus/XJTU-SY_Bearing_Datasets` |
-| `BW_PORT` | `8080` | UI port |
+| `BW_ENGINE_ROOT` | repo `data/` | corpus root; on the box: `/opt/bw/corpus` (the symlink at `/opt/bw/corpus` already resolves straight to `XJTU-SY_Bearing_Datasets/` — do not append that segment again) |
+| `BW_PORT` | `8080` | UI port; the OpenShell gateway also binds 8080 on this box, so pick a free port (e.g. `8091`) if it's taken |
 
 ## Bring-up order
 
@@ -49,13 +49,16 @@ cd /opt/bw/engine
 # error by design (false-green guard), locally it would just skip.
 
 # 3. E2E through the real engine (corpus + mongod both needed)
-/opt/bw/venv/bin/python -m pytest bw_product/tests/ -q -m slow
-# expect: real-engine e2e tests pass (W155 through adapter to Mongo projection)
+/opt/bw/venv/bin/python -m pytest bw_product/tests/test_e2e_real_engine.py -q
+# expect: 3 passed (W155 through adapter to Mongo projection). NOTE: these are
+# NOT marked `slow` (that marker is only on tests/test_engine_realdata.py in the
+# engine lane); they're gated by needs_corpus/needs_mongod skipif and already ran
+# as part of step 2's full suite once corpus+mongod are both up.
 
 # 4. UI up
-BW_ENGINE_ROOT=/opt/bw/corpus/XJTU-SY_Bearing_Datasets \
+BW_ENGINE_ROOT=/opt/bw/corpus BW_PORT=8091 \
   /opt/bw/venv/bin/python -m bw_product.ui
-# then open http://127.0.0.1:8080
+# then open http://127.0.0.1:8091 (8080 is taken by the OpenShell gateway on this box)
 ```
 
 ## What must work (walk this list in the UI, in order)
