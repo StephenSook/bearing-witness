@@ -1,0 +1,902 @@
+{
+ "version": "v3",
+ "thresholds_sha256": "59a9d901f9cf3fe607493a348100835c62fe24a2da8f082550809b8198701dc5",
+ "run_at": "2026-08-22T03:43:33.691522+00:00",
+ "wall_s": 7,
+ "summary": {
+  "correct": 10,
+  "cage_consistent_correct": 1,
+  "abstain": 4,
+  "wrong": 0,
+  "missed": 0,
+  "other": 0,
+  "lead_min_median_max": [
+   11,
+   99,
+   2519
+  ],
+  "early_onset_first_30pct": 7,
+  "view_a_abstains": 0
+ },
+ "results": {
+  "Bearing1_1": {
+   "condition": "35Hz12kN",
+   "files": 123,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 30,
+   "lead_time_min": 93,
+   "early_onset_inside_first_30pct": true,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 48.01,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 108.59375,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 8.6,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 13.151212011577423,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 7.39,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 148.07467781103364,
+     "excluded_hz": [
+      142.96875,
+      290.625,
+      433.59375
+     ]
+    },
+    "BPFI": {
+     "score_median": 7.1,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 171.875,
+     "excluded_hz": [
+      507.03125
+     ]
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing1_2": {
+   "condition": "35Hz12kN",
+   "files": 161,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 37,
+   "lead_time_min": 124,
+   "early_onset_inside_first_30pct": true,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 24.5,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 107.94407109261938,
+     "excluded_hz": [
+      107.03125,
+      214.0625,
+      321.875
+     ]
+    },
+    "BSF2": {
+     "score_median": 6.04,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 143.38717781103364,
+     "excluded_hz": [
+      141.40625,
+      428.90625
+     ]
+    },
+    "BPFI": {
+     "score_median": 5.86,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 176.3840539073806,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 3.77,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 13.541837011577423,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing1_3": {
+   "condition": "35Hz12kN",
+   "files": 158,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 59,
+   "lead_time_min": 99,
+   "early_onset_inside_first_30pct": false,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 30.1,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 107.03125,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 11.44,
+     "harm": 2.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 13.28125,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 11.38,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 171.3059289073806,
+     "excluded_hz": [
+      534.375
+     ]
+    },
+    "BSF2": {
+     "score_median": 6.56,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 147.29342781103364,
+     "excluded_hz": [
+      427.34375
+     ]
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing1_4": {
+   "condition": "35Hz12kN",
+   "files": 122,
+   "documented": [
+    "cage"
+   ],
+   "onset_window": 57,
+   "lead_time_min": 65,
+   "early_onset_inside_first_30pct": false,
+   "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+   "suspected_location": null,
+   "refusal_reasons": [
+    "CAGE_CONSISTENT_NOT_CALLED"
+   ],
+   "view_a_supports": null,
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "FTF": {
+     "score_median": 15.96,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 13.28125,
+     "excluded_hz": []
+    },
+    "BPFO": {
+     "score_median": 7.09,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 111.71875,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.93,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 146.51217781103364,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 6.05,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 170.1340539073806,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "CORRECT_CONSISTENT"
+  },
+  "Bearing1_5": {
+   "condition": "35Hz12kN",
+   "files": 52,
+   "documented": [
+    "inner",
+    "outer"
+   ],
+   "onset_window": 32,
+   "lead_time_min": 20,
+   "early_onset_inside_first_30pct": false,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 14.63,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 108.59375,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 6.48,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 170.9153039073806,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 6.25,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 13.151212011577423,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.1,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 141.04342781103364,
+     "excluded_hz": [
+      433.59375
+     ]
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing2_1": {
+   "condition": "37.5Hz11kN",
+   "files": 491,
+   "documented": [
+    "inner"
+   ],
+   "onset_window": 453,
+   "lead_time_min": 38,
+   "early_onset_inside_first_30pct": false,
+   "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+   "suspected_location": null,
+   "refusal_reasons": [
+    "BEARING_PATTERN_LOCATION_UNCONFIRMED",
+    "INSUFFICIENT_HARMONICS_BPFI_2_NEED_3"
+   ],
+   "view_a_supports": null,
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFI": {
+     "score_median": 42.85,
+     "harm": 2.0,
+     "sb_pairs": 3.0,
+     "eligible": true,
+     "f0": 178.90625,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 21.08,
+     "harm": 1.0,
+     "sb_pairs": 1.0,
+     "eligible": true,
+     "f0": 151.89920836896462,
+     "excluded_hz": [
+      320.3125
+     ]
+    },
+    "BPFO": {
+     "score_median": 9.94,
+     "harm": 2.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 117.1875,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 5.98,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 14.481209298118669,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "ABSTAIN"
+  },
+  "Bearing2_2": {
+   "condition": "37.5Hz11kN",
+   "files": 161,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 47,
+   "lead_time_min": 114,
+   "early_onset_inside_first_30pct": true,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 37.59,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 116.40625,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 6.63,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 181.72845061505066,
+     "excluded_hz": [
+      539.84375
+     ]
+    },
+    "FTF": {
+     "score_median": 6.09,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 14.090584298118669,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 5.39,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 151.11795836896462,
+     "excluded_hz": [
+      153.125,
+      311.71875,
+      465.625
+     ]
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing2_3": {
+   "condition": "37.5Hz11kN",
+   "files": 533,
+   "documented": [
+    "cage"
+   ],
+   "onset_window": 128,
+   "lead_time_min": 405,
+   "early_onset_inside_first_30pct": true,
+   "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+   "suspected_location": null,
+   "refusal_reasons": [
+    "BEARING_PATTERN_LOCATION_UNCONFIRMED",
+    "INSUFFICIENT_HARMONICS_BPFO_2_NEED_3"
+   ],
+   "view_a_supports": null,
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 20.4,
+     "harm": 2.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 111.71875,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 6.36,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 179.77532561505066,
+     "excluded_hz": [
+      185.9375
+     ]
+    },
+    "BSF2": {
+     "score_median": 5.85,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 158.14920836896462,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 5.31,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 14.481209298118669,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "ABSTAIN"
+  },
+  "Bearing2_4": {
+   "condition": "37.5Hz11kN",
+   "files": 42,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 31,
+   "lead_time_min": 11,
+   "early_onset_inside_first_30pct": false,
+   "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+   "suspected_location": null,
+   "refusal_reasons": [
+    "BEARING_PATTERN_LOCATION_UNCONFIRMED",
+    "INSUFFICIENT_HARMONICS_BPFO_2_NEED_3"
+   ],
+   "view_a_supports": null,
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 15.4,
+     "harm": 2.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 117.02154938494935,
+     "excluded_hz": [
+      228.125,
+      342.1875
+     ]
+    },
+    "BPFI": {
+     "score_median": 7.03,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 188.75970061505066,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.6,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 154.6875,
+     "excluded_hz": [
+      150.78125,
+      305.46875,
+      456.25
+     ]
+    },
+    "FTF": {
+     "score_median": 3.75,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 14.090584298118669,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "ABSTAIN"
+  },
+  "Bearing2_5": {
+   "condition": "37.5Hz11kN",
+   "files": 339,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 122,
+   "lead_time_min": 217,
+   "early_onset_inside_first_30pct": false,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 36.46,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 117.1875,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 8.3,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 14.84375,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 6.76,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 180.94720061505066,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.57,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 153.90625,
+     "excluded_hz": [
+      467.1875
+     ]
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing3_1": {
+   "condition": "40Hz10kN",
+   "files": 2538,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 19,
+   "lead_time_min": 2519,
+   "early_onset_inside_first_30pct": true,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 67.88,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 121.875,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 7.16,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 194.4947223227207,
+     "excluded_hz": [
+      610.9375
+     ]
+    },
+    "FTF": {
+     "score_median": 6.23,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 14.84375,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.11,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 169.3956139268956,
+     "excluded_hz": [
+      161.71875,
+      327.34375,
+      488.28125
+     ]
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing3_2": {
+   "condition": "40Hz10kN",
+   "files": 2496,
+   "documented": [
+    "inner",
+    "ball",
+    "cage",
+    "outer"
+   ],
+   "onset_window": 169,
+   "lead_time_min": 2327,
+   "early_onset_inside_first_30pct": true,
+   "status": "ABNORMAL_LOCATION_UNCONFIRMED",
+   "suspected_location": null,
+   "refusal_reasons": [
+    "BEARING_PATTERN_LOCATION_UNCONFIRMED",
+    "INSUFFICIENT_HARMONICS_BPFI_2_NEED_3"
+   ],
+   "view_a_supports": null,
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFI": {
+     "score_median": 17.51,
+     "harm": 2.0,
+     "sb_pairs": 1.0,
+     "eligible": true,
+     "f0": 196.4478473227207,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.95,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 159.375,
+     "excluded_hz": []
+    },
+    "BPFO": {
+     "score_median": 6.62,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 120.2396526772793,
+     "excluded_hz": [
+      237.5
+     ]
+    },
+    "FTF": {
+     "score_median": 6.58,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 15.029956584659912,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "ABSTAIN"
+  },
+  "Bearing3_3": {
+   "condition": "40Hz10kN",
+   "files": 371,
+   "documented": [
+    "inner"
+   ],
+   "onset_window": 342,
+   "lead_time_min": 29,
+   "early_onset_inside_first_30pct": false,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "inner",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFI",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFI": {
+     "score_median": 46.0,
+     "harm": 3.0,
+     "sb_pairs": 2.0,
+     "eligible": true,
+     "f0": 192.1875,
+     "excluded_hz": []
+    },
+    "BPFO": {
+     "score_median": 9.09,
+     "harm": 1.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 118.75,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 6.3,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 167.8331139268956,
+     "excluded_hz": []
+    },
+    "FTF": {
+     "score_median": 4.15,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 15.029956584659912,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing3_4": {
+   "condition": "40Hz10kN",
+   "files": 1515,
+   "documented": [
+    "inner"
+   ],
+   "onset_window": 1418,
+   "lead_time_min": 97,
+   "early_onset_inside_first_30pct": false,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "inner",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFI",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFI": {
+     "score_median": 83.25,
+     "harm": 3.0,
+     "sb_pairs": 3.0,
+     "eligible": true,
+     "f0": 193.75,
+     "excluded_hz": []
+    },
+    "BPFO": {
+     "score_median": 13.16,
+     "harm": 2.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 118.75,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 5.84,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 167.8331139268956,
+     "excluded_hz": [
+      501.5625
+     ]
+    },
+    "FTF": {
+     "score_median": 4.94,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 15.420581584659912,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "CORRECT"
+  },
+  "Bearing3_5": {
+   "condition": "40Hz10kN",
+   "files": 114,
+   "documented": [
+    "outer"
+   ],
+   "onset_window": 11,
+   "lead_time_min": 103,
+   "early_onset_inside_first_30pct": true,
+   "status": "ANALYST_REVIEW_REQUIRED",
+   "suspected_location": "outer",
+   "refusal_reasons": [],
+   "view_a_supports": "BPFO",
+   "band": [
+    2000.0,
+    4000.0
+   ],
+   "band_source": "fixed",
+   "families": {
+    "BPFO": {
+     "score_median": 27.81,
+     "harm": 3.0,
+     "sb_pairs": 0.0,
+     "eligible": true,
+     "f0": 124.21875,
+     "excluded_hz": []
+    },
+    "BPFI": {
+     "score_median": 7.19,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 200.3540973227207,
+     "excluded_hz": []
+    },
+    "BSF2": {
+     "score_median": 4.79,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 161.1924889268956,
+     "excluded_hz": [
+      163.28125,
+      496.09375
+     ]
+    },
+    "FTF": {
+     "score_median": 4.19,
+     "harm": 0.0,
+     "sb_pairs": 0.0,
+     "eligible": false,
+     "f0": 15.420581584659912,
+     "excluded_hz": []
+    }
+   },
+   "verdict": "CORRECT"
+  }
+ }
+}

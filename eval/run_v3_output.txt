@@ -1,0 +1,27 @@
+Bearing1_1   onset=   30 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing1_2   onset=   37 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing1_3   onset=   59 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing1_4   onset=   57 status=ABNORMAL_LOCATION_UNCONFIRMED  loc=None   verdict=CORRECT_CONSISTENT reasons=CAGE_CONSISTENT_NOT_CALLED (0s)
+Bearing1_5   onset=   32 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing2_1   onset=  453 status=ABNORMAL_LOCATION_UNCONFIRMED  loc=None   verdict=ABSTAIN            reasons=BEARING_PATTERN_LOCATION_UNCONFIRMED,INSUFFICIENT_HARMONICS_BPFI_2_NEED_3 (0s)
+Bearing2_2   onset=   47 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing2_3   onset=  128 status=ABNORMAL_LOCATION_UNCONFIRMED  loc=None   verdict=ABSTAIN            reasons=BEARING_PATTERN_LOCATION_UNCONFIRMED,INSUFFICIENT_HARMONICS_BPFO_2_NEED_3 (0s)
+Bearing2_4   onset=   31 status=ABNORMAL_LOCATION_UNCONFIRMED  loc=None   verdict=ABSTAIN            reasons=BEARING_PATTERN_LOCATION_UNCONFIRMED,INSUFFICIENT_HARMONICS_BPFO_2_NEED_3 (0s)
+Bearing2_5   onset=  122 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing3_1   onset=   19 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+Bearing3_2   onset=  169 status=ABNORMAL_LOCATION_UNCONFIRMED  loc=None   verdict=ABSTAIN            reasons=BEARING_PATTERN_LOCATION_UNCONFIRMED,INSUFFICIENT_HARMONICS_BPFI_2_NEED_3 (0s)
+Bearing3_3   onset=  342 status=ANALYST_REVIEW_REQUIRED        loc=inner  verdict=CORRECT            reasons=- (0s)
+Bearing3_4   onset= 1418 status=ANALYST_REVIEW_REQUIRED        loc=inner  verdict=CORRECT            reasons=- (0s)
+Bearing3_5   onset=   11 status=ANALYST_REVIEW_REQUIRED        loc=outer  verdict=CORRECT            reasons=- (0s)
+
+==== V3 SUMMARY (frozen before run, no exclusions) ====
+correct                      10
+cage_consistent_correct      1
+abstain                      4
+wrong                        0
+missed                       0
+other                        0
+lead_min_median_max          [11, 99, 2519]
+early_onset_first_30pct      7
+view_a_abstains              0
+thresholds sha256: 59a9d901f9cf3fe607493a348100835c62fe24a2da8f082550809b8198701dc5
