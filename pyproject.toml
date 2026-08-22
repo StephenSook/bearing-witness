@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bearing-witness"
+version = "0.1.0"
+description = "Detect the change. Explain the spectrum. Escalate with evidence."
+requires-python = ">=3.12"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "pydantic>=2.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+eval = ["pandas>=2.1"]
+ui = ["nicegui>=2.0"]
+
+[tool.setuptools.packages.find]
+include = ["bearing_witness*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: needs the XJTU-SY corpus under data/ and takes minutes"]
+addopts = "-m 'not slow'"
